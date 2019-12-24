@@ -61,6 +61,7 @@ Route::get('/user8/{id}/', function ($id) {
     return $id; })->where('id', '[0-9]+');
 
 //1 Урок Задача 9 Сделайте маршрут вида /user/:id/, где вместо :id должно быть число. Добавьте проверку параметра регулярным выражением.
+
 Route::get('/user9/{id}/{name}/', function ($id,$name) {
 
 return $id.' ' .$name;})->where(['id' => '[0-9]+' , 'name' => '[a-z]{3,}']);
