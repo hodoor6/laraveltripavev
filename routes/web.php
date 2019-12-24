@@ -39,3 +39,8 @@ Route::get('/user/{id}/', function ($id) {
 Route::get('/user/{name}/', function ($name) {
     return 'Имя пользователя: '.$name;
 });
+
+//Урок 2. Задача 5. Пусть дан адрес вида /sum/:num1/:num2/, где вместо :num1 и :num2 могут быть любые числа. Сделайте так, чтобы при обращении на адрес такого вида в браузер выводилось сумма переданных чисел.
+Route::get('/sum/{num1}/{num2}/', function ($num1, $num2) {
+    return 'Сумма: '.($num1 + $num2);
+});
