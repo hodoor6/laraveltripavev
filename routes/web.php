@@ -54,3 +54,10 @@ Route::get('/user/show-{id}/', function ($id) {
 Route::get('/user/{id?}/', function ($id = 0) {
     return $id;
 });
+
+//1 Урок Задача 8 Сделайте маршрут вида /user/:id/, где вместо :id должно быть число. Добавьте проверку параметра регулярным выражением.
+Route::get('/user8/{id}/', function ($id) {
+
+})->where('id', '[0-9]+');
+
+
