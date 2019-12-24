@@ -44,3 +44,8 @@ Route::get('/user/{name}/', function ($name) {
 Route::get('/sum/{num1}/{num2}/', function ($num1, $num2) {
     return 'Сумма: '.($num1 + $num2);
 });
+
+//Урок 2. Задача 6. Пусть дан адрес вида /user/show-:id/, где вместо :id может быть любое число. Сделайте так, чтобы при обращении на адрес такого вида в браузер выводилось содержимое переданного параметра.
+Route::get('/user/show-{id}/', function ($id) {
+    return $id;
+});
