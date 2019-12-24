@@ -49,3 +49,8 @@ Route::get('/sum/{num1}/{num2}/', function ($num1, $num2) {
 Route::get('/user/show-{id}/', function ($id) {
     return $id;
 });
+
+//Урок 2. (laravel). Задача 7. Пусть дан адрес вида /user/:id/, где вместо :id может быть любое число. Сделайте так, чтобы параметр id был не обязательный и, если он не передан, вместо него будет передаваться 0.
+Route::get('/user/{id?}/', function ($id = 0) {
+    return $id;
+});
