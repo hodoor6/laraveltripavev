@@ -73,3 +73,9 @@ Route::get('/articles/{date}/', function ($date) {
     return $date;})->where('date' ,'(\d{4})-(|0\d|1[012])-([0-2]\d|3[01])');
 
 
+//2 Урок Задача 11 Сделайте маршрут вида /users/:order/, где вместо :order должно быть одно из значений: 'name', 'surname' или 'age'. Добавьте проверку параметра регулярным выражением.
+
+
+Route::get('/users11/{order}/', function ($order) {
+
+    return $order;})->where('order', '|name|age|surname' );
