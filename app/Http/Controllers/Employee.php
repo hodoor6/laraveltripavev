@@ -4,7 +4,7 @@ use App\Http\Controllers\Controller;
 
 
 //Урок 3 Задача 10 Создайте контроллер Employee (работник). В конструкторе класса запишите в свойство $this->employees массив с работниками:
-class TestController extends Controller
+class Employee extends Controller
 {
     private $employees;
 
@@ -38,6 +38,20 @@ class TestController extends Controller
             ],
         ];
     }
+//Урок 3 Задача 11 В контроллере Employee сделайте действие showOne. Параметром оно должно принимать номер работника в массиве $this->employees и выводить на экран строку с именем, фамилией и зарплатой работника.
+    public function showOne($id)
+    {
+        var_dump($this->employees[$id]);
+
+        foreach ($this->employees[$id] as
+                 $key => $value) {
+            echo "$value ";
+        }
+
+        $worker = $this->employees[$id];
+        $str = "Имя: $worker[name], фамилия: $worker[surname], зарплата: $worker[salary].";
+        return $str;
+    }
 }
 
-?>
+
