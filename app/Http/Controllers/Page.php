@@ -15,4 +15,11 @@ class Page extends Controller
         return 'showOne';
 }
 
+//Урок 3 Задача 3 В контроллере Page сделайте действие showAll. Сделайте так, чтобы данное действие было доступно по адресу /pages/all/. По обращению к данному действию выведите на экран какую-нибудь строку.
+
+    public function showAll()
+    {
+        return 'showAll';
+}
+
 }

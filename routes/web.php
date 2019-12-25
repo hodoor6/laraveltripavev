@@ -86,3 +86,7 @@ Route::get('/{year}/{month}/{day}/', function ($year, $month, $day) {
 
 Route::get('/pages/show/','Page@showOne');
 
+//Урок 3 Задача 3 В контроллере Page сделайте действие showAll. Сделайте так, чтобы данное действие было доступно по адресу /pages/all/. По обращению к данному действию выведите на экран какую-нибудь строку.
+
+Route::get('/pages/all/','Page@showall');
+
