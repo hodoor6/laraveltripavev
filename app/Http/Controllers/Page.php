@@ -29,7 +29,6 @@ class Page extends Controller
 //        return $params;
 //    }
 
-
 //Урок 3 Задача 5 Модифицируйте предыдущую задачу так, чтобы на экран выводился квадрат переданного числа.
     public function showOne ($params)
     {
