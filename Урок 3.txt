@@ -1,0 +1,88 @@
+//���� 2. (laravel) ������ 2. �������� ���, ����� ��� ��������� �� ����� /dir/test/ � ������� ���������� ��������� '!!'.
+Route::get('/dir/test/', function () {
+    return '!!';
+});
+
+//���� 2. (laravel) ������ 3. ����� ��� ����� ���� /user/:id/, ��� ������ :id ����� ���� ����� �����. �������� ���, ����� ��� ��������� �� ����� ������ ���� � ������� ���������� ���������� ����������� ���������.
+Route::get('/user/{id}/', function ($id) {
+    return '��������: '.$id;
+});
+
+
+
+
+
+
+
+�������� ������� ���� /user/:id/, ��� ������ :id ������ ���� �����. �������� �������� ��������� ���������� ����������. 
+
+
+
+//���� 3 ������ 1 �������� ���������� Page.
+
+Page extends Controllers {
+
+//���� 3 ������ 2 � ����������� Page �������� �������� showOne. �������� ���, ����� ������ �������� ���� �������� �� ������ /pages/show/. �� ��������� � ������� �������� �������� �� ����� �����-������ ������. 
+
+public function showOne (){
+
+return 'showOne';
+}
+}
+
+
+
+//���� 3 ������ 2 � ����������� Page �������� �������� showOne. �������� ���, ����� ������ �������� ���� �������� �� ������ /pages/show/. �� ��������� � ������� �������� �������� �� ����� �����-������ ������.
+
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller
+
+
+Page extends Controllers {
+
+
+public function showOne (){
+
+return 'showOne';
+}
+
+//���� web
+
+route::( 'pages/show' , 'Page@show')
+
+
+/pages/show/
+
+}
+
+//���� 3 ������ 3 � ����������� Page �������� �������� showAll. �������� ���, ����� ������ �������� ���� �������� �� ������ /pages/all/. �� ��������� � ������� �������� �������� �� ����� �����-������ ������. 
+
+
+namespace App\Http\Controllers;
+use App\Http\Controllers\Controller
+
+
+Page extends Controllers {
+
+
+public function showOne (){
+
+return 'showOne';
+}
+
+public function showAll (){
+
+return 'showAll';
+
+
+
+//���� web
+
+route::( 'pages/show' , 'Page@show')
+
+
+/pages/show/
+
+}
+
+
