@@ -59,3 +59,9 @@ Route::get('/user8/{id}/', function ($id) {
 Route::get('/user9/{id}/{name}/', function ($id,$name) {
 
     return $id.' ' .$name;})->where(['id' => '[0-9]+' , 'name' => '[a-z]{3,}']);
+
+//2 Урок Задача 10 Сделайте маршрут вида /articles/:date/, где вместо :date должна быть дата в формате год-месяц-день. Добавьте проверку параметра регулярным выражением.
+
+Route::get('/articles/{date}/', function ($date) {
+
+    return $date;})->where('date' ,'(\d{4})-(|0\d|1[012])-([0-2]\d|3[01])');
