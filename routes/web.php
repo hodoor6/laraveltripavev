@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/test/', function () {
     return '!';
 });
+//Урок 2. (laravel) Задача 2. Сделайте так, чтобы при обращении на адрес /dir/test/ в браузер выводилось сообщение '!!'.
+Route::get('/dir/test/', function () {
+    return '!!';
+});
