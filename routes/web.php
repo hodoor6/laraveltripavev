@@ -72,3 +72,13 @@ Route::get('/articles/{date}/', function ($date) {
 Route::get('/users11/{order}/', function ($order) {
 
     return $order;})->where('order', '|name|age|surname' );
+
+//Урок 2 Задача 12. Сделайте маршрут вида /:year/:month/:day/, где вместо :year должен быть год, вместо :month - месяц, вместо :day - день. Выведите на экран день недели, соответствующий этой дате. Добавьте проверку параметров регулярными выражениями.
+Route::get('/{year}/{month}/{day}/', function ($year, $month, $day) {
+    $week = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+    return $week[date('w', mktime(0, 0, 0, $month, $day, $year))]; }) -> where
+(['year' => '([0-9]{4})',
+    'month' => '(0[1-9]|1[012])',
+    'day' => '(0[1-9]|1[0-9]|2[0-9]|3[01])'
+]);
+
