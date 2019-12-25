@@ -11,4 +11,5 @@ class Test
     public function sum ($sum1,$sum2){
         echo $sum1 + $sum2;
     }
+
 }
