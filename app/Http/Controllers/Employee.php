@@ -38,6 +38,7 @@ class Employee extends Controller
             ],
         ];
     }
+
 //Урок 3 Задача 11 В контроллере Employee сделайте действие showOne. Параметром оно должно принимать номер работника в массиве $this->employees и выводить на экран строку с именем, фамилией и зарплатой работника.
     public function showOne($id)
     {
@@ -52,6 +53,17 @@ class Employee extends Controller
         $str = "Имя: $worker[name], фамилия: $worker[surname], зарплата: $worker[salary].";
         return $str;
     }
+
+
+//Урок 3 Задачи 12 В контроллере Employee сделайте действие showField. Параметрами оно должно принимать номер работника в массиве $this->employees и название одного из полей ('name', 'surname' или 'salary'). Действие выводить на экран значение соответствующего поля соответствующего работника.
+
+    public function showField($id,$value)
+    {
+        $this->employees[$id][$value];
+
+        $worker = $this->employees[$id];
+        $str = "Выбран параметр работника '$value' = $worker[$value].";
+        return $str;
+
+    }
 }
-
-
