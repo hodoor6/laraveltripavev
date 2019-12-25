@@ -123,3 +123,8 @@ Route::get('/employees11/{id}/','Employee@showOne')->where('num1','[0-9]+');
 //Урок 3 Задачи 12 В контроллере Employee сделайте действие showField. Параметрами оно должно принимать номер работника в массиве $this->employees и название одного из полей ('name', 'surname' или 'salary'). Действие выводить на экран значение соответствующего поля соответствующего работника.
 
 Route::get('/employees12/{id}/{name}/','Employee@showField')->where('id','[0-9]+');
+
+//Урок 3 Задачи 13 Добавьте проверку регулярными выражениями всех параметров для маршрутов контроллера Employee.
+
+Route::get('/employees13/{id}/{name}/','Employee@showField')->where(['id'=>'[1-5]+','name'=>'|name|surname|salary']);
+

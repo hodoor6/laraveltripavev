@@ -86,3 +86,14 @@ route::( 'pages/show' , 'Page@show')
 }
 
 
+
+http://code.mu/ru/php/framework/laravel/prime/3/
+https://github.com/hodoor6/laraveltripavev
+
+https://vk.com/topic-128796313_40286911?offset=920
+
+https://vk.com/topic-128796313_40481716?post=138646
+
+https://vk.com/topic-128796313_40169990?offset=280
+регулярки
+https://vk.com/topic-128796313_37790635?offset=560
