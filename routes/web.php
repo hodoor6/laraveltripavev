@@ -95,3 +95,8 @@ Route::get('/pages3/all/','Page@showall');
 
 Route::get('/pages4/show/{params}','Page@showOne');
 
+//Урок 3 Задача 5 Модифицируйте предыдущую задачу так, чтобы на экран выводился квадрат переданного числа.
+
+Route::get('/pages5/show/{params}','Page@showOne');
+
+
