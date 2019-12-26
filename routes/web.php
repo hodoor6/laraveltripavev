@@ -131,4 +131,8 @@ Route::get('/employees13/{id}/{name}/','Employee@showField')->where(['id'=>'[1-5
 
 // Урок 4. Задача 1 Сделайте представление для какого-нибудь действия одного из ваших контроллеров.
 
-Route::get('/lessonfour1/','LessonFour@LessonFourOne');
+Route::get('/lessonfour1/','LessonFour@lessonFourOne');
+
+// Урок 4. Задача 2 Пусть в действии контроллера даны переменные $name (имя), $surname (фамилия). Передайте значения этих переменных в представление и выведите содержимое каждой из этих переменных на экран.
+
+Route::get('/lessonfour2/','LessonFour@lessonFourTwo');
