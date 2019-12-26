@@ -25,5 +25,11 @@ class LessonFour extends Controller
     public function lessonFourTwo()
     {
         return view('lessonfour',  ['name'=>'Сергей','surname' => 'Сергеев']);
- }
+    }
+
+    // Урок 4. Задача 3 Перенесите ваше представление в соответствующую папку.
+    public function lessonFourThree()
+    {
+        return view('lessonfour.lessonfourthree',  ['name'=>'Сергей','surname' => 'Сергеев']);
+    }
 }

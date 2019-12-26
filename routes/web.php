@@ -136,3 +136,8 @@ Route::get('/lessonfour1/','LessonFour@lessonFourOne');
 // Урок 4. Задача 2 Пусть в действии контроллера даны переменные $name (имя), $surname (фамилия). Передайте значения этих переменных в представление и выведите содержимое каждой из этих переменных на экран.
 
 Route::get('/lessonfour2/','LessonFour@lessonFourTwo');
+
+//Урок 4. Задача 3 Перенесите ваше представление в соответствующую папку.
+
+
+Route::get('/lessonfour3/','LessonFour@lessonFourThree');
