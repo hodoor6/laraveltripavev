@@ -128,3 +128,7 @@ Route::get('/employees12/{id}/{name}/','Employee@showField')->where('id','[0-9]+
 
 Route::get('/employees13/{id}/{name}/','Employee@showField')->where(['id'=>'[1-5]+','name'=>'|name|surname|salary']);
 
+
+// Урок 4. Задача 1 Сделайте представление для какого-нибудь действия одного из ваших контроллеров.
+
+Route::get('/lessonfour1/','LessonFour@LessonFourOne');
