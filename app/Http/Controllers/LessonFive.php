@@ -29,4 +29,16 @@ class LessonFive extends Controller
 
         return view('lessonfive.lessonfive3',  ['var1'=>'test','var2'=>'test','var3'=>'test']);
     }
+
+//Урок 5. Задача 4 Пусть в представлении дан абзац. Передайте из действия в представление переменную, содержащую CSS код, задающий красный цвет текста. С помощью атрибута style покрасьте наш абзац в красный цвет.
+
+    public function lessonFive4()
+    {
+
+        return view('lessonfive.lessonfive4',  ['color'=>'color:red']);
+    }
+
+
+
+
 }
