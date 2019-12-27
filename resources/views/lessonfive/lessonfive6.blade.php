@@ -6,7 +6,7 @@
 </head>
 
 <body>
-is {{ date('d.m.Y') }}
+{{ date('d.m.Y') }}
 
 
 </body>

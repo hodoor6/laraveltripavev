@@ -53,6 +53,11 @@ class LessonFive extends Controller
 
         return view('lessonfive.lessonfive6');
     }
+    public function lessonFive7()
+    {
+
+        return view('lessonfive.lessonfive7',['worker' => ['name'=>'Сергей','age' => '30','salary' => '5000']]);
+    }
 
 
 
