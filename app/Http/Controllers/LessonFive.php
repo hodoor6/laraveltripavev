@@ -46,6 +46,14 @@ class LessonFive extends Controller
         return view('lessonfive.lessonfive5',  ['text'=>'нажать','href'=>'#']);
     }
 
+    //Урок 5. Задача 6 Выведите в представлении текущую дату в формате день.месяц.год.
+
+    public function lessonFive6()
+    {
+
+        return view('lessonfive.lessonfive6');
+    }
+
 
 
 
