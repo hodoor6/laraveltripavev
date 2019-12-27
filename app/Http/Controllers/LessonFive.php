@@ -38,6 +38,14 @@ class LessonFive extends Controller
         return view('lessonfive.lessonfive4',  ['color'=>'color:red']);
     }
 
+    //Урок 5. Задача 5 Пусть в действии дана переменная $text, содержащая текст ссылки, и переменная $href, содержащая адрес ссылки. Передайте эти переменные в представление и сформируйте с их помощью HTML ссылку.
+
+    public function lessonFive5()
+    {
+
+        return view('lessonfive.lessonfive5',  ['text'=>'нажать','href'=>'#']);
+    }
+
 
 
 
