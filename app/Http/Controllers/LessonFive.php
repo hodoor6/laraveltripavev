@@ -52,11 +52,22 @@ class LessonFive extends Controller
     {
 
         return view('lessonfive.lessonfive6');
+
+     //   Урок 5. Задача 7 Пусть из действия в представление передаются данные работника в виде массива. Пусть в массиве будет ключ name (имя), ключ age (возраст) и ключ salary (зарплата). Выведите каждый элемент массива в отдельном абзаце.
     }
     public function lessonFive7()
     {
 
         return view('lessonfive.lessonfive7',['worker' => ['name'=>'Сергей','age' => '30','salary' => '5000']]);
+    }
+
+    //   Урок 5. Задача 8 Передайте в представление какой-нибудь массив. Выведите на экран количество элементов в этом массиве.
+    public function lessonFive8()
+    {
+
+
+
+        return view('lessonfive.lessonfive8',['worker' => ['name'=>'Сергей','age' => '30','salary' => '5000']]);
     }
 
 
