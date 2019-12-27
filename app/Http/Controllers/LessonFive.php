@@ -21,4 +21,12 @@ class LessonFive extends Controller
 
         return view('lessonfive.lessonfivetwo',  ['class'=>'body']);
     }
+
+//Урок 5. Задача 3 Пусть в представлении даны 3 инпута. Передайте из действия в представление 3 переменные, значения которых запишите в атрибуты value наших инпутов. переменную.
+
+    public function lessonFive3()
+    {
+
+        return view('lessonfive.lessonfive3',  ['var1'=>'test','var2'=>'test','var3'=>'test']);
+    }
 }
