@@ -141,3 +141,7 @@ Route::get('/lessonfour2/','LessonFour@lessonFourTwo');
 
 
 Route::get('/lessonfour3/','LessonFour@lessonFourThree');
+
+// Урок 5. Задача 1 Пусть в действии контроллера даны переменные $name (имя), $age (возраст) и $salary (зарплата). Передайте значения этих переменных в представление и выведите содержимое каждой из этих переменных в отдельном абзаце.
+
+Route::get('/lessonfive1/','LessonFive@lessonFiveOne');
