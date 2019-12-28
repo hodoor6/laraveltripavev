@@ -80,7 +80,14 @@ class LessonFive extends Controller
 
 public function lessonFive10()
 {
-    return view('lessonfive.lessonfive10', ['location'=>['country'=>'Украина', 'city'=>'Днепр']]);
+    return view('lessonfive.lessonfive10', ['location'=>['country'=>'', 'city'=>'Днепр']]);
+}
+
+
+//Урок 5  Задача 11 Пусть из действия в представление передаются переменные $year (год), $month (месяц) и $day (день). Сделайте так, чтобы, если какая-либо из этих переменных не задана, то вместо нее выведется текущее значение (текущий год, месяц или день).
+    public function lessonFive11()
+{
+    return view('lessonfive.lessonfive11', ['year'=>'1900','month'=>'12','day'=>'15']);
 }
 
 }

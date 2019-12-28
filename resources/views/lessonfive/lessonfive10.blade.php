@@ -13,7 +13,7 @@
 
 
 
-<p>{{$location['country'] or 'Россия'}}</p>
+<p>{{$location['country'] ? $location['country']  :'Россия'}}</p>
 <p>{{isset($location['city']) ? $location['city'] : 'Москва'}}</p>
 
 
