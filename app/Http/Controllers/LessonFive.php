@@ -103,4 +103,10 @@ public function lessonFive10()
     {
         return view('lessonfive.lessonfive13', ['str'=>'<b>строка</b>']);
     }
+
+//Урок 5 Задача 14 Описанным способом выполните какой-нибудь PHP код.
+    public function lessonFive14()
+    {
+        return view('lessonfive.lessonfive14', ['str'=>'<b>строка</b>']);
+    }
 }

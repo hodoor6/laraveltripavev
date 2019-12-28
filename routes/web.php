@@ -199,3 +199,7 @@ Route::get('/lessonfive12/', 'LessonFive@lessonFive12');
 //Урок 5 Задача 13 С помощью комментариев Blade закомментируйте какую-нибудь часть кода представления.
 
 Route::get('/lessonfive13/', 'LessonFive@lessonFive13');
+
+//Урок 5 Задача 14 Описанным способом выполните какой-нибудь PHP код.
+
+Route::get('/lessonfive14/', 'LessonFive@lessonFive14');
