@@ -90,4 +90,12 @@ public function lessonFive10()
     return view('lessonfive.lessonfive11', ['year'=>'1900','month'=>'12','day'=>'15']);
 }
 
+
+
+//Урок 5. Задача 12 Пусть в переменной $str хранится строка с тегами, например, '<b>строка</b>'. Выведите эту строку на экран так, чтобы теги выполнили свое действие (то есть чтобы в данном случае текст стал жирным).
+    public function lessonFive12()
+{
+    return view('lessonfive.lessonfive12', ['str'=>'<b>строка</b>']);
+}
+
 }
