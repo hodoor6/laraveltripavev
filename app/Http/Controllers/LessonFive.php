@@ -98,4 +98,9 @@ public function lessonFive10()
     return view('lessonfive.lessonfive12', ['str'=>'<b>строка</b>']);
 }
 
+//Урок 5 Задача 13 С помощью комментариев Blade закомментируйте какую-нибудь часть кода представления.
+    public function lessonFive13()
+    {
+        return view('lessonfive.lessonfive13', ['str'=>'<b>строка</b>']);
+    }
 }
