@@ -23,4 +23,11 @@ class LessonSix extends Controller
         return view('lessonsix.lessonsix2',['dayweek' => date("w",mktime(0,0,0,12,28,2019))]);
     }
 
+//Урок 6 Задача 3 Пусть из действия в представление передается номер дня недели. Сделайте так, чтобы, если номер дня недели соответствует выходному дню, то вывелось сообщение об этом, в противном случае выведите сообщение о том, что передан номер рабочего дня недели.
+    public function lessonSix3()
+    {
+
+        return view('lessonsix.lessonsix3',['dayweek' => date("w",mktime(0,0,0,12,30,2019))]);
+    }
+
 }
