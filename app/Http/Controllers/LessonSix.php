@@ -30,4 +30,13 @@ class LessonSix extends Controller
         return view('lessonsix.lessonsix3',['dayweek' => date("w",mktime(0,0,0,12,30,2019))]);
     }
 
+
+
+// Урок 6 Задача 4 Пусть из действия в представление передается номер месяца. С помощью директив @if и @elseif определите пору года, в которую попадает переданный месяц. Если переданный номер не соответствует ни одному месяцу - выведите сообщение об этом.
+    public function lessonSix4()
+    {
+
+        return view('lessonsix.lessonsix4',['month' => date("n",mktime(0,0,0,12,30,2019))]);
+    }
+
 }
