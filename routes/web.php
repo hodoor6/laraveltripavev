@@ -231,3 +231,7 @@ Route::get('/lessonsix3/', 'LessonSix@lessonSix3');
 
 
 Route::get('/lessonsix4/', 'LessonSix@lessonSix4');
+
+// Урок 6 Задача 5 Пусть из действия в представление передается возраст пользователя. Если возраст пользователь несовершеннолетний, то выведите сообщение об этом. Для решения задачи воспользуйтесь директивой @unless.
+
+Route::get('/lessonsix5/', 'LessonSix@lessonSix5');

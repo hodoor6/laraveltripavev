@@ -39,4 +39,11 @@ class LessonSix extends Controller
         return view('lessonsix.lessonsix4',['month' => date("n",mktime(0,0,0,12,30,2019))]);
     }
 
+    // Урок 6 Задача 5 Пусть из действия в представление передается возраст пользователя. Если возраст пользователь несовершеннолетний, то выведите сообщение об этом. Для решения задачи воспользуйтесь директивой @unless.
+    public function lessonSix5()
+    {
+
+        return view('lessonsix.lessonsix5',['age' => '17']);
+    }
+
 }
