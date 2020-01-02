@@ -76,5 +76,32 @@ class LessonSeven extends Controller
         ]]);
     }
 
+     // Урок 7 Задача 9 Передайте из действия в представление массив с работниками:
+
+    public function lessonSeven9()
+    {
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+        ];
+
+        return view('lessonseven.lessonseven9', ['data' => $employees]);
+    }
+
+
+
 
 }

@@ -6,7 +6,6 @@
 
 <body>
 
-
 <table border="1">
     <tr>
         <th>1</th>
@@ -17,9 +16,7 @@
     </tr>
 @foreach ($number as$key=> $numb)
 
-
 <tr>
-
 
 @foreach ($numb as $key=>$td)
         <td>{{$td}}</td>

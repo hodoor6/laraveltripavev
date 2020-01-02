@@ -272,4 +272,8 @@ Route::get('/lessonseven7/', 'LessonSeven@lessonSeven7');
 
 Route::get('/lessonseven8/', 'LessonSeven@lessonSeven8');
 
+// Урок 7 Задача 9 Передайте из действия в представление массив с работниками:
+
+Route::get('/lessonseven9/', 'LessonSeven@lessonSeven9');
+
 
