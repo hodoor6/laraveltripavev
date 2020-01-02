@@ -37,5 +37,21 @@ class LessonSeven extends Controller
         return view('lessonseven.lessonseven4',['numbers' => [1,2,3,4,5]]);
     }
 
+    //  Урок 7 Задача 5 Передайте из действия в представление массив со строками. Выведите этот массив в виде списка ul так, чтобы выводились и ключи, и значения элементов массива.
+    public function lessonSeven5()
+    {
+
+        return view('lessonseven.lessonseven5',['numbers' => [1,2,3,4,5]]);
+    }
+
+
+    //  Урок 7 Задача 4 Передайте из действия в представление массив со строками. Выведите этот массив в виде списка ul так, чтобы выводились и ключи, и значения элементов массива.
+
+    public function lessonSeven5()
+    {
+
+        return view('lessonseven.lessonseven5',['numbers' => [1,2,3,4,5]]);
+    }
+
 
 }

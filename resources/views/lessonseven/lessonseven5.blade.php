@@ -9,7 +9,7 @@
 
 <ul>
 @foreach ($numbers as $key=>$number)
-   <li>Ключ {{$key}} Значение {{pow($number,1/2)}}</li>
+   <li>Ключ {{$key + 1 }} Значение {{pow($number,1/2)}}</li>
 @endforeach
 </ul>
 
