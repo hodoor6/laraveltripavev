@@ -23,5 +23,19 @@ class LessonSeven extends Controller
         return view('lessonseven.lessonseven2',['numbers' => [1,2,3,4,5]]);
     }
 
+//// Урок 7 Задача 3 Модифицируйте предыдущую задачу так, чтобы в пункты списка выводились квадратные корни элементов массива.
+    public function lessonSeven3()
+    {
+
+        return view('lessonseven.lessonseven3',['numbers' => [1,2,3,4,5]]);
+    }
+
+//  Урок 7 Задача 4 Передайте из действия в представление массив со строками. Выведите этот массив в виде списка ul так, чтобы выводились и ключи, и значения элементов массива.
+    public function lessonSeven4()
+    {
+
+        return view('lessonseven.lessonseven4',['numbers' => [1,2,3,4,5]]);
+    }
+
 
 }
