@@ -66,7 +66,7 @@ class LessonSeven extends Controller
     public function lessonSeven8()
     {
 
-       // return view('lessonseven.lessonseven8',['number' => [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,19,20,21,22,23,24,25]]);
+
         return view('lessonseven.lessonseven8', ['number' => [
             [1, 2, 3, 4, 5],
             [6, 7, 8, 9, 10],
@@ -200,6 +200,15 @@ class LessonSeven extends Controller
         ];
 
         return view('lessonseven.lessonseven13', ['data' => $employees]);
+    }
+
+//Урок 7 Задача 14 Из действия в представление передается массив с числами. Выведите каждый элемент этого массива в своем теге b. С помощью $loop->remaining три последних элемента массива выведите не в теге b, а в теге i.
+
+    public function lessonSeven14()
+    {
+         return view('lessonseven.lessonseven14',['number' => [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,19,20,21,22,23,24,25]]);
+
+
     }
 
 }

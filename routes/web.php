@@ -294,3 +294,9 @@ Route::get('/lessonseven12/', 'LessonSeven@lessonSeven12');
 Route::get('/lessonseven13/', 'LessonSeven@lessonSeven13');
 
 
+//Урок 7 Задача 14 Из действия в представление передается массив с числами. Выведите каждый элемент этого массива в своем теге b. С помощью $loop->remaining три последних элемента массива выведите не в теге b, а в теге i.
+
+
+Route::get('/lessonseven14/', 'LessonSeven@lessonSeven14');
+
+
