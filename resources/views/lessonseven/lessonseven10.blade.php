@@ -1,4 +1,4 @@
-{{--// Урок 7 Задача 9 Передайте из действия в представление массив с работниками:  --}}
+{{--// Урок 7 Задача 10 Выведите массив из предыдущей задачи в виде таблицы table.   --}}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -7,30 +7,23 @@
 
 <body>
 
-{{--<table border="1">--}}
-{{--    <tr>--}}
-{{--        <th>1</th>--}}
-{{--        <th>2</th>--}}
-{{--        <th>3</th>--}}
-{{--       --}}
-{{--    </tr>--}}
-<li>
+<table border="1">
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
 
+    </tr>
+@foreach ($data as $employee)
+    <tr>
+        <td>{{$employee['name']}}</td>
+        <td> {{$employee['surname']}}</td>
+        <td> {{$employee['salary']}}</td>
 
-@foreach ($data as $key=> $employee)
-
-
-        <ul>{{$employee['name']}} {{$employee['surname']}} {{$employee['salary']}}</ul>
-<tr>
-
-{{--@foreach ($employee as $key=>$td)--}}
-{{--        <td>{{$td}}</td>--}}
-
-{{--                @endforeach--}}
-{{--</tr>--}}
+</tr>
                 @endforeach
 
-{{--                            </table>--}}
-</li>
+                            </table>
+
 </body>
 </html>

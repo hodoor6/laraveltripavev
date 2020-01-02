@@ -277,3 +277,8 @@ Route::get('/lessonseven8/', 'LessonSeven@lessonSeven8');
 Route::get('/lessonseven9/', 'LessonSeven@lessonSeven9');
 
 
+// Урок 7 Задача 10 Выведите массив из предыдущей задачи в виде таблицы table.
+
+Route::get('/lessonseven10/', 'LessonSeven@lessonSeven10');
+
+
