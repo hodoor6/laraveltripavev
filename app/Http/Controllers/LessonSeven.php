@@ -16,4 +16,12 @@ class LessonSeven extends Controller
     }
 
 
+//Урок 7 Задача 2 Модифицируйте предыдущую задачу так, чтобы в пункты списка выводились квадраты элементов массива.
+    public function lessonSeven2()
+    {
+
+        return view('lessonseven.lessonseven2',['numbers' => [1,2,3,4,5]]);
+    }
+
+
 }

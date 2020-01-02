@@ -243,3 +243,7 @@ Route::get('/lessonsix6/', 'LessonSix@lessonSix6');
 //Урок 7 Задача 1 Передайте из действия в представление массив с числами. Выведите этот массив в виде списка ul.
 
 Route::get('/lessonseven1/', 'LessonSeven@lessonSeven1');
+
+//Урок 7 Задача 2 Модифицируйте предыдущую задачу так, чтобы в пункты списка выводились квадраты элементов массива.
+
+Route::get('/lessonseven2/', 'LessonSeven@lessonSeven2');
