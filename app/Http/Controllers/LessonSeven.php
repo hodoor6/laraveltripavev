@@ -53,5 +53,13 @@ class LessonSeven extends Controller
         return view('lessonseven.lessonseven6',['numbers' => [1,2,3,4,5]]);
     }
 
+    //  Урок 7 Задача 7 Из действия в представление передается переменная $data. Эта переменная может содержать массив с числами либо быть обычным числом. Если переменная $data - массив, то выведите элементы этого массива в виде списка ul, а если переменная $data - число, то выведите это число в абзаце..
+
+    public function lessonSeven7()
+    {
+
+        return view('lessonseven.lessonseven7',['data' => [1,2,3,4,5]]);
+    }
+
 
 }
