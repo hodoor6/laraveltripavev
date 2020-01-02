@@ -285,9 +285,12 @@ Route::get('/lessonseven10/', 'LessonSeven@lessonSeven10');
 
 Route::get('/lessonseven11/', 'LessonSeven@lessonSeven11');
 
-
 //Урок 7 Задача 12 Модифицируйте предыдущую задачу так, чтобы порядковый номер итерации начинался с 1.
 
 Route::get('/lessonseven12/', 'LessonSeven@lessonSeven12');
+
+//Урок 7 Задача 13 Модифицируйте предыдущую задачу так, чтобы для первой li добавлялся CSS класс first, а для последней - класс last.
+
+Route::get('/lessonseven13/', 'LessonSeven@lessonSeven13');
 
 

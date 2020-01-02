@@ -177,4 +177,29 @@ class LessonSeven extends Controller
         return view('lessonseven.lessonseven12', ['data' => $employees]);
     }
 
+//Урок 7 Задача 13 Модифицируйте предыдущую задачу так, чтобы для первой li добавлялся CSS класс first, а для последней - класс last.
+
+    public function lessonSeven13()
+    {
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+        ];
+
+        return view('lessonseven.lessonseven13', ['data' => $employees]);
+    }
+
 }
