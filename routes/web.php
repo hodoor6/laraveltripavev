@@ -282,3 +282,8 @@ Route::get('/lessonseven9/', 'LessonSeven@lessonSeven9');
 Route::get('/lessonseven10/', 'LessonSeven@lessonSeven10');
 
 
+//Урок 7 Задача 11 Из действия в представление передается массив со строками. Выведите элементы этого массива в виде списка ul. Сделайте так, чтобы перед значением элемента, выводился еще и порядковый номер итерации, начиная с 0.
+
+Route::get('/lessonseven11/', 'LessonSeven@lessonSeven11');
+
+
