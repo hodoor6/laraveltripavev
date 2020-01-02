@@ -61,5 +61,20 @@ class LessonSeven extends Controller
         return view('lessonseven.lessonseven7',['data' => [1,2,3,4,5]]);
     }
 
+    // Урок 7 Задача 8  Передайте из действия в представление массив с числами от 1 до 25. Выведите его в виде таблицы 5 на 5.
+
+    public function lessonSeven8()
+    {
+
+       // return view('lessonseven.lessonseven8',['number' => [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,19,20,21,22,23,24,25]]);
+        return view('lessonseven.lessonseven8', ['number' => [
+            [1, 2, 3, 4, 5],
+            [6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20],
+            [21, 22, 33, 24, 25]
+        ]]);
+    }
+
 
 }

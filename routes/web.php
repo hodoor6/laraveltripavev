@@ -268,4 +268,8 @@ Route::get('/lessonseven6/', 'LessonSeven@lessonSeven6');
 
 Route::get('/lessonseven7/', 'LessonSeven@lessonSeven7');
 
+// Урок 7 Задача 8  Передайте из действия в представление массив с числами от 1 до 25. Выведите его в виде таблицы 5 на 5.
+
+Route::get('/lessonseven8/', 'LessonSeven@lessonSeven8');
+
 
