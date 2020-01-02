@@ -300,3 +300,6 @@ Route::get('/lessonseven13/', 'LessonSeven@lessonSeven13');
 Route::get('/lessonseven14/', 'LessonSeven@lessonSeven14');
 
 
+//Урок 7 Задача 15 Самостоятельно попробуйте работу изученных директив.
+Route::get('/lessonseven15/', 'LessonSeven@lessonSeven15');
+
