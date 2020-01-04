@@ -369,3 +369,8 @@ Route::get('/lessonnine7/', 'LessonNine@lessonNine7');
 Route::get('/lessonnine8/', 'LessonNine@lessonNine8');
 
 
+// Урок 9 Задача 9 Модифицируйте предыдущую задачу так, чтобы цвет текста tr с забаненным пользователем был красного цвета, а с активным пользователем - зеленого.
+
+Route::get('/lessonnine9/', 'LessonNine@lessonNine9');
+
+
