@@ -12,10 +12,20 @@ class LessonEight extends Controller
     public function lessonEight1()
     {
 
-        return view('lessoneight.child',['main' => 'Здесь содержание контента тега main']);
-      //  return view('lessoneight.lessonseight1',['main' => 12345]);
+        return view('lessoneight.child1',['main' => 'Здесь содержание контента тега main']);
 
-      //  return view('layouts.app',['main' => 12345]);
+
+    }
+
+
+// Урок 8 Задача 2 Сделайте так, чтобы каждое действие отправляло в представление переменную $title, содержащую тайтл страницы. Модифицируйте код предыдущей задачи так, чтобы переданный тайтл попадал в тег title макета сайта.
+
+
+    public function lessonEight2()
+    {
+
+        return view('lessoneight.child2',['main' => 'Здесь содержание контента тега main' , 'title' =>'Заголовок главной страницы']);
+
 
     }
 

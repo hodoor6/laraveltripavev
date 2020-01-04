@@ -13,7 +13,7 @@
 
 </aside>
 <main>
-    {{$main}}
+
     @section('main')
         <p>Это содержимое тела страницы.</p>
     @endsection
