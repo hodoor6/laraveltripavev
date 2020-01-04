@@ -133,4 +133,82 @@ class LessonNine extends Controller
 
     }
 
+
+//Урок 9 Задача 5  Модифицируйте предыдущую задачу так, чтобы появилась еще одна колонка в начале таблицы, в которой будут выводится порядковые номера работников (то есть ключи элементов массива). Нумерация должна начинаться с единицы, а не с нуля.
+
+
+
+    public function lessonNine5()
+    {
+
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+            [
+                'name' => 'user4',
+                'surname' => 'surname4',
+                'salary' => 4000,
+            ],
+            [
+                'name' => 'user5',
+                'surname' => 'surname5',
+                'salary' => 5000,
+            ],
+        ];
+
+        return view('lessonnine.lessonnine5', ['employees' => $employees]);
+
+    }
+// Урок 9 Задача 6  Модифицируйте предыдущую задачу так, чтобы на экран выводились только работники с зарплатой более 2000.
+
+
+
+    public function lessonNine6()
+    {
+
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+            [
+                'name' => 'user4',
+                'surname' => 'surname4',
+                'salary' => 4000,
+            ],
+            [
+                'name' => 'user5',
+                'surname' => 'surname5',
+                'salary' => 5000,
+            ],
+        ];
+
+        return view('lessonnine.lessonnine6', ['employees' => $employees]);
+
+    }
+
 }
