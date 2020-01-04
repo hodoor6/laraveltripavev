@@ -293,4 +293,13 @@ class LessonNine extends Controller
 
     }
 
+    //Урок 9 Задача 10 Из действия в представление передается массив со строками. Сделайте из этого массива выпадающий список select.
+
+    public function lessonNine10()
+    {
+
+        return view('lessonnine.lessonnine10', ['inputs' => [ 'строка 1','строка 2','строка 3','строка 4']]);
+
+    }
+
 }
