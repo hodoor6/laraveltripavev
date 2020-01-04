@@ -211,4 +211,41 @@ class LessonNine extends Controller
 
     }
 
+ // Урок 9 Задача 7 Выведите этот массив в виде HTML таблицы с тремя колонками: имя, фамилия и статус. В последней колонке должен выводится статус пользователя: забанен он или нет. Если ключ banned для данного пользователя имеет значение true, то выводите слово 'забанен', а если false, то слово 'активен'.
+
+
+
+    public function lessonNine7()
+    {
+        $users = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'banned' => true,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'banned' => false,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'banned' => true,
+            ],
+            [
+                'name' => 'user4',
+                'surname' => 'surname4',
+                'banned' => false,
+            ],
+            [
+                'name' => 'user5',
+                'surname' => 'surname5',
+                'banned' => false,
+            ],
+        ];
+        return view('lessonnine.lessonnine7', ['users' => $users]);
+
+    }
+
 }

@@ -360,3 +360,8 @@ Route::get('/lessonnine5/', 'LessonNine@lessonNine5');
 Route::get('/lessonnine6/', 'LessonNine@lessonNine6');
 
 
+// Урок 9 Задача 7  Модифицируйте предыдущую задачу так, чтобы на экран выводились только работники с зарплатой более 2000.
+
+Route::get('/lessonnine7/', 'LessonNine@lessonNine7');
+
+
