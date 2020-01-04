@@ -306,3 +306,6 @@ Route::get('/lessonseven15/', 'LessonSeven@lessonSeven15');
 // Урок 7 Задача 16 Самостоятельно попробуйте работу цикла @forelse.
 Route::get('/lessonseven16/', 'LessonSeven@lessonSeven16');
 
+// Урок 7 Задача 17 С помощью цикла $@for выведите 10 абзацев, заполненных числами от 1 до 10.
+Route::get('/lessonseven17/', 'LessonSeven@lessonSeven17');
+

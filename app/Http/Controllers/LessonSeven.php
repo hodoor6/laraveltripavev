@@ -229,4 +229,13 @@ class LessonSeven extends Controller
 
     }
 
+    // Урок 7 Задача 17 С помощью цикла $@for выведите 10 абзацев, заполненных числами от 1 до 10.
+
+    public function lessonSeven17()
+    {
+         return view('lessonseven.lessonseven17',['number' => [1,2,3,4,5,6,7,8,9,10]]);
+
+
+    }
+
 }
