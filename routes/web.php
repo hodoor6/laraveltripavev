@@ -329,3 +329,12 @@ Route::get('/lessoneight3/', 'LessonEight@lessonEight3');
 Route::get('/lessoneight4/', 'LessonEight@lessonEight4');
 
 
+// Урок 9 Задача 1  Сформируйте из нашего массива следующий HTML код:
+//<a href="http://href1">text1</a>
+//<a href="http://href2">text2</a>
+//<a href="http://href3">text3</a>
+//
+
+Route::get('/lessonnine1/', 'LessonNine@lessonNine1');
+
+
