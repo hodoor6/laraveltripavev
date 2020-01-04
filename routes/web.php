@@ -338,3 +338,13 @@ Route::get('/lessoneight4/', 'LessonEight@lessonEight4');
 Route::get('/lessonnine1/', 'LessonNine@lessonNine1');
 
 
+// Урок 9 Задача 2  Модифицируйте предыдущую задачу так, чтобы каждая ссылка выводилась в отдельном теге li тега ul.
+
+
+Route::get('/lessonnine2/', 'LessonNine@lessonNine2');
+
+// Урок 9 Задача 3  Выведите этот массив в виде следующей таблицы:
+
+Route::get('/lessonnine3/', 'LessonNine@lessonNine3');
+
+
