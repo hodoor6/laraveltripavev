@@ -2,8 +2,8 @@
 
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
 
 
 class LessonNine extends Controller
@@ -30,10 +30,11 @@ class LessonNine extends Controller
             ],
         ];
 
-        return view('lessonnine.lessonnine1',['main' => $links]);
+        return view('lessonnine.lessonnine1', ['main' => $links]);
 
 
     }
+
 // Урок 9 Задача 2  Модифицируйте предыдущую задачу так, чтобы каждая ссылка выводилась в отдельном теге li тега ul.
 
     public function lessonNine2()
@@ -54,13 +55,12 @@ class LessonNine extends Controller
             ],
         ];
 
-        return view('lessonnine.lessonnine2',['main' => $links]);
+        return view('lessonnine.lessonnine2', ['main' => $links]);
 
 
+    }
 
-}
-
-// Урок 9 Задача 2  Модифицируйте предыдущую задачу так, чтобы каждая ссылка выводилась в отдельном теге li тега ul.
+// Урок 9 Задача 3 Выведите этот массив в виде следующей таблицы:
 
     public function lessonNine3()
     {
@@ -93,11 +93,44 @@ class LessonNine extends Controller
             ],
         ];
 
-        return view('lessonnine.lessonnine3',['employees' =>$employees]);
+        return view('lessonnine.lessonnine3', ['employees' => $employees]);
 
 
+    }// // Урок 9 Задача 4  Модифицируйте предыдущую задачу так, чтобы в первом ряду появились заголовки таблицы:
 
-}
+    public function lessonNine4()
+    {
 
+        $employees = [
+            [
+                'name' => 'user1',
+                'surname' => 'surname1',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'user2',
+                'surname' => 'surname2',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'user3',
+                'surname' => 'surname3',
+                'salary' => 3000,
+            ],
+            [
+                'name' => 'user4',
+                'surname' => 'surname4',
+                'salary' => 4000,
+            ],
+            [
+                'name' => 'user5',
+                'surname' => 'surname5',
+                'salary' => 5000,
+            ],
+        ];
+
+        return view('lessonnine.lessonnine4', ['employees' => $employees]);
+
+    }
 
 }
