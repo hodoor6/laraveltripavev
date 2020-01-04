@@ -303,3 +303,6 @@ Route::get('/lessonseven14/', 'LessonSeven@lessonSeven14');
 //Урок 7 Задача 15 Самостоятельно попробуйте работу изученных директив.
 Route::get('/lessonseven15/', 'LessonSeven@lessonSeven15');
 
+// Урок 7 Задача 16 Самостоятельно попробуйте работу цикла @forelse.
+Route::get('/lessonseven16/', 'LessonSeven@lessonSeven16');
+

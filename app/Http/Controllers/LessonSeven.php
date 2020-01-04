@@ -220,4 +220,13 @@ class LessonSeven extends Controller
 
     }
 
+  // Урок 7 Задача 16 Самостоятельно попробуйте работу цикла @forelse.
+
+    public function lessonSeven16()
+    {
+         return view('lessonseven.lessonseven16',['number' => [1,2,3,4,5,6,7,8,9,10]]);
+
+
+    }
+
 }
