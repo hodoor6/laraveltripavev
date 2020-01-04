@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 
 
-class LessonEight extends Controller
+class LessonNine extends Controller
 {
 // Урок 8 Задача 1 Сделайте данную верстку макетом вашего сайта так, чтобы в тег main загружались представления действий контроллеров.
     public function lessonEight1()

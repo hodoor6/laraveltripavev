@@ -323,3 +323,9 @@ Route::get('/lessoneight2/', 'LessonEight@lessonEight2');
 Route::get('/lessoneight3/', 'LessonEight@lessonEight3');
 
 
+
+// Урок 8 Задача 4 Вынесите хедер и футер сайта в отдельные подшаблоны. Разместите их в папке elems. Подключите их к основному макету.
+
+Route::get('/lessoneight4/', 'LessonEight@lessonEight4');
+
+
