@@ -17,15 +17,5 @@
 
 @endfor
 
-    <ul>
-        @for ($i = 1; $i <= 10; $i++)
-            <p>
-                @for ($j = 1; $j <= 10; $j++)
-                    {{ $j }}
-                @endfor
-            </p>
-        @endfor
-    </ul>
-
 </body>
 </html>

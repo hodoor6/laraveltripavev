@@ -309,3 +309,7 @@ Route::get('/lessonseven16/', 'LessonSeven@lessonSeven16');
 // Урок 7 Задача 17 С помощью цикла $@for выведите 10 абзацев, заполненных числами от 1 до 10.
 Route::get('/lessonseven17/', 'LessonSeven@lessonSeven17');
 
+// Урок 8 Задача 1 Сделайте данную верстку макетом вашего сайта так, чтобы в тег main загружались представления действий контроллеров.
+Route::get('/lessoneight1/', 'LessonEight@lessonEight1');
+
+
