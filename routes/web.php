@@ -385,3 +385,13 @@ Route::get('/lessonnine10/', 'LessonNine@lessonNine10');
 Route::get('/lessonnine11/', 'LessonNine@lessonNine11');
 
 
+
+
+// Урок 10 Задача 13 В контроллере Post сделайте действие showOne, маршрут к которому будет следующий: /posts/:id/, где :id будет представлять собой номер поста в массиве $this->posts. Данное действие должно будет выводить запрошенный пост (все поля, кроме короткого описания).
+
+Route::get('/lessonten3/posts/{id}/', 'LessonTen@lessonTen3')->where('id','[1-5]'
+
+
+);
+
+
