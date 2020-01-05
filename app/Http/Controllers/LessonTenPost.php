@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+
 // Урок 10 Задача 1  Создайте контроллер Post (статья). В конструкторе класса запишите в свойство $this->posts массив со статьями:
 
 
-class LessonTen extends Controller
+class LessonTenPost extends Controller
 {
 
    private $posts;
@@ -95,6 +96,4 @@ if(isset($this->posts) )     {
 
 
 }
-
-
 
