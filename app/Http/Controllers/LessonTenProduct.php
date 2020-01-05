@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 class LessonTenProduct extends Controller
 {
 
-    private $categories;
+    private $categories = [];
 
     public function __construct()
     {
@@ -41,8 +41,7 @@ class LessonTenProduct extends Controller
                 ],
             ],
             2 => [
-                'name' => 'Категория 2',
-                'products' => [
+                'name' => 'Категория 2','products' => [
                     1 => [
                         'name'    => 'Продукт 1',
                         'cost'    => '700',
@@ -65,6 +64,23 @@ class LessonTenProduct extends Controller
             ],
         ];
 
+
+}
+
+
+
+// Урок 10 Задача 7  В контроллере Product сделайте действие showProduct, маршрут к которому будет следующий: /product/:category_id/:product_id, где :category_id будет представлять собой номер категории в массиве $this->categories, а :product_id - номер продукта в подмассиве products соответствующей категории.
+//
+//Данное действие должно будет выводить запрошенный продукт с названием, ценой, наличием на складе, описанием продукта и названием категории этого продукта.
+//
+//Пусть наличие на складе выводится либо строкой 'есть в наличии', либо строкой 'нет в наличии'.
+    public function lessonTen7showProduct ($idcategory,$productId) {
+        //   $page= $this->posts[$id];
+
+        $category = $this->categories[$idcategory]['name'];
+        $product = $this->categories[$idcategory]['products'][$productId];
+
+        return view('.lessonten.elems.product7', ['product'=> $product,'category'=> $category,]);
 
 }
 }

@@ -399,13 +399,12 @@ Route::get('/posts/', 'PostController@ShowAll');
 
 // Урок 10 Задача 3 В контроллере Post сделайте действие showOne, маршрут к которому будет следующий: /posts/:id/, где :id будет представлять собой номер поста в массиве $this->posts. Данное действие должно будет выводить запрошенный пост (все поля, кроме короткого описания).
 
-Route::get('/lessonten3/posts/{id}/', 'LessonTen@lessonTen3')->where('id','[1-5]');
+Route::get('/lessonten3/posts/{id}/', 'LessonTenPost@lessonTen3')->where('id','[1-5]');
 
 
 //Урок 10 Задача 4 Модифицируйте предыдущую задачу так, чтобы если в адресную строку передан некорректный id поста, то пользователю показывалось следующее представление (сделать отдельным файлом):
 
-Route::get('/lessonten4/posts/{id}/', 'LessonTen@lessonTen4')->where('id','[1-9]');
-
+Route::get('/lessonten4/posts/{id}/', 'LessonTenPost@lessonTen4')->where('id','[1-9]');
 
 //Урок 10 Задача 5  В контроллере Post сделайте действие showAll, маршрут к которому будет следующий: /posts/.
 //
@@ -413,6 +412,16 @@ Route::get('/lessonten4/posts/{id}/', 'LessonTen@lessonTen4')->where('id','[1-9]
 //
 //Верстка информации об одном посте (она должна повторяться в цикле для каждого поста):
 
-Route::get('/lessonten5/posts/', 'LessonTen@lessonTen5ShowAll');
+Route::get('/lessonten5/posts/', 'LessonTenPost@lessonTen5ShowAll');
+
+
+// Урок 10 Задача 7  В контроллере Product сделайте действие showProduct, маршрут к которому будет следующий: /product/:category_id/:product_id, где :category_id будет представлять собой номер категории в массиве $this->categories, а :product_id - номер продукта в подмассиве products соответствующей категории.
+//
+//Данное действие должно будет выводить запрошенный продукт с названием, ценой, наличием на складе, описанием продукта и названием категории этого продукта.
+//
+//Пусть наличие на складе выводится либо строкой 'есть в наличии', либо строкой 'нет в наличии'.
+
+Route::get('/lessonten7/product/{category_id}/{product_id}/', 'LessonTenProduct@lessonTen7showProduct')->where(['category_id'=>'[1-2]','product_id'=>'[1-3]']);
+
 
 
