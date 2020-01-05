@@ -13,10 +13,10 @@
 <main>
     <div class="info">
         <span class="date">@yield('date')</span><br>
-        <span class="author">@yield('author')</span><br>
+        <span class="author">{{$page['author']}}</span><br>
     </div>
     <div class="text">
-        @yield('text')
+        {{$page['text']}}
     </div>
 </main>
 </body>

@@ -63,6 +63,20 @@ class LessonTen extends Controller
         return view('.lessonten.сhieldlessonten3', ['page'=>$page]);
 }
 
+// Урок 10 Задача 4 Модифицируйте предыдущую задачу так, чтобы если в адресную строку передан некорректный id поста, то пользователю показывалось следующее представление (сделать отдельным файлом):
+
+    public function lessonTen4($id) {
+
+if(isset($this->posts[$id]) )     {
+    $page= $this->posts[$id];
+
+    return view('.lessonten.сhieldlessonten4', ['page'=>$this->posts[$id]]);
+}  else{
+    return view('.lessonten.layouts.idlessonten4', ['id'=>$id]);
+}
+
+    }
+
 
 
 
