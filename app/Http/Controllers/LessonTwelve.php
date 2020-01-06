@@ -63,5 +63,35 @@ public function lessonTwelve2result (Request $request)
     return view('lessontwelve.lessontwelve2result', ['result' => $result]);
 
     }
+
+
+    // Урок 12 Задача 3 Если метод HTTP запроса - GET, то выведите на экран сообщение '!', а если POST, то сообщение '!!'.
+    public function lessonTwelve3form ()
+    {
+        return view('lessontwelve.lessontwelve3');
+    }
+
+    // Урок 12 Задача 3 Если метод HTTP запроса - GET, то выведите на экран сообщение '!', а если POST, то сообщение '!!'.
+    public function lessonTwelve3result (Request $request)
+    {
+
+        $result = '';
+        if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2') and  !empty($request->number2) and $request->has('number3') and   !empty($request->number3) ) {
+            if ($request->isMethod('post')) {
+                $method = '! POST';
+            }else {
+               $method =  '!! GET';
+            }
+            $number1 = ($request->number1);
+            $number2 = ($request->number2);
+            $number3 = ($request->number3);
+
+            return view('lessontwelve.lessontwelve3result',['number1'=>$number1,'number2'=>$number2,'number3'=>$number3, 'method'=>$method] );
+
+        } else
+            $result = 'нет переданых чисел';
+        return view('lessontwelve.lessontwelve3result', ['result' => $result]);
+
+    }
 }
 

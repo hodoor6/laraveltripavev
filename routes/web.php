@@ -481,3 +481,9 @@ Route::get('/lessontwelve2/', 'LessonTwelve@lessontwelve2form');
 Route::post('/lessontwelve2/result/', 'LessonTwelve@lessonTwelve2result');
 
 
+// Урок 12 Задача 3 Если метод HTTP запроса - GET, то выведите на экран сообщение '!', а если POST, то сообщение '!!'.
+
+Route::get('/lessontwelve3/', 'LessonTwelve@lessontwelve3form');
+Route::post('/lessontwelve3/result/', 'LessonTwelve@lessonTwelve3result');
+
+
