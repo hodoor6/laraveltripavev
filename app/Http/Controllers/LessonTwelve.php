@@ -23,7 +23,7 @@ class LessonTwelve extends Controller
     public function lessonTwelve1result (Request $request)
     {
         $result = '';
-        if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2')and  !empty($request->numbe2) and $request->has('number3') and   !empty($request->number3) ) {
+        if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2')and  !empty($request->number2) and $request->has('number3') and   !empty($request->number3) ) {
             $number1 = ($request->number1);
             $number2 = ($request->number2);
             $number3 = ($request->number3);
@@ -36,5 +36,32 @@ class LessonTwelve extends Controller
     }
 
 
+
+    // Урок 12 Задача 2  Выведите на экран метод HTTP запроса.
+    public function lessonTwelve2form ()
+    {
+
+
+        return view('lessontwelve.lessontwelve2');
+    }
+
+// Урок 12 Задача 2  Выведите на экран метод HTTP запроса.
+public function lessonTwelve2result (Request $request)
+    {
+
+    $result = '';
+    if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2') and  !empty($request->number2) and $request->has('number3') and   !empty($request->number3) ) {
+        var_dump($method = $request->method());
+        $number1 = ($request->number1);
+        $number2 = ($request->number2);
+        $number3 = ($request->number3);
+
+        return view('lessontwelve.lessontwelve2result',['number1'=>$number1,'number2'=>$number2,'number3'=>$number3, 'method'=>'var_dump($method = $request->method())'] );
+
+    } else
+        $result = 'нет переданых чисел';
+    return view('lessontwelve.lessontwelve2result', ['result' => $result]);
+
+    }
 }
 

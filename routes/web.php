@@ -475,3 +475,9 @@ Route::get('/lessontwelve1/', 'LessonTwelve@lessontwelve1form');
 Route::post('/lessontwelve1/result/', 'LessonTwelve@lessonTwelve1result');
 
 
+// Урок 12 Задача 2 Выведите на экран метод HTTP запроса.
+
+Route::get('/lessontwelve2/', 'LessonTwelve@lessontwelve2form');
+Route::post('/lessontwelve2/result/', 'LessonTwelve@lessonTwelve2result');
+
+
