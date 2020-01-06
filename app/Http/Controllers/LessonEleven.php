@@ -36,12 +36,16 @@ public function lessonEleven2 (Request $request)
 
 public function lessonEleven3 (Request $request)
 {
-    if($request->has('number') and !empty($request->number)){
-     $result = ($request->number ** 2);
+
+        if($request->has('number1') and !empty($request->number1) and $request->has('number2') and !empty($request->number2)){
+     $result = ($request->number1 + $request->number2);
     }else
         $result = '';
 
-     return view('lessoneleven.lessoneleven3form',['result'=>$result]);
+    return view('lessoneleven.lessoneleven3form',['result'=>$result]);
 
 }
+
+
+
 }
