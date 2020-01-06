@@ -47,5 +47,33 @@ public function lessonEleven3 (Request $request)
 }
 
 
+// Урок 11 Задача 4 В каком-нибудь действии сделайте форму с тремя инпутами, в которые будут вводится числа. Отправьте эту форму на другое действие и выведите переданные числа в представлении этого действия.
+
+public function lessonEleven4form ()
+{
+
+     return view('lessoneleven.lessoneleven4form');
 
 }
+
+public function lessonEleven4result (Request $request)
+{
+    $result = '';
+    if ($request->has('number1')  and $request->has('number2')and $request->has('number3')) {
+        $number1 = ($request->number1);
+        $number2 = ($request->number2);
+        $number3 = ($request->number3);
+
+        return view('lessoneleven.lessoneleven4result',['number1'=>$number1,'number2'=>$number2,'number3'=>$number3]);
+
+    } else
+        $result = 'нет переданых чисел';
+    return view('lessoneleven.lessoneleven4result', ['result' => $result]);
+}
+
+
+
+
+
+}
+

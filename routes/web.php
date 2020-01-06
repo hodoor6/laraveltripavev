@@ -459,3 +459,9 @@ Route::get('/lessonleven2/', 'LessonEleven@lessonEleven2');
 // Урок 11 Задача 3 Сделайте форму с двумя инпутами, в которые будут вводится числа. После отправки формы выведите на экран сумму этих чисел, а форму уберите.
 
 Route::get('/lessonleven3/', 'LessonEleven@lessonEleven3');
+
+// Урок 11 Задача 4 В каком-нибудь действии сделайте форму с тремя инпутами, в которые будут вводится числа. Отправьте эту форму на другое действие и выведите переданные числа в представлении этого действия.
+
+Route::get('/lessonleven4/', 'LessonEleven@lessonEleven4form');
+
+Route::get('/lessonleven4/result/', 'LessonEleven@lessonEleven4result');
