@@ -487,3 +487,9 @@ Route::get('/lessontwelve3/', 'LessonTwelve@lessontwelve3form');
 Route::post('/lessontwelve3/result/', 'LessonTwelve@lessonTwelve3result');
 
 
+// Урок 12 Задача 4 Сделайте форму, которая будет спрашивать у пользователя два числа с помощью двух инпутов. После отправки формы методом POST выведите на экран сумму введенных чисел. Пусть и форма, и результат показываются одним действием.
+
+
+Route::match(['get','post'],'/lessontwelve4/', 'LessonTwelve@lessontwelve4');
+
+

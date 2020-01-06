@@ -93,5 +93,28 @@ public function lessonTwelve2result (Request $request)
         return view('lessontwelve.lessontwelve3result', ['result' => $result]);
 
     }
+
+    // Урок 12 Задача 4 Сделайте форму, которая будет спрашивать у пользователя два числа с помощью двух инпутов. После отправки формы методом POST выведите на экран сумму введенных чисел. Пусть и форма, и результат показываются одним действием.
+    public function lessonTwelve4 (Request $request)
+    {
+        if ($request->isMethod('post'))  {
+
+        if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2') and  !empty($request->number2) ) {
+
+            $sumNumber = $request->number1 + $request->number2;
+            $number2 = ($request->number2);
+
+
+            return view('lessontwelve.lessontwelve4form',['sumNumber'=>  $sumNumber]);
+
+        } else{
+            $result = 'нет переданых чисел для вычесления суммы';
+            return view('lessontwelve.lessontwelve4form', ['result' => $result]);
+        }
+
+        }   else{
+            return view('lessontwelve.lessontwelve4form');
+        }
+    }
 }
 
