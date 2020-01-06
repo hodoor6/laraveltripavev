@@ -31,4 +31,17 @@ public function lessonEleven2 (Request $request)
      return view('lessoneleven.lessoneleven2form',['result'=>$result]);
 
 }
+
+// Урок 11 Задача 3 Сделайте форму с двумя инпутами, в которые будут вводится числа. После отправки формы выведите на экран сумму этих чисел, а форму уберите.
+
+public function lessonEleven3 (Request $request)
+{
+    if($request->has('number') and !empty($request->number)){
+     $result = ($request->number ** 2);
+    }else
+        $result = '';
+
+     return view('lessoneleven.lessoneleven3form',['result'=>$result]);
+
+}
 }
