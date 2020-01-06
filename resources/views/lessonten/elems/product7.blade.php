@@ -3,10 +3,15 @@
 Данное действие должно будет выводить запрошенный продукт с названием, ценой, наличием на складе, описанием продукта и названием категории этого продукта.
 
 Пусть наличие на складе выводится либо строкой 'есть в наличии', либо строкой 'нет в наличии'.   --}}
+
+{{--// Урок 10 Задача 9 Отредактируйте представление действия showProduct так, чтобы название категории продукта было ссылкой на список продуктов данной категории.--}}
+
 @extends('lessonten.layouts.lessonten7')
 
 @section('title',$product['name'])
-@section('header',$category)
+@section('header')
+    <a href ="/lessonten8/product/{{$id}}/">{{$category}}</a>
+    @endsection
 @section('content')
     <table border="1" width="500" align="center" style="text-align: center">
         <tr>
