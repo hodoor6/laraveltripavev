@@ -18,15 +18,15 @@
 
         </tr>
 
-@forelse($categories as $key=>$category)
+        @forelse($categories as $key=>$category)
             <tr>
-                            <td><a href="/lessonten8/product/{{$loop->iteration}}/"> {{$category['name']}}</a></td>
-                            <td>{{count($category['products'])}}</td>
-                        </tr>
-                            @empty
-               < <p>Нет в данной категории и товаров</p>
-          @endforelse
-           </table>
+                <td><a href="/lessonten8/product/{{$loop->iteration}}/"> {{$category['name']}}</a></td>
+                <td>{{count($category['products'])}}</td>
+            </tr>
+        @empty
+            < <p>Нет в данной категории и товаров</p>
+        @endforelse
+    </table>
 @endsection
 
 

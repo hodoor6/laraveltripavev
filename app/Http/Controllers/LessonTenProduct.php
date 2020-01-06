@@ -112,4 +112,18 @@ class LessonTenProduct extends Controller
     }
 
 
+
+
+// Урок 10 Задача 10  В контроллере Product сделайте действие showCategoryList, маршрут к которому будет следующий: /categories/.
+//
+//Данное действие должно будет выводить список всех категорий. Пусть выводится название категории и количество продуктов в этой категории.
+//
+//Название категории должно быть ссылкой на список продуктов данной категории.
+
+    public function lessonTen10showCategoryList () {
+
+        return view('lessonten.elems.allcategory10', ['categories'=>  $this->categories]);
+
+    }
+
 }
