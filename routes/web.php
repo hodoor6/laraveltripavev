@@ -424,4 +424,13 @@ Route::get('/lessonten5/posts/', 'LessonTenPost@lessonTen5ShowAll');
 Route::get('/lessonten7/product/{category_id}/{product_id}/', 'LessonTenProduct@lessonTen7showProduct')->where(['category_id'=>'[1-2]','product_id'=>'[1-3]']);
 
 
+// Урок 10 Задача 8  В контроллере Product сделайте действие showCategory, маршрут к которому будет следующий: /product/:category_id/, где :category_id будет представлять собой номер категории в массиве $this->categories.
+//
+//Данное действие должно будет выводить список продуктов данной категории. Пусть в списке будет название продукта и цена.
+//
+//Название продукта должно быть ссылкой на страницу одного продукта (то есть на действие showProduct).
+
+
+Route::get('/lessonten8/product/{category_id}/', 'LessonTenProduct@lessonTen8showCategory')->where(['category_id'=>'[1-2]']);
+
 

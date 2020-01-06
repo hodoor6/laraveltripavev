@@ -75,12 +75,28 @@ class LessonTenProduct extends Controller
 //
 //Пусть наличие на складе выводится либо строкой 'есть в наличии', либо строкой 'нет в наличии'.
     public function lessonTen7showProduct ($idcategory,$productId) {
-        //   $page= $this->posts[$id];
+
 
         $category = $this->categories[$idcategory]['name'];
         $product = $this->categories[$idcategory]['products'][$productId];
 
-        return view('.lessonten.elems.product7', ['product'=> $product,'category'=> $category,]);
+        return view('.lessonten.elems.product7', ['product'=> $product,'category'=> $category,'id'=>$idcategory]);
 
 }
+
+
+// Урок 10 Задача 8  В контроллере Product сделайте действие showCategory, маршрут к которому будет следующий: /product/:category_id/, где :category_id будет представлять собой номер категории в массиве $this->categories.
+//
+//Данное действие должно будет выводить список продуктов данной категории. Пусть в списке будет название продукта и цена.
+//
+//Название продукта должно быть ссылкой на страницу одного продукта (то есть на действие showProduct).
+    public function lessonTen8showCategory ($idcategory) {
+
+        $category = $this->categories[$idcategory];
+
+        return view('.lessonten.elems.productcategory8', ['category'=> $category,'id'=> $idcategory,]);
+
+    }
+
+
 }
