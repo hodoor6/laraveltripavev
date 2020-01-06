@@ -4,12 +4,14 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Http\Request;
 class Test
 {
 
     public function sum ($sum1,$sum2){
-        echo $sum1 + $sum2;
-    }
+       echo $sum1 + $sum2;
+   }
 
 }
+
+

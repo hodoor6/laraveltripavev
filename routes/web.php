@@ -464,4 +464,14 @@ Route::get('/lessonleven3/', 'LessonEleven@lessonEleven3');
 
 Route::get('/lessonleven4/', 'LessonEleven@lessonEleven4form');
 
+
 Route::get('/lessonleven4/result/', 'LessonEleven@lessonEleven4result');
+
+
+// Урок 12 Задача 1 Сделайте два действия. В представлении первого действия покажите форму, которая будет отправляться на второе действие методом POST. Выведите данные, отправленные через форму, в представлении второго действия.
+
+Route::get('/lessontwelve1/', 'LessonTwelve@lessontwelve1form');
+
+Route::post('/lessontwelve1/result/', 'LessonTwelve@lessonTwelve1result');
+
+

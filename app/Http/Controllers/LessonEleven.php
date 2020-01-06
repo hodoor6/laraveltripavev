@@ -59,7 +59,7 @@ public function lessonEleven4form ()
 public function lessonEleven4result (Request $request)
 {
     $result = '';
-    if ($request->has('number1')  and $request->has('number2')and $request->has('number3')) {
+    if ($request->has('number1')  and  !empty($request->number1) and $request->has('number2')and  !empty($request->numbe2) and $request->has('number3') and   !empty($request->number3) ) {
         $number1 = ($request->number1);
         $number2 = ($request->number2);
         $number3 = ($request->number3);
