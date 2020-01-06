@@ -448,3 +448,6 @@ Route::get('/lessonten10/categories/', 'LessonTenProduct@lessonTen10showCategory
 
 
 
+// Урок 11 Задача 1 Сделайте форму с инпутом, принимающим своим значением число. После отправки формы выведите через var_dump квадрат этого числа.
+
+Route::get('/lessonleven1/', 'LessonEleven@lessonEleven1');
