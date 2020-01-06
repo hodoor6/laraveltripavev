@@ -19,5 +19,16 @@ public function lessonEleven1(Request $request)
 
 }
 
+// Урок 11 Задача 2 Модифицируйте предыдущую задачу так, чтобы квадрат переданного числа выводился в представлении над формой.
 
+public function lessonEleven2 (Request $request)
+{
+    if($request->has('number') and !empty($request->number)){
+     $result = ($request->number ** 2);
+    }else
+        $result = '';
+
+     return view('lessoneleven.lessoneleven2form',['result'=>$result]);
+
+}
 }
