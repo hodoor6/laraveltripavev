@@ -98,5 +98,18 @@ class LessonTenProduct extends Controller
 
     }
 
+    // Урок 10 Задача 9 Отредактируйте представление действия showProduct так, чтобы название категории продукта было ссылкой на список продуктов данной категории.
+
+    public function lessonTen9showProduct ($idcategory,$productId) {
+
+
+
+        $category = $this->categories[$idcategory]['name'];
+        $product = $this->categories[$idcategory]['products'][$productId];
+
+        return view('.lessonten.elems.product7', ['product'=> $product,'category'=> $category,'id'=>$idcategory]);
+
+    }
+
 
 }

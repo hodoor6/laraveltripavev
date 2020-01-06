@@ -434,3 +434,9 @@ Route::get('/lessonten7/product/{category_id}/{product_id}/', 'LessonTenProduct@
 Route::get('/lessonten8/product/{category_id}/', 'LessonTenProduct@lessonTen8showCategory')->where(['category_id'=>'[1-2]']);
 
 
+
+
+// Урок 10 Задача 9  Отредактируйте представление действия showProduct так, чтобы название категории продукта было ссылкой на список продуктов данной категории.
+
+Route::get('/lessonten9/product/{category_id}/{product_id}/', 'LessonTenProduct@lessonTen9showProduct')->where(['category_id'=>'[1-2]','product_id'=>'[1-3]']);
+

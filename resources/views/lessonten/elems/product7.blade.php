@@ -11,7 +11,7 @@
 @section('title',$product['name'])
 @section('header')
     <a href ="/lessonten8/product/{{$id}}/">{{$category}}</a>
-    @endsection
+@endsection
 @section('content')
     <table border="1" width="500" align="center" style="text-align: center">
         <tr>
@@ -31,5 +31,5 @@
             <td>{{$str}} </td>
             <td>{{ $product['desc'] }}</td>
         </tr>
-           </table>
+    </table>
 @endsection
