@@ -124,7 +124,17 @@ $request->session()->put('key','lesson14_1put');
     }
 
 
+    /// Урок 14 Задача 8  Очистите вашу сессию от заданных переменных.
 
+    public function lesson14_8(Request $request)
+    {
+        $request->session()->put('arr2', '1');
+        $add = $request->session()->get('arr2', '1');
+        var_dump($add);
+        $flush = $request->session()->flush('arr2');
+        var_dump($flush);
+
+    }
 
 
 }
