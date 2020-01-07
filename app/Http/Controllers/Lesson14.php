@@ -106,6 +106,25 @@ $request->session()->put('key','lesson14_1put');
 
     }
 
+    /// Урок 14 Задача 7 Удалите какую-нибудь переменную из сессии.
+
+    public function lesson14_7(Request $request)
+    {
+            $request->session()->put('arr2', '1');
+
+    }
+
+    public function lesson14_7delete(Request $request)
+    {
+
+    $delete = $request->session()->pull('arr2');
+
+    return view('lesson14.lesson14-7delete',['delete' =>$delete]);
+
+    }
+
+
+
 
 
 }
