@@ -62,4 +62,24 @@ $request->session()->put('key','lesson14_1put');
         return view('lesson14.lesson14-3',['value' =>$value ]);
 
 }
+
+
+/// Урок 14 Задача 4 Запишите в сессию время первого захода пользователя на страницу. При обновлении страницы (и при первом заходе тоже) выводите это время на экран.
+
+    public function lesson14_4(Request $request)
+    {
+        if($request->session()->get('time') ==null)
+        {
+            $request->session()->put('time', date('H:i:s d-m-Y'));
+            $value = $request->session()->get('time');
+        }
+        else {
+            $value = date('H:i:s d-m-Y');
+            $request->session()->put('time', $value);
+        }
+
+        return view('lesson14.lesson14-4',['value' =>$value ]);
+
+    }
+
 }
