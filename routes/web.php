@@ -522,3 +522,8 @@ Route::get('/lesson13-5/test/method/', 'Lesson13@lesson13_5');
 Route::get('/lesson13-6/test/method/', 'Lesson13@lesson13_6');
 
 
+// Урок 13 Задача 7 Для указанного адреса выведите результат метода fullUrl.
+
+Route::get('/lesson13-7/test/method/', 'Lesson13@lesson13_7');
+
+
