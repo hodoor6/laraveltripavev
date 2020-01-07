@@ -94,6 +94,18 @@ $request->session()->put('key','lesson14_1put');
 
     }
 
+    /// Урок 14 Задача 6  Удалите какую-нибудь переменную из сессии.
+
+    public function lesson14_6(Request $request)
+    {
+            $request->session()->put('arr1', ['1', '2', '3']);
+       $request->session()->forget('arr1');
+        $value = $request->session()->get('arr1');
+
+        return view('lesson14.lesson14-6',['value' =>$value]);
+
+    }
+
 
 
 }

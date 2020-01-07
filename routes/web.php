@@ -566,4 +566,7 @@ Route::get('/lesson14-4/', 'Lesson14@lesson14_4');
 
 Route::get('/lesson14-5/', 'Lesson14@lesson14_5');
 
+// Урок 14 Задача 6 Удалите какую-нибудь переменную из сессии.
+Route::get('/lesson14-6/', 'Lesson14@lesson14_6');
+
 
