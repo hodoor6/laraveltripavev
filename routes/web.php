@@ -507,4 +507,8 @@ Route::match(['get','post'],'/lesson13-2/', 'Lesson13@lesson13_2');
 
 Route::match(['get','post'],'/lesson13-3/{id}/{page}', 'Lesson13@lesson13_3');
 
+// Урок 13 Задача 4 Сделайте так, чтобы у вас было действие, которое будет срабатывать по следующему адресу: /test/method/. Перейдите по указанному адресу, но с GET параметром, например, так: /test/method?param=1. Решите все задачи ниже для данного адреса с GET параметром.
+
+Route::get('/lesson13-4/test/method/', 'Lesson13@lesson13_4');
+
 

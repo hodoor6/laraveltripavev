@@ -85,6 +85,25 @@ class Lesson13 extends Controller
 }
     }
 
+/// // Урок 13 Задача 4  Сделайте так, чтобы у вас было действие, которое будет срабатывать по следующему адресу: /test/method/. Перейдите по указанному адресу, но с GET параметром, например, так: /test/method?param=1. Решите все задачи ниже для данного адреса с GET параметром.
+
+    public function lesson13_4 (Request $request)
+    {
+
+        if ($request->has('param')  and  !empty($request->param) ) {
+            $param = $request->param;
+            return view('lesson13.lesson13-4',['param'=>$param]);
+
+        } else{
+    $result = 'нет переданого параметра';
+    return view('lesson13.lesson13-4', ['result' => $result]);
+}
+
+
+    return view('lesson13.lesson13-4',['page'=>$param]);
+
+ }
+
 
 }
 
