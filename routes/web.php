@@ -547,3 +547,8 @@ Route::get('/lesson14-1/put', 'Lesson14@lesson14_1put');
 Route::get('/lesson14-1/show', 'Lesson14@lesson14_1show');
 
 
+// Урок 14 Задача 2  Используя сессии, выведите в каком-нибудь представлении счетчик, показывающий количество обновлений страницы.
+
+Route::get('/lesson14-2/', 'Lesson14@lesson14_2');
+
+
