@@ -512,3 +512,9 @@ Route::match(['get','post'],'/lesson13-3/{id}/{page}', 'Lesson13@lesson13_3');
 Route::get('/lesson13-4/test/method/', 'Lesson13@lesson13_4');
 
 
+
+// Урок 13 Задача 5 Для указанного адреса выведите результат метода path.
+
+Route::get('/lesson13-5/test/method/', 'Lesson13@lesson13_5');
+
+

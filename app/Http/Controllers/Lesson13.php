@@ -90,6 +90,7 @@ class Lesson13 extends Controller
     public function lesson13_4 (Request $request)
     {
 
+
         if ($request->has('param')  and  !empty($request->param) ) {
             $param = $request->param;
             return view('lesson13.lesson13-4',['param'=>$param]);
@@ -100,9 +101,30 @@ class Lesson13 extends Controller
 }
 
 
-    return view('lesson13.lesson13-4',['page'=>$param]);
+    return view('lesson13.lesson13-4');
 
  }
+
+
+    /// // Урок 13 Задача 5  Для указанного адреса выведите результат метода path.
+    public function lesson13_5 (Request $request)
+    {
+
+
+        if ($request->has('param')  and  !empty($request->param) ) {
+            $param = $request->param;
+            $path = $request->path();
+            return view('lesson13.lesson13-5',['param'=>$param,'path'=>$path]);
+
+        } else{
+            $result = 'нет переданого параметра';
+            return view('lesson13.lesson13-5', ['result' => $result]);
+        }
+
+
+        return view('lesson13.lesson13-5');
+
+    }
 
 
 }
