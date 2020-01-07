@@ -533,3 +533,9 @@ Route::get('/lesson13-7/test/method/', 'Lesson13@lesson13_7');
 Route::get('/lesson13-8/test/method/', 'Lesson13@lesson13_8');
 
 
+// Урок 13 Задача 9  Самостоятельно попробуйте поработать с методом is.
+
+
+Route::get('/lesson13-9/test/method/', 'Lesson13@lesson13_9');
+
+
