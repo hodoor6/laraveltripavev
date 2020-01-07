@@ -82,4 +82,18 @@ $request->session()->put('key','lesson14_1put');
 
     }
 
+    /// Урок 14 Задача 5  Пусть в переменной сессии записан массив с числами. Используя метод push добавьте к этому массиву еще одно число.
+
+    public function lesson14_5(Request $request)
+    {
+            $request->session()->put('arr', ['1', '2', '3']);
+            $request->session()->push('arr', '4');
+            $value = $request->session()->get('arr');
+
+        return view('lesson14.lesson14-5',['value' =>$value ]);
+
+    }
+
+
+
 }
