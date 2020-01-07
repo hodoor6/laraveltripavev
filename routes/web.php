@@ -502,4 +502,9 @@ Route::match(['get','post'],'/lesson13-1/', 'Lesson13@lesson13_1');
 
 Route::match(['get','post'],'/lesson13-2/', 'Lesson13@lesson13_2');
 
+// Урок 13 Задача 3 Самостоятельно попробуйте получить данные из формы, передав при этом два параметра в ваш маршрут.
+
+
+Route::match(['get','post'],'/lesson13-3/{id}/{page}', 'Lesson13@lesson13_3');
+
 

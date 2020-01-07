@@ -32,7 +32,7 @@ class Lesson13 extends Controller
     return view('lesson13.lesson13-1');
 }
     }
-
+// Урок 13 Задача 2 Пусть у нас будет форма, имитирующая регистрацию пользователя на сайте. Спросите с помощью этой формы у пользователя его имя, фамилию, email, желаемый логин, желаемый пароль (инпут с типом password). После отправки формы выведите на экран в виде списка ul все отправленные поля, кроме поля с паролем и email. Решите задачу сначала через except, а затем через only.
 
     public function lesson13_2 (Request $request)
     {
@@ -41,7 +41,7 @@ class Lesson13 extends Controller
 
         if ($request->has('name')  and  !empty($request->name) and $request->has('surmame') and  !empty($request->surmame)  and $request->has('email') and  !empty($request->email)  and $request->has('login') and  !empty($request->login)  and $request->has('password') and  !empty($request->password) ) {
             $data = $request->only(['name','surmame','login','name']);
-            $except = $request->except('password','email');
+            $except = $request->except('password','email','_token');
 
 
 
@@ -54,6 +54,34 @@ class Lesson13 extends Controller
 
 }   else{
     return view('lesson13.lesson13-2');
+}
+    }
+
+
+
+
+// Урок 13 Задача 3 Самостоятельно попробуйте получить данные из формы, передав при этом два параметра в ваш маршрут.
+
+    public function lesson13_3 (Request $request, $id,$page)
+    {
+
+        if ($request->isMethod('post'))  {
+
+        if ($request->has('name')  and  !empty($request->name) and $request->has('surmame') and  !empty($request->surmame)  and $request->has('email') and  !empty($request->email)  and $request->has('login') and  !empty($request->login)  and $request->has('password') and  !empty($request->password) ) {
+            $data = $request->only(['name','surmame','login','name']);
+            $except = $request->except('password','email','_token');
+
+
+
+            return view('lesson13.lesson13-3',['data'=>$data, 'id'=>$id ,'page'=>$page]);
+
+        } else{
+    $result = 'нет переданых чисел для вычесления суммы';
+    return view('lesson13.lesson13-3', ['result' => $result,'id'=>$id, 'page'=>$page]);
+}
+
+}   else{
+    return view('lesson13.lesson13-3',['id'=>$id, 'page'=>$page]);
 }
     }
 
