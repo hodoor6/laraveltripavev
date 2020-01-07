@@ -551,4 +551,8 @@ Route::get('/lesson14-1/show', 'Lesson14@lesson14_1show');
 
 Route::get('/lesson14-2/', 'Lesson14@lesson14_2');
 
+// Урок 14 Задача 3  Описанным выше способом реализуйте счетчик обновления страницы.
+
+Route::get('/lesson14-3/', 'Lesson14@lesson14_3');
+
 

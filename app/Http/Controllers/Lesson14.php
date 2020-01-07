@@ -32,9 +32,8 @@ $request->session()->put('key','lesson14_1put');
     {
         if($request->session()->get('counter') !==null)
         {
-            $value = $request->session()->get('counter');
-            $request->session()->put('counter', $value + 1);
-            $value = $request->session()->get('counter');
+            $value = $request->session()->get('counter') +1;
+            $request->session()->put('counter', $value);
     }
         else {
             $value = 1;
@@ -42,6 +41,25 @@ $request->session()->put('key','lesson14_1put');
         }
 
         return view('lesson14.lesson14-2',['value' =>$value ]);
+
+}
+
+/// Урок 14 Задача 3 Описанным выше способом реализуйте счетчик обновления страницы.
+
+ public function lesson14_3(Request $request)
+    {
+        if($request->session()->get('counter') !==null)
+        {
+            $value = $request->session()->get('counter','1');
+            $request->session()->put('counter', $value + 1);
+            $value = $request->session()->get('counter');
+        }
+        else {
+            $value = 1;
+            $request->session()->put('counter', $value);
+        }
+
+        return view('lesson14.lesson14-3',['value' =>$value ]);
 
 }
 }
