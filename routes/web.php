@@ -527,3 +527,9 @@ Route::get('/lesson13-6/test/method/', 'Lesson13@lesson13_6');
 Route::get('/lesson13-7/test/method/', 'Lesson13@lesson13_7');
 
 
+
+// Урок 13 Задача 8 С помощью метода fullUrlWithQuery добавьте к запрошенному URL GET параметр page со значением 1
+
+Route::get('/lesson13-8/test/method/', 'Lesson13@lesson13_8');
+
+

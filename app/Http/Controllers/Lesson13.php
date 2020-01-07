@@ -170,5 +170,28 @@ class Lesson13 extends Controller
     }
 
 
+
+// Урок 13 Задача 8  С помощью метода fullUrlWithQuery добавьте к запрошенному URL GET параметр page со значением 1.
+    public function lesson13_8 (Request $request)
+    {
+
+
+        if ($request->has('param')  and  !empty($request->param) ) {
+            $param = $request->param;
+            $fullUrlWithQuery = $request->fullUrlWithQuery( ['page'=>'1']);
+            return view('lesson13.lesson13-8',['param'=>$param,'fullUrlWithQuery'=>$fullUrlWithQuery]);
+
+        } else{
+            $result = 'нет переданого параметра';
+            return view('lesson13.lesson13-8', ['result' => $result]);
+        }
+
+
+        return view('lesson13.lesson13-8');
+
+    }
+
+
+
 }
 
