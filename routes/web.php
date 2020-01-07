@@ -539,3 +539,11 @@ Route::get('/lesson13-8/test/method/', 'Lesson13@lesson13_8');
 Route::get('/lesson13-9/test/method/', 'Lesson13@lesson13_9');
 
 
+
+// Урок 14 Задача 1  В одном действии контроллера установите какое-нибудь значение в сессию, а во втором - получите его.
+
+
+Route::get('/lesson14-1/put', 'Lesson14@lesson14_1put');
+Route::get('/lesson14-1/show', 'Lesson14@lesson14_1show');
+
+
