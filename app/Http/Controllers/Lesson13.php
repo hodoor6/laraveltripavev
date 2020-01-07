@@ -34,5 +34,29 @@ class Lesson13 extends Controller
     }
 
 
+    public function lesson13_2 (Request $request)
+    {
+
+        if ($request->isMethod('post'))  {
+
+        if ($request->has('name')  and  !empty($request->name) and $request->has('surmame') and  !empty($request->surmame)  and $request->has('email') and  !empty($request->email)  and $request->has('login') and  !empty($request->login)  and $request->has('password') and  !empty($request->password) ) {
+            $data = $request->only(['name','surmame','login','name']);
+            $except = $request->except('password','email');
+
+
+
+            return view('lesson13.lesson13-2',['data'=>$data,'except'=>$except]);
+
+        } else{
+    $result = 'нет переданых чисел для вычесления суммы';
+    return view('lesson13.lesson13-2', ['result' => $result]);
+}
+
+}   else{
+    return view('lesson13.lesson13-2');
+}
+    }
+
+
 }
 
