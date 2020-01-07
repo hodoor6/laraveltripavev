@@ -492,4 +492,8 @@ Route::post('/lessontwelve3/result/', 'LessonTwelve@lessonTwelve3result');
 
 Route::match(['get','post'],'/lessontwelve4/', 'LessonTwelve@lessontwelve4');
 
+// Урок 13 Задача 1 Пусть в вашей форме есть произвольное количество инпутов. После отправки формы получите массив отправленных значений, отправьте его в представление и выведите эти данные в виде списка ul.
+
+Route::match(['get','post'],'/lesson13-1/', 'Lesson13@lesson13_1');
+
 
