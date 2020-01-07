@@ -517,4 +517,8 @@ Route::get('/lesson13-4/test/method/', 'Lesson13@lesson13_4');
 
 Route::get('/lesson13-5/test/method/', 'Lesson13@lesson13_5');
 
+// Урок 13 Задача 6 Для указанного адреса выведите результат метода url.
+
+Route::get('/lesson13-6/test/method/', 'Lesson13@lesson13_6');
+
 

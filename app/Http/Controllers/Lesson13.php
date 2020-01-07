@@ -127,5 +127,48 @@ class Lesson13 extends Controller
     }
 
 
+
+    /// // Урок 13 Задача 6  Для указанного адреса выведите результат метода url.
+    public function lesson13_6 (Request $request)
+    {
+
+
+        if ($request->has('param')  and  !empty($request->param) ) {
+            $param = $request->param;
+            $url = $request->url();
+            return view('lesson13.lesson13-6',['param'=>$param,'url'=>$url]);
+
+        } else{
+            $result = 'нет переданого параметра';
+            return view('lesson13.lesson13-6', ['result' => $result]);
+        }
+
+
+        return view('lesson13.lesson13-6');
+
+    }
+
+
+    /// // Урок 13 Задача 7  Для указанного адреса выведите результат метода fullUrl.
+    public function lesson13_7 (Request $request)
+    {
+
+
+        if ($request->has('param')  and  !empty($request->param) ) {
+            $param = $request->param;
+            $fullUrl = $request->fullUrl();
+            return view('lesson13.lesson13-7',['param'=>$param,'fullUrl'=>$fullUrl]);
+
+        } else{
+            $result = 'нет переданого параметра';
+            return view('lesson13.lesson13-7', ['result' => $result]);
+        }
+
+
+        return view('lesson13.lesson13-7');
+
+    }
+
+
 }
 
