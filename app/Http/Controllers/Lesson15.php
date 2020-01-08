@@ -17,7 +17,7 @@ class Lesson15 extends Controller
     public function lesson15_1(Request $request)
     {
         $result = '';
-        if ( $request->has('number1')) {
+        if ($request->has('number1')) {
             $num = $request->input('number1');
             if ($num >= 1 and $num <= 10) {
                 return redirect('lesson15-1/result/');
@@ -49,7 +49,7 @@ class Lesson15 extends Controller
     public function lesson15_2(Request $request)
     {
         $result = '';
-        if ( $request->has('email')) {
+        if ($request->has('email')) {
             $email = $request->input('email');
             if (preg_match('#^[0-9a-zA-Z-.]+@[a-z]+\.[a-z]{2,3}$#', $email)) {
                 return redirect('lesson15-2/result/')->withInput();
@@ -64,10 +64,27 @@ class Lesson15 extends Controller
 
     public function lesson15_2result(Request $request)
     {
-   $email =  $request->old('email');
+        $email = $request->old('email');
 
-     $result = 'Email некорректный';
-   return view('lesson15.lesson15-2result', ['value' => $result, 'email'=>$email]);
+        $result = 'Email некорректный';
+        return view('lesson15.lesson15-2result', ['value' => $result, 'email' => $email]);
 
     }
+
+
+// Урок 15 Задача 3  Сделайте именованный маршрут. Выполните на него редирект с другого действия.
+
+    public function lesson15_3(Request $request)
+    {
+        return redirect()->route('result');
+    }
+
+    public function lesson15_3result(Request $request)
+    {
+
+        $result = 'Переданный верный параметр';
+        return view('lesson15.lesson15-3result', ['value' => $result]);
+
+    }
+
 }
