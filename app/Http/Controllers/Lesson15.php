@@ -37,4 +37,37 @@ class Lesson15 extends Controller
         return view('lesson15.lesson15-1result', ['value' => $result]);
 
     }
+
+
+
+
+
+// Урок 15 Задача 2   Спросите у пользователя email с помощью формы. Если этот email корректный, то выполните редирект на другое действие и выведите в представлении этого действия переданный email и сообщение о том, что он корректен.
+//
+//Если же email не корректный, снова покажите форму, показав над ней сообщение о некорректности ввода.
+
+    public function lesson15_2(Request $request)
+    {
+        $result = '';
+        if ( $request->has('email')) {
+            $email = $request->input('email');
+            if (preg_match('#^[0-9a-zA-Z-.]+@[a-z]+\.[a-z]{2,3}$#', $email)) {
+                return redirect('lesson15-2/result/')->withInput();
+            } else {
+                $result = 'Email некорректный!';
+                return view('lesson15.lesson15-2', ['value' => $result]);
+            }
+        }
+
+        return view('lesson15.lesson15-2', ['value' => $result]);
+    }
+
+    public function lesson15_2result(Request $request)
+    {
+   $email =  $request->old('email');
+
+     $result = 'Email некорректный';
+   return view('lesson15.lesson15-2result', ['value' => $result, 'email'=>$email]);
+
+    }
 }
