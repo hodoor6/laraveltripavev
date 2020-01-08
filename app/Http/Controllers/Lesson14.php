@@ -161,11 +161,32 @@ $request->session()->put('key','lesson14_1put');
         }
         else
         {
-            $request->session()->put('test', date('H:i:s d-m-'));
+            $request->session()->put('test', date('H:i:s d-m-Y'));
+
+        }
+
+
+
+    }
+
+    // Урок 14 Задача 11  Задача С помощью функции session сохраните какие-нибудь данные в сессию.
+
+    public function lesson14_11(Request $request)
+    {
+
+        if($request->session()->exists('key11' )) {
+
+
+            var_dump($value = session('key11'));
+
+        }  else
+        {
+            session(['key11'=> 'работает']);
 
         }
 
     }
+
 
 
 
