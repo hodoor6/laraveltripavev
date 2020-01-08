@@ -74,12 +74,12 @@ class Lesson15 extends Controller
 
 // Урок 15 Задача 3  Сделайте именованный маршрут. Выполните на него редирект с другого действия.
 
-    public function lesson15_3(Request $request)
+    public function lesson15_3()
     {
         return redirect()->route('result');
     }
 
-    public function lesson15_3result(Request $request)
+    public function lesson15_3result()
     {
 
         $result = 'Переданный верный параметр';
@@ -87,4 +87,19 @@ class Lesson15 extends Controller
 
     }
 
+
+// Урок 15 Задача 4 Сделайте именованный маршрут с параметрами, например, /test/{param1}/{param2}. Выполните редирект на данный маршрут, передав при этом значения параметров.
+
+    public function lesson15_4()
+    {
+        return redirect()->route('result',['param1' => 'param1','param2' => 'param2']);
+    }
+
+    public function lesson15_4result($param1,$param2)
+    {
+
+        $result = 'Переданный верный параметр1 '. $param1 .' параметр 2 '. $param2;
+        return view('lesson15.lesson15-4result', ['value' => $result]);
+
+    }
 }

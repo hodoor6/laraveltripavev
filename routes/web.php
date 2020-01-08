@@ -621,3 +621,9 @@ Route::get('/lesson15-2/result/', 'Lesson15@lesson15_2result');
 Route::get('/lesson15-3/result/', 'Lesson15@lesson15_3result')->name('result');
 Route::get('/lesson15-3/', 'Lesson15@lesson15_3');
 
+
+// Урок 15 Задача 4  Сделайте именованный маршрут. Выполните на него редирект с другого действия.
+
+Route::get('/lesson15-4/{param1}/{param2}', 'Lesson15@lesson15_4result')->name('result');
+Route::get('/lesson15-4/', 'Lesson15@lesson15_4');
+
