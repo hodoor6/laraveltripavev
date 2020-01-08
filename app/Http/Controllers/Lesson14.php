@@ -135,6 +135,17 @@ $request->session()->put('key','lesson14_1put');
         var_dump($flush);
 
     }
+    /// Урок 14 Задача 9  Установите несколько переменных сессии. Получите эти установленные переменные в виде массива.
+
+    public function lesson14_9(Request $request)
+    {
+        $request->session()->put('arr2', ['22',22222,'2222']);
+        $add = $request->session()->get('arr2');
+        $request->session()->put('arr3', [12345,$add]);
+        $data = $request->session()->all();
+
+        return view('lesson14.lesson14-9',['data1' =>$data]);
+    }
 
 
 }

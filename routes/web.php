@@ -581,3 +581,7 @@ Route::get('/lesson14-7/delete', 'Lesson14@lesson14_7delete');
 Route::get('/lesson14-8/', 'Lesson14@lesson14_8');
 
 
+
+/// Урок 14 Задача 9  Установите несколько переменных сессии. Получите эти установленные переменные в виде массива.
+
+Route::get('/lesson14-9/', 'Lesson14@lesson14_9');
