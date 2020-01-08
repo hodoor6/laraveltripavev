@@ -179,9 +179,30 @@ $request->session()->put('key','lesson14_1put');
 
             var_dump($value = session('key11'));
 
+
+
         }  else
         {
             session(['key11'=> 'работает']);
+
+        }
+
+    }
+
+
+    // Урок 14 Задача 12  С помощью функции session получите сохраненные данные из сессии.
+
+    public function lesson14_12(Request $request)
+    {
+
+        if($request->session()->exists('key12' )) {
+
+
+            var_dump($value = session('key12', 'заработало'));
+            return view('lesson14.lesson14-12',['data12' =>$value]);
+        }  else
+        {
+            session(['key12'=> 'заработало']);
 
         }
 

@@ -595,4 +595,7 @@ Route::get('/lesson14-10/', 'Lesson14@lesson14_10');
 
 Route::get('/lesson14-11/', 'Lesson14@lesson14_11');
 
+// Урок 14 Задача 12  С помощью функции session получите сохраненные данные из сессии.
+Route::get('/lesson14-12/', 'Lesson14@lesson14_12');
+
 
