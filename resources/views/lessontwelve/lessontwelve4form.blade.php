@@ -5,7 +5,7 @@
     {{ csrf_field() }}
     <input type="number" name="number1" id="" value="25">
     <input type="number" name="number2" id="" value="40">
-     <input type="submit" value="Отправить">
+    <input type="submit" value="Отправить">
 </form>
 @if(isset ($sumNumber))
     <p>Cумма чисел = {{ $sumNumber }}</p>
