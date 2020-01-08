@@ -147,5 +147,27 @@ $request->session()->put('key','lesson14_1put');
         return view('lesson14.lesson14-9',['data1' =>$data]);
     }
 
+       // Урок 14 Задача 10  Проверьте, существует ли в сессии переменная test. Если существует - выведите на экран ее значение, а если не существует - установите ее значение в текущий момент времени.
+
+    public function lesson14_10(Request $request)
+    {
+
+        if($request->session()->has('test' )){
+            $request->session()->put('test', date("H:i:s d-m-Y"));
+            $value = $request->session()->get('test');
+            var_dump( $value);
+            return view('lesson14.lesson14-10',['data10' =>$value]);
+
+        }
+        else
+        {
+            $request->session()->put('test', date('H:i:s d-m-'));
+
+        }
+
+    }
+
+
+
 
 }
