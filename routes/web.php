@@ -627,3 +627,9 @@ Route::get('/lesson15-3/', 'Lesson15@lesson15_3');
 Route::get('/lesson15-4/{param1}/{param2}', 'Lesson15@lesson15_4result')->name('result');
 Route::get('/lesson15-4/', 'Lesson15@lesson15_4');
 
+
+// Урок 16 Задача 1  Сделайте два действия. В первом действии запишите флеш сообщение. При заходе на второе действие выведите это сообщение в представлении.
+
+Route::get('/lesson16-1/', 'Lesson16@lesson16_1');
+Route::get('/lesson16-1/flash', 'Lesson16@lesson16_1flash')->name('flash');
+
