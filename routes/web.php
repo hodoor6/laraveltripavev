@@ -639,3 +639,9 @@ Route::get('/lesson16-1/flash', 'Lesson16@lesson16_1flash')->name('flash');
 Route::get('/lesson16-2/', 'Lesson16@lesson16_2');
 Route::get('/lesson16-2/flash', 'Lesson16@lesson16_2flash')->name('flash');
 
+
+// Урок 16 Задача 3  Пусть у вас есть какая-то форма. Сделайте так, чтобы значения не пропадали из этой формы после отправки.
+
+Route::get('/lesson16-3/', 'Lesson16@lesson16_3');
+
+
