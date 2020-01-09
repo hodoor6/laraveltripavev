@@ -644,4 +644,8 @@ Route::get('/lesson16-2/flash', 'Lesson16@lesson16_2flash')->name('flash');
 
 Route::get('/lesson16-3/', 'Lesson16@lesson16_3');
 
+// Урок 17 Задача 1  Верните результатом какого-нибудь действия объект Response с каким-нибудь заголовком.
+
+Route::get('/lesson17-1/', 'Lesson17@lesson17_1');
+
 
