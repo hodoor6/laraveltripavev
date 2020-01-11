@@ -12,12 +12,42 @@ class Lesson18 extends Controller
 
     public function lesson18_1(Request $request)
     {
+
+
        if(!$request->cookie('name'))
        {
-        return   response('Первый заход')->cookie('name', time(), 1000);
+
+          response('Первый заход')->cookie('name', time(), 1000);
        }else{
            return date('H:i:s',(time ()- ($request->cookie('name'))));
 
 }
 }
+
+// Урок 18 Задача 2 С помощью формы спросите у пользователя дату рождения. Запишите ее в куки. При заходе на сайт, если сегодня День Рождения пользователя, поздравьте его с этим праздником.
+
+
+    public function lesson18_2(Request $request)
+    {
+
+           if (!$request -> cookie('birthdayuser2')) {
+
+                   if ($request->has('birthday') and !empty($request->birthday)){
+                       return response('Благодорим что заполнили нашу форму')->cookie('birthdayuser2', $request->birthday, 1000);
+
+                   }
+
+                   return view('lesson18.lesson18-2');
+               }  else{
+
+              $birthdayUser = $request->cookie('birthdayuser2');
+               if(date('Y-m-d') == $birthdayUser){
+                   echo 'Сегодня у Вас день рождение';
+               }else{
+                   echo 'Сегодня у нет дня рождения';
+               }
 }
+
+}
+}
+
