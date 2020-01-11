@@ -49,5 +49,19 @@ class Lesson18 extends Controller
 }
 
 }
-}
 
+// Урок 18 Задача 3 Сделайте счетчик обновления страницы, работающий через куки.
+
+public function lesson18_3(Request $request)
+{
+    if (!$request -> cookie('couter')) {
+
+           return response('первый заход пользователя')->cookie('couter', 1, 1440);
+    }  else{
+     $counter ='Количество обновленый страницы ' . ($request->cookie('couter') +1);
+        return response()->view('lesson18.lesson18-3',['counter'=>$counter])->cookie('couter', ($request->cookie('couter') +1), 1440);
+
+    }
+
+}
+}
