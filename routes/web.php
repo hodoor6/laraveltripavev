@@ -681,3 +681,9 @@ Route::get ('lesson19-2/show', 'Lesson19@lesson19_2show');
 
 Route::get ('/lesson20-2/', 'Lesson20@lesson20_2');
 
+
+// Урок 20. (laravel). Задача 3. С помощью фасада DB добавьте нового юзера в таблицу users.
+
+
+Route::get ('/lesson20-3/', 'Lesson20@lesson20_3');
+
