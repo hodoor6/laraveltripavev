@@ -39,6 +39,21 @@ class Lesson22 extends Controller
         );
     }
 
+    // Урок 22. (laravel). Задача 4. С помощью построителя запросов поменяйте логин и email какому-нибудь юзеру из таблицы users.
+
+    public function lesson22_5()
+    {
+        //удалить по id
+//        $users = DB::table('users22')->where('id','=',5)->delete();
+
+        // Очистка таблицы:
+      //   DB::table('users22')->delete();
+      //  Очистка таблицы со сбросом счётчика autoincrement-полей.:
+
+        $users = DB::table('users22')->truncate();
+
+    }
+
 
 
 
