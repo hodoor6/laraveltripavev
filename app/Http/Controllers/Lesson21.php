@@ -243,4 +243,17 @@ public function lesson21_25()
     return view('lesson21.lesson21-24', ['users' => $users]);
 }
 
+
+// Урок 21. (laravel).  Задача 26 Из таблицы employees получите работника, у которого день рождения приходится на дату 1988-03-25.
+
+
+    public function lesson21_26()
+    {
+        $users = DB::table('employees')->whereDate('birthday','=','1988-03-25' )
+            
+            ->get();
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
+
 }
