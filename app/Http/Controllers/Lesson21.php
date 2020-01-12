@@ -43,5 +43,15 @@ public function lesson21_3()
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
+    // Урок 21. (laravel). Задача 5. Из таблицы employees получите всех работников с зарплатой более 450.
+    public function lesson21_5()
+    {
+
+
+        $users = DB::table('employees')->where('salary', '>', '450')->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
 }
 
