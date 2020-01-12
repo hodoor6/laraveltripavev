@@ -775,3 +775,7 @@ Route::get ('/lesson21-20/', 'Lesson21@lesson21_20');
 // Урок 21. (laravel).  Задача 21 Из таблицы employees получите всех работников и отсортируйте их по убыванию даты рождения.
 Route::get ('/lesson21-21/', 'Lesson21@lesson21_21');
 
+
+// Урок 21. (laravel).  Задача 22 Из таблицы employees получите максимальную зарплату.
+Route::get ('/lesson21-22/', 'Lesson21@lesson21_22');
+

@@ -203,4 +203,12 @@ public function lesson21_21()
     return view('lesson21.lesson21-2', ['users' => $users]);
 }
 
+// Урок 21. (laravel).  Задача 22 Из таблицы employees получите максимальную зарплату.
+public function lesson21_22()
+{
+    $users = DB::table('employees')->max('Salary');
+
+    return view('lesson21.lesson21-22', ['users' => $users]);
+}
+
 }
