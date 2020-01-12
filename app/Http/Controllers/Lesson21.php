@@ -255,5 +255,25 @@ public function lesson21_25()
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
+// Урок 21. (laravel).  Задача 27 Из таблицы employees получите работников, у которых день рождения приходится на 25 день месяца.
+
+    public function lesson21_27()
+    {
+        $users = DB::table('employees')->whereDay('birthday','=','25' )
+
+            ->get();
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
+// Урок 21. (laravel).  Задача 28 Из таблицы employees получите работников, у которых день рождения в марте.
+
+    public function lesson21_28()
+    {
+        $users = DB::table('employees')->whereMonth('birthday','=','3' )
+
+            ->get();
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
 
 }
