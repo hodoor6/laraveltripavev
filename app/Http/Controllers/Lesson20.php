@@ -26,9 +26,27 @@ public function lesson20_3()
 {
 
 
-    $insert = DB::insert('insert into users (name,surname, age) value (?,?,?)', ['Cергей', 'Пушкин','25']);
+    $insert = DB::insert('insert into users (name,surname, age) value (?,?,?)', ['Иван', 'Пушкин','25']);
     if ($insert) {
         echo 'Запись выполнена';
+    } else {
+        echo 'Извините, какая-то ошибка!';
+    }
+
+    return redirect('/lesson20-2/');
+}
+
+
+// Урок 20. (laravel). Задача 4. С помощью фасада DB удалите какого-нибудь нового юзера из таблицы users.
+
+public function lesson20_4()
+{
+
+
+
+    $delete =  DB::delete('delete from users where name = :name and surname = :surname', ['name' => 'Иван', 'surname' => 'Пушкин']);
+    if ($delete) {
+        echo 'Запись удалена';
     } else {
         echo 'Извините, какая-то ошибка!';
     }

@@ -687,3 +687,7 @@ Route::get ('/lesson20-2/', 'Lesson20@lesson20_2');
 
 Route::get ('/lesson20-3/', 'Lesson20@lesson20_3');
 
+// Урок 20. (laravel). Задача 4. С помощью фасада DB удалите какого-нибудь нового юзера из таблицы users.
+
+Route::get ('/lesson20-4/', 'Lesson20@lesson20_4');
+
