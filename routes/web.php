@@ -724,3 +724,8 @@ Route::get ('/lesson21-7/', 'Lesson21@lesson21_7');
 
 Route::get ('/lesson21-8/', 'Lesson21@lesson21_8');
 
+
+ // Урок 21. (laravel). Задача 9 Из таблицы employees получите работника имя работника id, равным 5.
+
+Route::get ('/lesson21-9/', 'Lesson21@lesson21_9');
+

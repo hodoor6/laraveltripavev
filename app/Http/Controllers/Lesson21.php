@@ -83,11 +83,18 @@ public function lesson21_3()
     public function lesson21_8()
     {
 
-
-//        $users = DB::table('employees')->where(	'id', 'birthday' , 'position' , 'salary')->first();
         $users = DB::table('employees')->where(	'id', 3)->first();
-//
-        return view('lesson21.lesson21-8', ['users' => $users]);
+
+        return view('lesson21.lesson21-8', ['user' => $users]);
+    }
+
+// Урок 21. (laravel). Задача 9 Из таблицы employees получите работника имя работника id, равным 5.
+    public function lesson21_9()
+    {
+
+        $users = DB::table('employees')->where(	'id', 5)->value(	'name');
+
+        return view('lesson21.lesson21-9', ['users' => $users]);
     }
 
 }
