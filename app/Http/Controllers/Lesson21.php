@@ -218,4 +218,15 @@ public function lesson21_23()
     return view('lesson21.lesson21-23', ['users' => $users]);
 }
 
+// Урок 21. (laravel).  Задача 24 Из таблицы employees для каждой должности получите минимальную зарплату.
+public function lesson21_24()
+{
+    $users = DB::table('employees')
+        ->select('position', DB::raw('min(salary) as salary'))
+        ->groupBy('position')
+        ->havingRaw('min(salary)')
+        ->get();
+    return view('lesson21.lesson21-24', ['users' => $users]);
+}
+
 }

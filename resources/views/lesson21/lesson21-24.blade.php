@@ -4,20 +4,14 @@
 
 <table border ="1" width="400" align="center">
     <tr>
-        <th>№</th>
-        <th>Имя</th>
-        <th>Дата рождения</th>
-        <th>Должность</th>
-        <th>Зарплата</th>
 
+        <th>Должность</th>
+        <th>Минимальная Зарплата</th>
     </tr>
 
 
     @foreach($users as $key=>$user)
         <tr>
-            <td>{{$user->id }}</td>
-            <td>{{$user->name}}</td>
-            <td>{{$user->birthday}}</td>
             <td>{{$user->position}}</td>
             <td>{{$user->salary}}</td>
         </tr>
