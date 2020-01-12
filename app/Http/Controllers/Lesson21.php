@@ -135,4 +135,13 @@ public function lesson21_3()
     }
 
 
+    // Урок 21. (laravel).Задача 14 Из таблицы employees получите работников с id, НЕ равными 1, 2, 3.
+    public function lesson21_14()
+    {
+
+        $users = DB::table('employees')->whereNotIn(	'id', [1,2,3])->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+}
 

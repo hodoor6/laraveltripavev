@@ -746,3 +746,7 @@ Route::get ('/lesson21-12/', 'Lesson21@lesson21_12');
 
 Route::get ('/lesson21-13/', 'Lesson21@lesson21_13');
 
+ // Урок 21. (laravel).Задача 14 Из таблицы employees получите работников с id, НЕ равными 1, 2, 3.
+
+Route::get ('/lesson21-14/', 'Lesson21@lesson21_14');
+
