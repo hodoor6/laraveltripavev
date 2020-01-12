@@ -97,5 +97,14 @@ public function lesson21_3()
         return view('lesson21.lesson21-9', ['users' => $users]);
     }
 
+// Урок 21. (laravel). Задача 10 Из таблицы employees получите массив имен работников.
+    public function lesson21_10()
+    {
+
+        $users = DB::table('employees')->pluck(	'name', 'id');
+
+        return view('lesson21.lesson21-10', ['users' => $users]);
+    }
+
 }
 
