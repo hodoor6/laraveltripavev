@@ -674,3 +674,10 @@ Route::match(['get', 'post'],'/lesson19-1/', 'Lesson19@lesson19_1');
 Route::match(['get', 'post'],'/lesson19-2/', 'Lesson19@lesson19_2');
 
 Route::get ('lesson19-2/show', 'Lesson19@lesson19_2show');
+
+
+// Урок 20. (laravel). Задача 2. С помощью фасада DB получите всех юзеров, возраст которых более 18 лет. Передайте полученных юзеров в представление и выведите их в виде таблицы table.
+
+
+Route::get ('/lesson20-2/', 'Lesson20@lesson20_2');
+
