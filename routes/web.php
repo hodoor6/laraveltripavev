@@ -785,3 +785,6 @@ Route::get ('/lesson21-23/', 'Lesson21@lesson21_23');
 // Урок 21. (laravel).  Задача 24 Из таблицы employees для каждой должности получите минимальную зарплату.
 Route::get ('/lesson21-24/', 'Lesson21@lesson21_24');
 
+// Урок 21. (laravel).  Задача 25 Из таблицы employees для каждой должности получите минимальную зарплату.
+Route::get ('/lesson21-25/', 'Lesson21@lesson21_25');
+

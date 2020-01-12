@@ -229,4 +229,18 @@ public function lesson21_24()
     return view('lesson21.lesson21-24', ['users' => $users]);
 }
 
+
+// Урок 21. (laravel).  Задача 25 Из таблицы employees для каждой должности получите суммарную зарплату.
+public function lesson21_25()
+{
+    $users = DB::table('employees')
+        ->select('position', DB::raw('sum(salary) as salary'))
+        ->groupBy('position')
+        ->havingRaw('sum(salary)')
+        ->get();
+
+
+    return view('lesson21.lesson21-24', ['users' => $users]);
+}
+
 }
