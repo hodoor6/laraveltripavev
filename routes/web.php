@@ -695,3 +695,8 @@ Route::get ('/lesson20-4/', 'Lesson20@lesson20_4');
 
 Route::get ('/lesson20-5/', 'Lesson20@lesson20_5');
 
+
+// Урок 21. (laravel). Задача 2. Получите все записи из таблицы employees и выведите их в представлении в виде таблицы table.
+
+Route::get ('/lesson21-2/', 'Lesson21@lesson21_2');
+
