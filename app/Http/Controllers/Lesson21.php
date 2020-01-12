@@ -143,5 +143,16 @@ public function lesson21_3()
 
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
+
+
+    // Урок 21. (laravel).  Задача 15 Из таблицы employees получите работников, у которых зарплата id от 1 до 3, либо зарплата от 400 до 800.
+    public function lesson21_15()
+    {
+
+        $users = DB::table('employees')->whereIn(	'id', [1,2,3])->orWhere(function($query)
+        {$query->whereBetween(	'salary', [600,800]);}) ->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
 }
 

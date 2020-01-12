@@ -750,3 +750,7 @@ Route::get ('/lesson21-13/', 'Lesson21@lesson21_13');
 
 Route::get ('/lesson21-14/', 'Lesson21@lesson21_14');
 
+ // Урок 21. (laravel).Задача 15 Из таблицы employees получите работников, у которых зарплата id от 1 до 3, либо зарплата от 400 до 800.
+
+Route::get ('/lesson21-15/', 'Lesson21@lesson21_15');
+
