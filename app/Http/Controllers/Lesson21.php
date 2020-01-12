@@ -51,6 +51,18 @@ public function lesson21_3()
         $users = DB::table('employees')->where('salary', '>', '450')->get();
 
         return view('lesson21.lesson21-2', ['users' => $users]);
+
+
+
+    }
+    // Урок 21. (laravel). Задача 6. Из таблицы employees получите всех работников с зарплатой, не равной 500.
+    public function lesson21_6()
+    {
+
+
+        $users = DB::table('employees')->where('salary', '!=', '500')->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
 }
