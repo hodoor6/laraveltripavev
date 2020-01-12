@@ -276,4 +276,15 @@ public function lesson21_25()
     }
 
 
+// Урок 21. (laravel).  Задача 29 Из таблицы employees получите работников, родившихся в 1990 году.
+
+    public function lesson21_29()
+    {
+        $users = DB::table('employees')->whereYear('birthday','=','1990' )
+
+            ->get();
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
+
 }
