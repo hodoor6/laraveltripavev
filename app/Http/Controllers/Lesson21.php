@@ -164,5 +164,13 @@ public function lesson21_3()
 
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
+// Урок 21. (laravel).  Задача 17 Из таблицы employees получите работников, у которых зарплата равна 500 И должность 'программист'.
+    public function lesson21_17()
+    {
+        $users = DB::table('employees')->whereSalaryAndPosition(500,'программист')->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
 }
 
