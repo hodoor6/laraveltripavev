@@ -78,5 +78,17 @@ public function lesson21_3()
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
+    // Урок 21. (laravel). Задача 8. Из таблицы employees получите работника с id, равным 3.
+
+    public function lesson21_8()
+    {
+
+
+//        $users = DB::table('employees')->where(	'id', 'birthday' , 'position' , 'salary')->first();
+        $users = DB::table('employees')->where(	'id', 3)->first();
+//
+        return view('lesson21.lesson21-8', ['users' => $users]);
+    }
+
 }
 
