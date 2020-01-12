@@ -123,5 +123,16 @@ public function lesson21_3()
 
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
-}
+
+
+    // Урок 21. (laravel).Задача 13 Из таблицы employees получите работников с id, равными 1, 2, 3 и 5.
+    public function lesson21_13()
+    {
+
+        $users = DB::table('employees')->whereIn(	'id', [1,2,3,5])->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
+
 
