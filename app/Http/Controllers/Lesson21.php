@@ -115,5 +115,13 @@ public function lesson21_3()
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
+// Урок 21. (laravel). Задача 12 Из таблицы employees получите работников, зарплата которых находится НЕ в промежутке от 300 до 600.
+    public function lesson21_12()
+    {
+
+        $users = DB::table('employees')->whereNotBetween(	'salary', [300,600])->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
 }
 
