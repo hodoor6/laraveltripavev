@@ -7,7 +7,6 @@ class Lesson22 extends Controller
 {
 
 // Урок 22. (laravel). Задача 1. Сделайте через PhpMyAdmin таблицу users с полями id, login (логин), password (пароль), email (адрес).
-
 // Урок 22. (laravel). Задача 2. С помощью построителя запросов добавьте нового юзера в таблицу users.
 
 

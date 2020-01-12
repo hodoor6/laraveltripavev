@@ -797,3 +797,11 @@ Route::get ('/lesson21-27/', 'Lesson21@lesson21_27');
 // Урок 21. (laravel).  Задача 28 Из таблицы employees получите работников, у которых день рождения в марте.
 Route::get ('/lesson21-28/', 'Lesson21@lesson21_28');
 
+
+// Урок 21. (laravel).  Задача 29 // Урок 21. (laravel).  Задача 29 Из таблицы employees получите работников, родившихся в 1990 году
+Route::get ('/lesson21-29/', 'Lesson21@lesson21_29');
+
+
+// Урок 22. (laravel).  Задача 2 С помощью построителя запросов добавьте нового юзера в таблицу users.
+Route::get ('/lesson22-2/', 'Lesson22@lesson22_2');
+
