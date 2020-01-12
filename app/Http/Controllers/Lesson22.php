@@ -28,5 +28,19 @@ class Lesson22 extends Controller
             ['login' => 'login4', 'password' => 'password4', 'email' => 'john4@example.com']
         ]);
     }
+
+    // Урок 22. (laravel). Задача 4. С помощью построителя запросов поменяйте логин и email какому-нибудь юзеру из таблицы users.
+
+    public function lesson22_4()
+    {
+        $users = DB::table('users22')->where('id','=',4)->update(
+
+            ['login' => 'login444', 'password' => 'password444', 'email' => 'john444@example.com']
+        );
+    }
+
+
+
+
 }
 
