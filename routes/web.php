@@ -704,3 +704,7 @@ Route::get ('/lesson21-2/', 'Lesson21@lesson21_2');
 
 Route::get ('/lesson21-3/', 'Lesson21@lesson21_3');
 
+// Урок 21. (laravel). Задача 4. Из таблицы employees получите всех работников с зарплатой 500.
+
+Route::get ('/lesson21-4/', 'Lesson21@lesson21_4');
+

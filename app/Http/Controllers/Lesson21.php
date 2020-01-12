@@ -31,7 +31,17 @@ public function lesson21_3()
 }
 
 
+// Урок 21. (laravel). Задача 4. Из таблицы employees получите всех работников с зарплатой 500.
 
+
+    public function lesson21_4()
+    {
+
+
+        $users = DB::table('employees')->where('salary', '500')->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
 
 }
 
