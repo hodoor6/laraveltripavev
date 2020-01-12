@@ -763,3 +763,9 @@ Route::get ('/lesson21-16/', 'Lesson21@lesson21_16');
 
 Route::get ('/lesson21-17/', 'Lesson21@lesson21_17');
 
+
+
+// Урок 21. (laravel).  Задача 19 Из таблицы events получите мероприятия, у которых дата начала и дата конца приходится на один и тот же день.
+
+Route::get ('/lesson21-19/', 'Lesson21@lesson21_19');
+

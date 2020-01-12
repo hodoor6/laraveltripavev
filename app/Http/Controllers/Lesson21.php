@@ -172,5 +172,15 @@ public function lesson21_3()
         return view('lesson21.lesson21-2', ['users' => $users]);
     }
 
+// Урок 21. (laravel).  Задача 18 Сделайте таблицу events (мероприятия), с полями id, name (название), start (начало мероприятия), finish (конец мероприятия).
+
+// Урок 21. (laravel).  Задача 19 Из таблицы events получите мероприятия, у которых дата начала и дата конца приходится на один и тот же день.
+    public function lesson21_19()
+    {
+        $events = DB::table('events')->whereColumn('start', '=','finish' )->get();
+
+        return view('lesson21.lesson21-19', ['events' => $events]);
+    }
+
 }
 
