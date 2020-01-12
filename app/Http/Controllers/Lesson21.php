@@ -194,4 +194,13 @@ public function lesson21_20()
     return view('lesson21.lesson21-2', ['users' => $users]);
 }
 
+
+// Урок 21. (laravel).  Задача 21 Из таблицы employees получите всех работников и отсортируйте их по убыванию даты рождения.
+public function lesson21_21()
+{
+    $users = DB::table('employees')->orderBy('birthday','desc')->get();
+
+    return view('lesson21.lesson21-2', ['users' => $users]);
+}
+
 }
