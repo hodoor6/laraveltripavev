@@ -106,5 +106,14 @@ public function lesson21_3()
         return view('lesson21.lesson21-10', ['users' => $users]);
     }
 
+// Урок 21. (laravel). Задача 11 Из таблицы employees получите работников, зарплата которых находится в промежутке от 450 до 1100.
+    public function lesson21_11()
+    {
+
+        $users = DB::table('employees')->whereBetween(	'salary', [450,1100])->get();
+
+        return view('lesson21.lesson21-2', ['users' => $users]);
+    }
+
 }
 

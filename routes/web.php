@@ -732,3 +732,8 @@ Route::get ('/lesson21-9/', 'Lesson21@lesson21_9');
 
 Route::get ('/lesson21-10/', 'Lesson21@lesson21_10');
 
+
+// Урок 21. (laravel). Задача 11 Из таблицы employees получите работников, зарплата которых находится в промежутке от 450 до 1100.
+
+Route::get ('/lesson21-11/', 'Lesson21@lesson21_11');
+
