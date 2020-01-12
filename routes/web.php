@@ -691,3 +691,7 @@ Route::get ('/lesson20-3/', 'Lesson20@lesson20_3');
 
 Route::get ('/lesson20-4/', 'Lesson20@lesson20_4');
 
+// Урок 20. (laravel). Задача 5. С помощью фасада DB поменяйте имя и фамилию какому-нибудь юзеру из таблицы users.
+
+Route::get ('/lesson20-5/', 'Lesson20@lesson20_5');
+

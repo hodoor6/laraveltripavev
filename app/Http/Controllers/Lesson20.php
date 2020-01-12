@@ -41,9 +41,6 @@ public function lesson20_3()
 
 public function lesson20_4()
 {
-
-
-
     $delete =  DB::delete('delete from users where name = :name and surname = :surname', ['name' => 'Иван', 'surname' => 'Пушкин']);
     if ($delete) {
         echo 'Запись удалена';
@@ -51,6 +48,23 @@ public function lesson20_4()
         echo 'Извините, какая-то ошибка!';
     }
 
+    return redirect('/lesson20-2/');
+}
+
+
+
+
+
+// Урок 20. (laravel). Задача 5 С помощью фасада DB поменяйте имя и фамилию какому-нибудь юзеру из таблицы users.
+public function lesson20_5()
+{
+    $update =  DB::update('update users set age = :age, surname = :surname
+ where id = :id',['age'=>45, 'surname' => 'Чернов','id'=>20]);
+    if ($update) {
+        echo 'Запись обновлена';
+    } else {
+        echo 'Извините, какая-то ошибка!';
+    }
     return redirect('/lesson20-2/');
 }
     }
