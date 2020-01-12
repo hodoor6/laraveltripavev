@@ -779,3 +779,6 @@ Route::get ('/lesson21-21/', 'Lesson21@lesson21_21');
 // Урок 21. (laravel).  Задача 22 Из таблицы employees получите максимальную зарплату.
 Route::get ('/lesson21-22/', 'Lesson21@lesson21_22');
 
+// Урок 21. (laravel).  Задача 23 Из таблицы employees получите суммарную зарплату всех работников.
+Route::get ('/lesson21-23/', 'Lesson21@lesson21_23');
+
