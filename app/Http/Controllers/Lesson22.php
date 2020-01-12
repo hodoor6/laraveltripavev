@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+
 class Lesson22 extends Controller
 {
 
@@ -10,13 +12,21 @@ class Lesson22 extends Controller
 // Урок 22. (laravel). Задача 2. С помощью построителя запросов добавьте нового юзера в таблицу users.
 
 
-public function lesson22_2()
-{
+    public function lesson22_2()
+    {
+        $users = DB::table('users22')->insertGetId(['login' => 'login1', 'password' => 'password1', 'email' => 'john@example.com']);
+    }
 
 
-    $users = DB::table('users22')->insertGetId(['login'=>'login1','password'=> 'password1','email' => 'john@example.com']);
+// Урок 22. (laravel). Задача 3. С помощью построителя запросов добавьте сразу 3 новых юзера в таблицу users.
 
-
-}
+    public function lesson22_3()
+    {
+        $users = DB::table('users22')->insert([
+            ['login' => 'login2', 'password' => 'password2', 'email' => 'john2@example.com'],
+            ['login' => 'login3', 'password' => 'password3', 'email' => 'john3@example.com'],
+            ['login' => 'login4', 'password' => 'password4', 'email' => 'john4@example.com']
+        ]);
+    }
 }
 
