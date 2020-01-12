@@ -769,3 +769,6 @@ Route::get ('/lesson21-17/', 'Lesson21@lesson21_17');
 
 Route::get ('/lesson21-19/', 'Lesson21@lesson21_19');
 
+// Урок 21. (laravel).  Задача 20 Из таблицы employees получите всех работников и отсортируйте их по возрастанию зарплаты.
+Route::get ('/lesson21-20/', 'Lesson21@lesson21_20');
+
