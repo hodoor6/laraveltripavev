@@ -19,5 +19,19 @@ public function lesson21_2()
 
     return view('lesson21.lesson21-2', ['users' => $users]);
 }
+
+// Урок 21. (laravel). Задача 2. Модифицируйте предыдущую задачу так, чтобы запрос получал только поле с именем и поле с зарплатой работника.
+public function lesson21_3()
+{
+
+
+    $users = DB::table('employees')->select('name','salary')->get();
+
+    return view('lesson21.lesson21-3', ['users' => $users]);
+}
+
+
+
+
 }
 
