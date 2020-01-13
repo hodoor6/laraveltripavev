@@ -849,4 +849,8 @@ Route::get ('/lesson25-7/post/all/', 'Lesson25@lesson26_7getAll');
 Route::get ('/lesson25-8/post/all/{order?}', 'Lesson25@lesson26_8getAll')->where(['order'=>'|id|title|date']);
 
 
+// Урок 25. (laravel). Задача 9  Отредактируйте маршрут действия getAll так, чтобы появился еще один параметр :dir, представляющий собой направление сортировки (по убыванию или по возрастанию). То есть наш маршрут станет выглядеть так: /post/all/:order/:dir.
+//
+//Пусть параметр :dir может иметь только два значения: asc или desc. При этом пусть наш параметр также является не обязательным и по умолчанию имеет значение desc.
+Route::get ('/lesson25-9/post/all/{order?}/{dir?}', 'Lesson25@lesson26_9getAll')->where(['order'=>'|id|title|date','dir'=>'|asc|desc']);
 

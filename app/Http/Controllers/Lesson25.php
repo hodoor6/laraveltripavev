@@ -83,6 +83,19 @@ class Lesson25 extends Controller
 
     }
 
+
+
+    // Урок 25. (laravel). Задача 9   Отредактируйте маршрут действия getAll так, чтобы появился еще один параметр :dir, представляющий собой направление сортировки (по убыванию или по возрастанию). То есть наш маршрут станет выглядеть так: /post/all/:order/:dir.
+    //
+    //Пусть параметр :dir может иметь только два значения: asc или desc. При этом пусть наш параметр также является не обязательным и по умолчанию имеет значение desc.
+    public function lesson26_9getAll($order='date',$dir='desc')
+{
+        $posts = lesson24::orderBy($order,$dir)->get();
+
+        return view('lesson25.lesson25-6', ['posts' => $posts]);
+
+    }
+
 }
 
 
