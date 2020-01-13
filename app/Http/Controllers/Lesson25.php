@@ -35,10 +35,21 @@ class Lesson25 extends Controller
 
     return view('lesson25.lesson25-4', ['post' => $post]);
 
+
+}
+// Урок 25. (laravel). Задача 5 В действии getOne из таблицы posts получите статью соответствующую переданному параметру. Передайте полученную статью в представление и выведите ее на экран, оформив соответствующим HTML кодом.
+
+    public function lesson25_5getOne($id)
+    {
+    $post = lesson24::find($id);
+
+    return view('lesson25.lesson25-5', ['post' => $post]);
+
+}
 }
 
 
-}
+
 
 
 
