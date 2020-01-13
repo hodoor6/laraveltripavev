@@ -813,10 +813,13 @@ Route::get ('/lesson22-3/', 'Lesson22@lesson22_3');
 Route::get ('/lesson22-4/', 'Lesson22@lesson22_4');
 
 // Урок 22. (laravel).  Задача 5 С помощью помощью построителя запросов удалите какого-нибудь нового юзера из таблицы users.
+Route::get ('/lesson22-5/', 'Lesson22@lesson22_5');// Урок 22. (laravel).  Задача 5 С помощью помощью построителя запросов удалите какого-нибудь нового юзера из таблицы users.
 Route::get ('/lesson22-5/', 'Lesson22@lesson22_5');
-
-
 
 // Урок 23. (laravel).  Задача 2 С помощью построителя запросов добавьте сразу 3 новых юзера в таблицу users.
 Route::get ('/lesson23-2/', 'Lesson23@lesson23_2');
+
+
+// Урок 25. (laravel).  Задача 2 В контроллере PostController сделайте действие getAll для получения списка всех статей. Пусть это действие будет доступно по адресу /post/all/.
+Route::get ('/lesson25-2/post/all/', 'Lesson25@lesson25_2getAll');
 
