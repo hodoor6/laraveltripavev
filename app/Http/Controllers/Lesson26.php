@@ -26,4 +26,18 @@ class Lesson26 extends Controller
         }
         return view('lesson26.lesson26-1', ['message' => $message]);
               }
-    }
+
+    // Урок 26. (laravel). Задача 2. Сделайте какое-нибудь действие, по заходу на которое для статьи с id 1 поменяйте title и короткое описание desc.
+
+    public function lesson26_2()
+    {
+    $post = lesson24::find(1);
+    $post->title = 'Статья 1 заголовок изменен';
+    $post->desc = 'Статья 1 Статья 1 Статья 1 Короткое описание изменено';
+    $post->save();
+        return  redirect('/lesson25-6/post/all/');
+}
+}
+
+
+
