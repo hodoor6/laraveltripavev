@@ -70,6 +70,19 @@ class Lesson25 extends Controller
 
     }
 
+
+    // Урок 25. (laravel). Задача 8  Отредактируйте маршрут действия getAll так, чтобы вместо адреса /post/all/ нашей действие стало доступно по адресу /post/all/:order/, где :order представляет собой имя поля, по которому выполнять сортировку.
+    //Сделайте так, чтобы сортировать можно было по полям id, title и date. Причем сортировка должна быть по убыванию значения поля.
+    //Сделайте так, чтобы параметр :order был не обязательным и по умолчанию имел значение date.
+
+    public function lesson26_8getAll($order='date')
+{
+        $posts = lesson24::orderBy($order,'desc')->get();
+
+        return view('lesson25.lesson25-6', ['posts' => $posts]);
+
+    }
+
 }
 
 
