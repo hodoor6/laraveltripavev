@@ -860,3 +860,8 @@ Route::get ('/lesson25-9/post/all/{order?}/{dir?}', 'Lesson25@lesson26_9getAll')
 
 
 Route::get ('/lesson25-10/post/{id}/', 'Lesson25@lesson25_10getOne');
+
+
+// Урок 26. (laravel). Задача 1  В контроллере PostController, созданном в предыдущем уроке, сделайте действие newPost для создания новой статьи. Пусть это действие будет доступно по адресу /post/new/. В представлении действия покажите форму для добавления новой записи. После отправки формы сохраните новую запись.
+
+Route::match(['get', 'post'],'/lesson26-1/post/new/', 'Lesson26@lesson26_1newPost');
