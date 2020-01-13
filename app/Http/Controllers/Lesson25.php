@@ -58,6 +58,18 @@ class Lesson25 extends Controller
 
     }
 
+
+
+    // Урок 25. (laravel). Задача 7 Отредактируйте действие getAll так, чтобы получаемые статьи были отсортированы по убыванию даты публикации.
+
+    public function lesson26_7getAll()
+    {
+        $posts = lesson24::orderBy('date','desc')->get();
+
+        return view('lesson25.lesson25-6', ['posts' => $posts]);
+
+    }
+
 }
 
 
