@@ -24,10 +24,16 @@ class Lesson25 extends Controller
     $posts = lesson24::all();
 
     return view('lesson25.lesson25-3', ['posts' => $posts]);
-    //   var_dump($posts);
-//        ('posts')->get();
-//        var_dump($users);
 
+}
+
+// Урок 25. (laravel). Задача 4 В контроллере PostController сделайте действие getOne для получения одной статьи по ее id. Пусть это действие будет доступно по адресу /post/:id/, где :id представляет собой id желаемой записи.
+
+    public function lesson25_4getOne($id)
+    {
+    $post = lesson24::find($id);
+
+    return view('lesson25.lesson25-4', ['post' => $post]);
 
 }
 
