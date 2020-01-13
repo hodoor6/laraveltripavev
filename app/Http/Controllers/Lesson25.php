@@ -96,6 +96,17 @@ class Lesson25 extends Controller
 
     }
 
+
+    // Урок 25. (laravel). Задача 10 Отредактируйте действия getOne так, чтобы, если для переданного параметром id не существует записи в базе данных, то выводилась ошибка 404.
+
+    public function lesson25_10getOne($id)
+    {
+        $post = lesson24::findOrFail($id);
+
+        return view('lesson25.lesson25-5', ['post' => $post]);
+
+    }
+
 }
 
 

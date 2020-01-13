@@ -854,3 +854,9 @@ Route::get ('/lesson25-8/post/all/{order?}', 'Lesson25@lesson26_8getAll')->where
 //Пусть параметр :dir может иметь только два значения: asc или desc. При этом пусть наш параметр также является не обязательным и по умолчанию имеет значение desc.
 Route::get ('/lesson25-9/post/all/{order?}/{dir?}', 'Lesson25@lesson26_9getAll')->where(['order'=>'|id|title|date','dir'=>'|asc|desc']);
 
+
+// Урок 25. (laravel). Задача 10  Отредактируйте действия getOne так, чтобы, если для переданного параметром id не существует записи в базе данных, то выводилась ошибка 404.
+//Route::get ('/lesson25-10/post/{id}/', 'Lesson25@lesson25_10getOne')->where('id','[1-9]+');
+
+
+Route::get ('/lesson25-10/post/{id}/', 'Lesson25@lesson25_10getOne');
