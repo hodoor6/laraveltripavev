@@ -16,9 +16,23 @@ class Lesson25 extends Controller
         var_dump($posts);
 
     }
+
+// Урок 25. (laravel). Задача 3 Используя модель Post, созданную в предыдущем уроке для таблицы posts, получите в действии getAll массив всех статей, передайте его в представление и выведите циклом на экран в виде HTML таблицы с колонками id, title (заголовок) и desc (то есть без текста статьи).
+
+    public function lesson25_3getAll()
+{
+    $posts = lesson24::all();
+
+    return view('lesson25.lesson25-3', ['posts' => $posts]);
+    //   var_dump($posts);
+//        ('posts')->get();
+//        var_dump($users);
+
+
 }
 
 
+}
 
 
 
