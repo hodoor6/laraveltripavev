@@ -46,10 +46,19 @@ class Lesson25 extends Controller
     return view('lesson25.lesson25-5', ['post' => $post]);
 
 }
+
+
+// Урок 25. (laravel). Задача 6 Отредактируйте представление действия getAll так, чтобы заголовок каждой из выводимых статей стал ссылкой на соответствующую страницу одной статьи.
+
+    public function lesson25_6getAll()
+    {
+        $posts = lesson24::all();
+
+        return view('lesson25.lesson25-6', ['posts' => $posts]);
+
+    }
+
 }
-
-
-
 
 
 
