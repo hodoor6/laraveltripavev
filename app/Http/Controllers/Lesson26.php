@@ -63,6 +63,16 @@ class Lesson26 extends Controller
 
         return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
     }
+
+// Урок 26. (laravel). Задача 4 Отредактируйте представление действия getAll так, чтобы появилась еще одна колонка со ссылкой на редактирование соответствующей статьи.
+
+    public function lesson26_4getAll($order='date',$dir='desc')
+    {
+        $posts = lesson24::orderBy($order,$dir)->get();
+
+        return view('lesson26.lesson26-4', ['posts' => $posts]);
     }
+}
+
 
 
