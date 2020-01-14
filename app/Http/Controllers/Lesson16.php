@@ -16,7 +16,7 @@ class Lesson16 extends Controller
     {
 
         $request->session()->flash('status', 'Задание выполнено успешно!');
-        return redirect()->route('flash');
+        return redirect()->route('flash1');
     }
 
     public function lesson16_1flash(Request $request)
@@ -39,7 +39,7 @@ class Lesson16 extends Controller
             and $request->has('number5') and $request->number5 != '') {
 
             $request->flash();
-            return redirect()->route('flash');
+            return redirect()->route('flash2');
 
         }
         $result = 'Ведите  все  числа';

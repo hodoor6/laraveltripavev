@@ -53,7 +53,10 @@ class Lesson26 extends Controller
         $post->date = $request->date;
         $post->text = $request->text;
         $post->save();
-      return  redirect('/lesson26-4/post/all/');
+
+        $request->session()->flash('status', 'Запись успешно обновлена!');
+               $value = $request->session()->get('status');
+               return  redirect('/lesson26-4/post/all/')->with('value', $value);
         }else
         {
             $message = 'Заполните все поля!';
@@ -66,11 +69,10 @@ class Lesson26 extends Controller
 
 // Урок 26. (laravel). Задача 4 Отредактируйте представление действия getAll так, чтобы появилась еще одна колонка со ссылкой на редактирование соответствующей статьи.
 
-    public function lesson26_4getAll($order='date',$dir='desc')
+    public function lesson26_4getAll(Request $request,$order='date',$dir='desc')
     {
         $posts = lesson24::orderBy($order,$dir)->get();
-
-        return view('lesson26.lesson26-4', ['posts' => $posts]);
+        return view('lesson26.lesson26-4', ['posts' => $posts ]);
     }
 
 
@@ -102,6 +104,39 @@ class Lesson26 extends Controller
 
         return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
     }
+
+
+    // Урок 26. (laravel). Задача 5.Модифицируйте предыдущую задачу так, чтобы при редиректе отправлялось флеш сообщение об успешном обновлении записи. Выводите это сообщение в представлении действия getAll.
+
+    public function lesson26_6edit(Request $request,$id)
+    {
+
+        $message = '';
+        $post = lesson24::findOrFail($id);
+        if($request->has('start'))
+        {
+            if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
+
+                $post->title = $request->title;
+                $post->desc = $request->desc;
+                $post->date = $request->date;
+                $post->text = $request->text;
+                $post->save();
+
+                $request->session()->flash('status', 'Запись успешно обновлена!');
+                $value = $request->session()->get('status');
+                return  redirect('/lesson26-4/post/all/')->with('value', $value);
+            }else
+            {
+                $message = 'Заполните все поля!';
+                redirect() -> back() -> withInput();
+            }
+        }
+
+        return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
+    }
+
+
 
 
 }
