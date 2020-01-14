@@ -48,15 +48,24 @@ class Lesson26 extends Controller
         {
             if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
 
+
         $post->title = $request->title;
         $post->desc = $request->desc;
         $post->date = $request->date;
         $post->text = $request->text;
         $post->save();
 
-        $request->session()->flash('status', 'Запись успешно обновлена!');
-               $value = $request->session()->get('status');
-               return  redirect('/lesson26-4/post/all/')->with('value', $value);
+
+                $request->session()->flash('statusedit', 'Запись успешно обновлена!');
+                $status = $request->session()->get('statusedit');
+
+                $idPost =  $request -> session() -> flash('id', $post -> id);
+                $idPost = $request->session()->get('id');
+
+                $title =  $request -> session() -> flash('title', $post -> title);
+                $title = $request->session()->get('title');
+
+               return  redirect('/lesson26-4/post/all/')->with(['status' => $status ,'idPost' => $idPost, 'title' =>  $title]);
         }else
         {
             $message = 'Заполните все поля!';
@@ -106,7 +115,7 @@ class Lesson26 extends Controller
     }
 
 
-    // Урок 26. (laravel). Задача 5.Модифицируйте предыдущую задачу так, чтобы при редиректе отправлялось флеш сообщение об успешном обновлении записи. Выводите это сообщение в представлении действия getAll.
+    // Урок 26. (laravel). Задача 6.Модифицируйте предыдущую задачу так, чтобы при редиректе отправлялось флеш сообщение об успешном обновлении записи. Выводите это сообщение в представлении действия getAll.
 
     public function lesson26_6edit(Request $request,$id)
     {
@@ -118,7 +127,7 @@ class Lesson26 extends Controller
             if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
 
                 $post->title = $request->title;
-                $post->desc = $request->desc;
+                 $post->desc = $request->desc;
                 $post->date = $request->date;
                 $post->text = $request->text;
                 $post->save();
@@ -126,6 +135,47 @@ class Lesson26 extends Controller
                 $request->session()->flash('status', 'Запись успешно обновлена!');
                 $value = $request->session()->get('status');
                 return  redirect('/lesson26-4/post/all/')->with('value', $value);
+            }else
+            {
+                $message = 'Заполните все поля!';
+                redirect() -> back() -> withInput();
+            }
+        }
+
+        return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
+    }
+
+
+
+    // Урок 26. (laravel). Задача 7. Модифицируйте предыдущую задачу так, чтобы во флеш сообщении был указан id и title статьи, подвергнувшейся изменению.
+
+    public function lesson26_7edit(Request $request,$id)
+    {
+
+        $message = '';
+        $post = lesson24::findOrFail($id);
+        if($request->has('start'))
+        {
+            if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
+
+
+                $post->title = $request->title;
+                $post->desc = $request->desc;
+                $post->date = $request->date;
+                $post->text = $request->text;
+                $post->save();
+
+
+                $request->session()->flash('statusedit', 'Запись успешно обновлена!');
+                $status = $request->session()->get('statusedit');
+
+                $idPost =  $request -> session() -> flash('id', $post -> id);
+                $idPost = $request->session()->get('id');
+
+                $title =  $request -> session() -> flash('title', $post -> title);
+                $title = $request->session()->get('title');
+
+                return  redirect('/lesson26-4/post/all/')->with(['status' => $status ,'idPost' => $idPost, 'title' =>  $title]);
             }else
             {
                 $message = 'Заполните все поля!';
