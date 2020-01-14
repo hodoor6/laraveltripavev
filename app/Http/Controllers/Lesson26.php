@@ -72,6 +72,38 @@ class Lesson26 extends Controller
 
         return view('lesson26.lesson26-4', ['posts' => $posts]);
     }
+
+
+    // Урок 26. (laravel). Задача 5. Модифицируйте код действия editPost так, чтобы после сохранения формы выполнялся редирект на список всех записей (то есть на действие getAll).
+
+    public function lesson26_5edit(Request $request,$id)
+    {
+
+        $message = '';
+        $post = lesson24::findOrFail($id);
+        if($request->has('start'))
+        {
+            if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
+
+                $post->title = $request->title;
+                $post->desc = $request->desc;
+                $post->date = $request->date;
+                $post->text = $request->text;
+                $post->save();
+
+                return  redirect('/lesson26-4/post/all/');
+
+            }else
+            {
+                $message = 'Заполните все поля!';
+                redirect() -> back() -> withInput();
+            }
+        }
+
+        return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
+    }
+
+
 }
 
 

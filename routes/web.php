@@ -870,3 +870,6 @@ Route::match(['get', 'post'],'/lesson26-3/{id}', 'Lesson26@lesson26_3edit');
 
 // Урок 26. (laravel). Задача 4  Отредактируйте представление действия getAll так, чтобы появилась еще одна колонка со ссылкой на редактирование соответствующей статьи.
 Route::get ('/lesson26-4/post/all/{order?}/{dir?}', 'Lesson26@lesson26_4getAll')->where(['order'=>'|id|title|date','dir'=>'|asc|desc']);
+
+// Урок 26. (laravel). Задача 5  Модифицируйте код действия editPost так, чтобы после сохранения формы выполнялся редирект на список всех записей (то есть на действие getAll).
+Route::match(['get', 'post'],'/lesson26-5/{id}', 'Lesson26@lesson26_5edit');
