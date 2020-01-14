@@ -37,7 +37,32 @@ class Lesson26 extends Controller
     $post->save();
         return  redirect('/lesson25-6/post/all/');
 }
-}
+    // Урок 26. (laravel). Задача 3. Сделайте самостоятельно описанное мною редактирование статьи.
 
+    public function lesson26_3edit(Request $request,$id)
+    {
+
+        $message = '';
+        $post = lesson24::findOrFail($id);
+        if($request->has('start'))
+        {
+            if ($request -> title != '' and $request -> desc != '' and $request -> text != '') {
+
+        $post->title = $request->title;
+        $post->desc = $request->desc;
+        $post->date = $request->date;
+        $post->text = $request->text;
+        $post->save();
+      return  redirect('/lesson26-4/post/all/');
+        }else
+        {
+            $message = 'Заполните все поля!';
+            redirect() -> back() -> withInput();
+        }
+        }
+
+        return view('lesson26.lesson26-3', ['message' => $message, 'post'=>$post]);
+    }
+    }
 
 
