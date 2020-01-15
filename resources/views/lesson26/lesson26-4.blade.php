@@ -16,7 +16,7 @@
 <table border ="1" width="400" align="center">
     <tr>
         <th>№</th>
-        <th>Pаголовок</th>
+        <th>Заголовок</th>
         <th>Короткое описание</th>
         <th>Редактирование</th>
       </tr>

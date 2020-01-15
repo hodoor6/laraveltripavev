@@ -880,3 +880,7 @@ Route::match(['get', 'post'],'/lesson26-6/{id}', 'Lesson26@lesson26_6edit');
 // Урок 26. (laravel). Задача 7. Модифицируйте предыдущую задачу так, чтобы во флеш сообщении был указан id и title статьи, подвергнувшейся изменению.
 
 Route::match(['get', 'post'],'/lesson26-7/{id}', 'Lesson26@lesson26_7edit');
+
+// Урок 26. (laravel). Задача 8. Массовые изменения //Самостоятельно опробуйте изученную теорию.
+
+Route::match(['get', 'post'],'/lesson26-8/{id}', 'Lesson26@lesson26_8');

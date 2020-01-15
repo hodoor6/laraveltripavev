@@ -187,8 +187,17 @@ class Lesson26 extends Controller
     }
 
 
+// Урок 26. (laravel). Задача 8. Массовые изменения //Самостоятельно опробуйте изученную теорию.
 
+    public function lesson26_8($id)
+    {
 
+        $post = lesson24::where('id','>=','13')
+->update(['title' =>'статья новая', 'desc' =>'описание'.$id]);
+
+        return  redirect('/lesson26-4/post/all/');
+
+}
 }
 
 
