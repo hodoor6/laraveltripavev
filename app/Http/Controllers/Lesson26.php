@@ -212,6 +212,19 @@ class Lesson26 extends Controller
 
 }
 
+
+
+//Урок 26 Задача 10 "Создайте модель с помощью массового заполнения firstOrCreate()."
+//// Метод firstOrCreate() пытается найти запись БД, используя указанные пары столбец/значение. Если модель не найдена в БД, запись будет вставлена в БД с указанными атрибутами.
+    public function lesson26_10($id)
+    {
+
+        $post = lesson24::firstOrNew(['title'=>'Статья'.$id,'descs' => 'описание cтатьи' . $id, 'text' => 'описание cтатьи'.$id,'date' => date('Y-m-d', time()) ]);
+        $post->save();
+
+      return  redirect('/lesson26-4/post/all/');
+
+}
 }
 
 
