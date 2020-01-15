@@ -205,7 +205,7 @@ class Lesson26 extends Controller
     public function lesson26_9($id)
     {
 
-        $post = lesson24::firstOrCreate(['title'=>'Статья'.$id,'descs' => 'описание cтатьи' . $id, 'text' => 'описание cтатьи'.$id,'date' => date('Y-m-d', time()) ]);
+        $post = lesson24::firstOrCreate(['title'=>'Статья'.$id,'desc' => 'описание cтатьи' . $id, 'text' => 'описание cтатьи'.$id,'date' => date('Y-m-d', time()) ]);
 
 
       return  redirect('/lesson26-4/post/all/');
@@ -219,11 +219,19 @@ class Lesson26 extends Controller
     public function lesson26_10($id)
     {
 
-        $post = lesson24::firstOrNew(['title'=>'Статья'.$id,'descs' => 'описание cтатьи' . $id, 'text' => 'описание cтатьи'.$id,'date' => date('Y-m-d', time()) ]);
+        $post = lesson24::firstOrNew(['title'=>'Статья'.$id,'desc' => 'описание cтатьи' . $id, 'text' => 'описание cтатьи'.$id,'date' => date('Y-m-d', time()) ]);
         $post->save();
 
       return  redirect('/lesson26-4/post/all/');
 
+}
+
+//Урок 26 Задача 10 "Задача 11: "Обновите существующую модель или создайте новую, если её пока нет, используя метод updateOrCreate()."Laravel предоставляет метод updateOrCreate(), когда надо обновить существующую модель или создать новую, если её пока нет, для выполнения этой задачи за один шаг. Подобно методу firstOrCreate(), метод updateOrCreate() сохраняет модель, поэтому не надо вызывать метод PHPsave().
+    public function lesson26_11($id)
+    {
+        $post = lesson24::updateOrCreate(['id'=>$id ] ,['title'=>'Статья '. $id , 'desc' => 'Описание cтатьи ' . $id, 'text' => 'Статья '.$id.' Статья '.$id.' Статья '.$id.' Статья '.$id.' Статья '.$id.' Статья '.$id,'date' => date('Y-m-d', time()) ]);
+
+     return  redirect('/lesson26-4/post/all/');
 }
 }
 

@@ -24,7 +24,7 @@
         <tr>
             <td>{{$post->id }}</td>
             <td><a href="/lesson25-5/post/{{$post->id}}/">{{$post->title}}</a></td>
-            <td>{{$post->descs}}</td>
+            <td>{{$post->desc}}</td>
             <td><a href="/lesson26-3/{{$post->id}}/">Редактирование</a></td>
         </tr>
     @endforeach
