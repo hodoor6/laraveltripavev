@@ -94,5 +94,18 @@ class Lesson27 extends Controller
 
 
     }
+
+    // Урок 27. (laravel). Задача 7.В представлении действия DeletePost для каждой статьи сделайте ссылку на ее удаление.
+
+    public function lesson27_7deletePost($id)
+    {
+
+     $posts = lesson24::withTrashed()
+        ->where('id', $id)->forceDelete();;
+
+  return redirect('/lesson26-4/post/all/');
+
+
+    }
 }
 
