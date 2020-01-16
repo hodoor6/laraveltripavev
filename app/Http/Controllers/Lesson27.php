@@ -81,5 +81,18 @@ class Lesson27 extends Controller
 
 
     }
+
+    // Урок 27. (laravel). Задача 6. В представлении действия getDeletedPost для каждой статьи сделайте ссылку на ее восстановление.
+
+    public function lesson27_6restorePost($id)
+    {
+
+     $posts = lesson24::withTrashed()
+        ->where('id', $id)->restore();
+
+  return redirect('/lesson26-4/post/all/');
+
+
+    }
 }
 

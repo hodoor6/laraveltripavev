@@ -922,3 +922,9 @@ Route::get('/lesson27-4/post/del/', 'Lesson27@lesson27_4getDeletedPost');
 
 
 Route::get('/lesson27-5/restorePost/{id}', 'Lesson27@lesson27_5restorePost');
+
+
+// Урок 27. (laravel). Задача 5.В представлении действия getDeletedPost для каждой статьи сделайте ссылку на ее восстановление.
+
+
+Route::get('/lesson27-6/restorePost/{id}', 'Lesson27@lesson27_6restorePost');

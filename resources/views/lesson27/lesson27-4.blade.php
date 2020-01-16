@@ -22,6 +22,7 @@
         <th>№</th>
         <th>Заголовок</th>
         <th>Короткое описание</th>
+        <th>Востановление</th>
 
       </tr>
     @foreach($posts as $post)
@@ -29,6 +30,7 @@
             <td>{{$post->id }}</td>
             <td>{{$post->title}}</td>
             <td>{{$post->desc}}</td>
+            <td><a href="/lesson27-6/restorePost/{{$post->id}}/">Востановление</a></td>
 
         </tr>
     @endforeach
