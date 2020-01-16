@@ -61,10 +61,23 @@ class Lesson27 extends Controller
 
     public function lesson27_4getDeletedPost(Request $request)
     {
-   //  $post = lesson24::withTrashed()->where('deleted_at','!=',null)->get();
+
      $posts = lesson24::onlyTrashed()->get();
 
   return view ('lesson27.lesson27-4' ,[ 'posts'=> $posts]);
+
+
+    }
+
+    // Урок 27. (laravel). Задача 5. Сделайте действие restorePost, восстанавливающее удаленную статью обратно.
+
+    public function lesson27_5restorePost($id)
+    {
+
+     $posts = lesson24::withTrashed()
+        ->where('id', $id)->restore();
+
+  return redirect('/lesson27-4/post/del');
 
 
     }

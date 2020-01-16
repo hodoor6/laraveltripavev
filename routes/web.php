@@ -917,3 +917,8 @@ Route::get('/lesson27-3/post/del/{id}', 'Lesson27@lesson27_3delPost');
 // Урок 27. (laravel). Задача 4. Сделайте действие getDeletedPost, выводящее список удаленных статей.
 
 Route::get('/lesson27-4/post/del/', 'Lesson27@lesson27_4getDeletedPost');
+
+// Урок 27. (laravel). Задача 5. Сделайте действие restorePost, восстанавливающее удаленную статью обратно.
+
+
+Route::get('/lesson27-5/restorePost/{id}', 'Lesson27@lesson27_5restorePost');
