@@ -25,12 +25,32 @@ class Lesson27 extends Controller
 
     public function lesson27_2delPost(Request $request, $id)
     {
+
      $post = lesson24::findOrFail($id);
+
         $delete = $request->session()->flash('delete','Статья успешно удалена');
         $delete = $request->session()->get('delete');
        $request->session()->flash('title', $post->title);
         $title= $request->session()->get('title');
-        $post->delete();
+
+        $post = lesson24::destroy($id);
+        return redirect('/lesson26-4/post/all/')->with(['delete'=>$delete,'title'=>$title]);
+
+
+      }
+
+
+    // Урок 27. (laravel). Задача 3.  Реализуйте мягкое удаление статей.
+
+    public function lesson27_3delPost(Request $request, $id)
+    {
+     $post = lesson24::findOrFail($id);
+
+        $delete = $request->session()->flash('delete','Статья успешно удалена');
+        $delete = $request->session()->get('delete');
+       $request->session()->flash('title', $post->title);
+        $title= $request->session()->get('title');
+
         $post = lesson24::destroy($id);
         return redirect('/lesson26-4/post/all/')->with(['delete'=>$delete,'title'=>$title]);
 
