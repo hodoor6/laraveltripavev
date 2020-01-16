@@ -56,5 +56,17 @@ class Lesson27 extends Controller
 
 
     }
+
+    // Урок 27. (laravel). Задача 4.  Сделайте действие getDeletedPost, выводящее список удаленных статей.
+
+    public function lesson27_4getDeletedPost(Request $request)
+    {
+   //  $post = lesson24::withTrashed()->where('deleted_at','!=',null)->get();
+     $posts = lesson24::onlyTrashed()->get();
+
+  return view ('lesson27.lesson27-4' ,[ 'posts'=> $posts]);
+
+
+    }
 }
 
