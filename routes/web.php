@@ -963,3 +963,6 @@ Route::get('/lesson28-9/', 'Lesson28@lesson28_9');
 
 // Урок 28. (laravel). Задача 9-1. Получите все города вместе с их странами.
 Route::get('/lesson28-9-1/', 'Lesson28@lesson28_9_1');
+
+// Урок 28. (laravel). Задача 11. Получите все страны вместе с их городами.
+Route::get('/lesson28-11/', 'Lesson28@lesson28_11');

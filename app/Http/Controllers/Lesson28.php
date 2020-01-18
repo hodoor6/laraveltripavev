@@ -76,6 +76,15 @@ public function lesson28_8()
     return view('lesson28.lesson28-9-1',['users'=>$users]);
 
 }
+//
+/// /Урок 28. (laravel). //--Урок 28. (laravel). Задача 11. Получите все страны вместе с их городами.       --}}
+    public function lesson28_11()
+{
+   $users = Lesson28countrie::all();
+
+  return view('lesson28.lesson28-11',['users'=>$users]);
+
+}
 }
 
 
