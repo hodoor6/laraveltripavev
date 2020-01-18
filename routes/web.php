@@ -11,6 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+DB::listen(function($query) {
+
+    var_dump($query->sql, $query->bindings,  $query->time);
+
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -936,4 +941,4 @@ Route::get('/lesson27-7/delete/post/{id}', 'Lesson27@lesson27_7deletePost');
 
 // Урок 28. (laravel). Задача 2. Получите какого-нибудь пользователя вместе с его профилем.
 
-Route::get('/lesson28-2/', 'Lesson281@lesson28_2');
+Route::get('/lesson28-2/', 'Lesson28@lesson28_2');
