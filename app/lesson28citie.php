@@ -19,7 +19,7 @@ public $timestamps = false;
 //
 public function lesson28user()
 {
-    return $this->belongsTo('App\Lesson28user','id','city_id');
+    return $this->belongsTo('App\Lesson28user','id');
 }
 
 }

@@ -29,23 +29,25 @@ class Lesson28 extends Controller
         $users = Lesson28user::all();
 
 return view('lesson28.lesson28-3',['users'=>$users]);
-
     }
-
     //     Урок 28. (laravel). Задача 5. Получите какого-нибудь пользователя вместе с его городом.
     public function lesson28_5()
     {
-
         $user = Lesson28citie::findOrFAil(2);
 
         dump($user);
 
         dump($user->lesson28user);
-
     }
 
-    }
+//Урок 28. (laravel). Задача 6.  Получите всех пользователей вместе с их городами, передайте полученный массив в представление и выведите на экран в виде HTML таблицы table.
+
+public function lesson28_6()
+{
+    $users = Lesson28citie::all();
+
+    return view('lesson28.lesson28-6',['users'=>$users]);
 
 
-
-
+}
+}
