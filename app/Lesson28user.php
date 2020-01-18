@@ -16,12 +16,10 @@ public $timestamps = false;
  //   protected $fillable = ['title','desc','date','text','deleted_at'];
   //  protected $dates = ['deleted_at'];
 
-//public function lesson28profile()
-//{
-//    return $this->hasOne('App\Lesson28profile','user_id','id');
-//}
-
-
+public function lesson28profile()
+{
+    return $this->hasOne('App\Lesson28profile','user_id','id');
+}
 
 // Урок 28. (laravel). Задача 4. Пусть у вас есть таблица users (пользователи) с полями id, login, password, city_id и таблица cities (города) с полями id, name (название города). Свяжите пользователей с городами отношением belongsTo.
 
