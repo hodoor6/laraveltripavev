@@ -17,11 +17,17 @@ public $timestamps = false;
  //   protected $fillable = ['title','desc','date','text','deleted_at'];
   //  protected $dates = ['deleted_at'];
 //
-public function lesson28citie()
+public function lesson28countrie()
 {
     return $this->belongsTo('App\Lesson28citie', 'id');
 }
+//--Урок 28. (laravel). Задача 10. Свяжите созданную вами таблицу countries с таблицей cities отношением hasMany.      --}}
 
+public function Lesson28countrieMany()
+{
+    return $this->hasMany('App\Lesson28citie', 'country_id');
+}
+//
 }
 
 
