@@ -929,10 +929,11 @@ Route::get('/lesson27-5/restorePost/{id}', 'Lesson27@lesson27_5restorePost');
 
 Route::get('/lesson27-6/restorePost/{id}', 'Lesson27@lesson27_6restorePost');
 
-
-
-
 // Урок 27. (laravel). Задача 7.В представлении действия DeletePost для каждой статьи сделайте ссылку на ее удаление.
 
-
 Route::get('/lesson27-7/delete/post/{id}', 'Lesson27@lesson27_7deletePost');
+
+
+// Урок 28. (laravel). Задача 2. Получите какого-нибудь пользователя вместе с его профилем.
+
+Route::get('/lesson28-2/', 'Lesson281@lesson28_2');
