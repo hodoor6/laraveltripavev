@@ -22,5 +22,12 @@ public function lesson28user()
     return $this->belongsTo('App\Lesson28user','id');
 }
 
+// Урок 28. (laravel). Задача 7. Сделайте еще таблицу countries (страны) с полями id, name (название страны). В таблицу cities добавьте поле country_id. Свяжите города со странами отношением belongsTo.
+
+    public function lesson28countrie()
+    {
+        return $this->belongsTo('App\Lesson28countrie', 'country_id');
+    }
+
 }
 
