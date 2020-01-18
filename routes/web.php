@@ -11,11 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-DB::listen(function($query) {
-
-    var_dump($query->sql, $query->bindings,  $query->time);
-
-});
+//DB::listen(function($query) {
+//
+//    var_dump($query->sql, $query->bindings,  $query->time);
+//
+//});
 
 Route::get('/', function () {
     return view('welcome');
@@ -955,3 +955,8 @@ Route::get('/lesson28-5/', 'Lesson28@lesson28_5');
 
 // Урок 28. (laravel). Задача 6. Получите всех пользователей вместе с их городами, передайте полученный массив в представление и выведите на экран в виде HTML таблицы table.
 Route::get('/lesson28-6/', 'Lesson28@lesson28_6');
+
+
+
+// Урок 28. (laravel). Задача 8. Получите все города вместе с их странами.
+Route::get('/lesson28-8/', 'Lesson28@lesson28_8');

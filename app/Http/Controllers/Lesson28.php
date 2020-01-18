@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Lesson28citie;
+use App\Lesson28countrie;
 use App\lesson28user;
 use App\Lesson28profile;
 use Illuminate\Http\Request;
@@ -48,6 +49,15 @@ public function lesson28_6()
 
     return view('lesson28.lesson28-6',['users'=>$users]);
 
+
+}
+
+
+public function lesson28_8()
+{
+    $cities = Lesson28countrie::all();
+
+    return view('lesson28.lesson28-8',['cities'=>$cities]);
 
 }
 }
