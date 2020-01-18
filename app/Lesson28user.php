@@ -23,10 +23,18 @@ public function lesson28profile()
 
 // Урок 28. (laravel). Задача 4. Пусть у вас есть таблица users (пользователи) с полями id, login, password, city_id и таблица cities (города) с полями id, name (название города). Свяжите пользователей с городами отношением belongsTo.
 
-public function Lesson28citie()
+public function lesson28citie()
 {
-    return $this->belongsTo('App\Lesson28citie','id','city_id');
+    return $this->belongsTo('App\Lesson28citie','city_id','id');
 }
 
-}
 
+
+
+
+public function city()
+{
+    return $this->belongsTo('App\Lesson28citie');
+
+}
+}

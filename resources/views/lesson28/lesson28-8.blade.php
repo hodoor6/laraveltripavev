@@ -10,7 +10,7 @@
     @foreach($cities as $elem)
         <tr>
             <td>{{$elem->name}}</td>
-            <td>{{$elem->lesson28citie->name }}</td>
+            <td>{{$elem->Lesson28countrie->name }}</td>
                     </tr>
     @endforeach
 

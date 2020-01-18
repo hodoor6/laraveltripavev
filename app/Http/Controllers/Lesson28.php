@@ -55,9 +55,27 @@ public function lesson28_6()
 
 public function lesson28_8()
 {
-    $cities = Lesson28countrie::all();
+    $cities = Lesson28citie::all();
 
     return view('lesson28.lesson28-8',['cities'=>$cities]);
 
 }
+//Урок 28. (laravel). Задача 9. Получите всех пользователей вместе с их городами и странами этих городов.
+    public function lesson28_9()
+{
+
+   $users = Lesson28user::all();
+    return view('lesson28.lesson28-9',['cities'=>$users]);
+
 }
+//Урок 28. (laravel). Задача 9-1. Получите всех пользователей вместе с их городами и странами этих городов.
+    public function lesson28_9_1()
+{
+
+   $users = Lesson28user::all();
+    return view('lesson28.lesson28-9-1',['users'=>$users]);
+
+}
+}
+
+

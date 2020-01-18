@@ -29,5 +29,14 @@ public function lesson28user()
         return $this->belongsTo('App\Lesson28countrie', 'country_id');
     }
 
+// Урок 28. (laravel). Задача 9. Получите всех пользователей вместе с их городами и странами этих городов.
+
+
+    public function country()
+    {
+        return $this->belongsTo('App\Lesson28countrie');
+    }
+
+
 }
 

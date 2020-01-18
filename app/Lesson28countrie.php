@@ -22,6 +22,9 @@ public function lesson28citie()
     return $this->belongsTo('App\Lesson28citie', 'id');
 }
 
-
 }
+
+
+
+
 
