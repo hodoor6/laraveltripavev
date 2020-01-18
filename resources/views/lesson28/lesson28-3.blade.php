@@ -20,18 +20,20 @@
 <table border ="1" width="400" align="center">
     <tr>
         <th>№</th>
-        <th>Заголовок</th>
-        <th>Короткое описание</th>
-        <th>Редактирование</th>
-        <th>Удаление</th>
+        <th>Логин</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Почта</th>
+        <th>Пароль</th>
       </tr>
     @foreach($users as $elem)
         <tr>
+            <td>{{$elem->id }}</td>
             <td>{{$elem->login }}</td>
-            <td>{{$elem->profile->name}}</td>
-{{--            <td><a href="/lesson25-5/post/{{$post->id}}/">{{$post->title}}</a></td>--}}
-{{--            <td><a href="/lesson26-3/{{$post->id}}/">Редактирование</a></td>--}}
-{{--            <td><a href="/lesson27-1/post/del/{{$post->id}}/">Удаление</a></td>--}}
+            <td>{{$elem->lesson28profile->name}}</td>
+            <td>{{$elem->lesson28profile->surname}}</td>
+            <td>{{$elem->lesson28profile->email}}</td>
+            <td>{{$elem->password}}</td>
         </tr>
     @endforeach
 

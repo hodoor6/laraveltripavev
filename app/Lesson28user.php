@@ -16,9 +16,15 @@ public $timestamps = false;
  //   protected $fillable = ['title','desc','date','text','deleted_at'];
   //  protected $dates = ['deleted_at'];
 
-public function lesson28profile()
+//public function lesson28profile()
+//{
+//    return $this->hasOne('App\Lesson28profile','user_id','id');
+//}
+
+
+public function Lesson28citie()
 {
-    return $this->hasOne('App\Lesson28profile','user_id','id');
+    return $this->belongsTo('App\Lesson28citie','id','city_id');
 }
 
 }
