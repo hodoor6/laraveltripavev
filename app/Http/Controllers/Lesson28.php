@@ -80,9 +80,32 @@ public function lesson28_8()
 /// /Урок 28. (laravel). //--Урок 28. (laravel). Задача 11. Получите все страны вместе с их городами.       --}}
     public function lesson28_11()
 {
-   $users = Lesson28countrie::all();
+   $cityes = Lesson28countrie::all();
 
-  return view('lesson28.lesson28-11',['users'=>$users]);
+  return view('lesson28.lesson28-11',['cityes'=>$cityes]);
+
+}
+
+/// /Урок 28. (laravel). //--Урок 28. (laravel). Задача 11. Получите все страны вместе с их городами.       --}}
+    public function lesson28_12()
+    {
+        $users = Lesson28countrie::all();
+
+
+
+  return view('lesson28.lesson28-12',['users'=>$users]);
+
+}
+
+
+/// /Урок 28. (laravel). //--Урок 28. (laravel). Задача 12-1. Получите все страны вместе с их городами.       --}}
+    public function lesson28_12_1()
+{
+
+        $users = Lesson28citie::all();
+
+
+  return view('lesson28.lesson28-12-1',['users'=>$users]);
 
 }
 }

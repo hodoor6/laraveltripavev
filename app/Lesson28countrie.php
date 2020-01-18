@@ -27,6 +27,11 @@ public function Lesson28countrieMany()
 {
     return $this->hasMany('App\Lesson28citie', 'country_id');
 }
+//--Урок 28. (laravel). Задача 12 Получите всех пользователей вместе с их странами.
+    public function Lesson28countryManyThrough()
+    {
+        return $this->hasManyThrough('App\Lesson28user', 'App\Lesson28citie', 'country_id','city_id');
+    }
 //
 }
 

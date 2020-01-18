@@ -6,11 +6,11 @@
         <tr>
             <th>country</th>
         </tr>
-        @foreach($users as $user)
+        @foreach($cityes as $city)
         <tr>
-            <td>{{ $user->name }}</td>
+            <td>{{ $city->name }}</td>
         </tr>
-          @foreach ($user ->lesson28countrieMany as $el)
+          @foreach ($city ->lesson28countrieMany as $el)
         <td>{{ $el -> name }}</td>
         @endforeach
         @endforeach
