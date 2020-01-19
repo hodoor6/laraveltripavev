@@ -26,7 +26,29 @@ class Lesson29 extends Controller
 
     }
 
+//Урок 30. (laravel). Задача 2. Добавить новый город  (и получить его модель) пользователя с id = 5. (один ко многим).
+//(комментарии) cities: id, name, user_id
+//(пользователи) users: id, login, password
 
+    public function lesson29_2()
+    {
+      $user =Lesson29user::find(5);
+
+      $user->lesson29citie()->saveMany([
+
+         new Lesson29citie(['name' => 'Норвегия']),
+         new Lesson29citie(['name' => 'Германия'])
+   ]);
+
+
+ $user->lesson29citie()->create([
+
+         'name' => 'Нидерланды'
+
+   ]);
+
+
+    }
     }
 
 

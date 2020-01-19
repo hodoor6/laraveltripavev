@@ -17,10 +17,11 @@ public $timestamps = false;
   //  protected $dates = ['deleted_at'];
 
 
-    //     Урок 29. (laravel). Самостоятельно отработайте изученный материал.
-    //Задача 1. Добавить нового пользователя и связанный с ним город (один к одному).
-//
+//Урок 30. (laravel). Задача 2. Добаавить новый комментарий (и получить ее модель) пользователя с id = 27. (один ко многим).
 
+public function lesson29userhasMany (){
+    return $this->hasMany('App\Lesson29user', 'id') ;
+}
 
 
 }

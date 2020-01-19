@@ -991,3 +991,6 @@ Route::get('/lesson28-16/', 'Lesson28@lesson28_16');
 
 // Урок 28. (laravel). Задача 17.  Вставка и изменение связанных моделей //Метод Save
 Route::get('/lesson29-1/', 'Lesson29@lesson29_1');
+
+// Урок 28. (laravel). Задача 17.  Вставка и изменение связанных моделей //Метод Save
+Route::get('/lesson29-2/', 'Lesson29@lesson29_2');
