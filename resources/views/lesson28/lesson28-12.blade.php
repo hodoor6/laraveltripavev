@@ -17,6 +17,5 @@
             <tr>
         <td colspan="2">{{ $el -> login }}</td>
             </tr>
-        @endforeach
-        @endforeach
+        @endforeach        @endforeach
     </table>

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Lesson28categorie;
+use App\Lesson28categorie_lesson28product;
 use App\Lesson28citie;
 use App\Lesson28countrie;
+use App\Lesson28product;
 use App\lesson28user;
 use App\Lesson28profile;
 use Illuminate\Http\Request;
@@ -108,6 +111,30 @@ public function lesson28_8()
   return view('lesson28.lesson28-12-1',['users'=>$users]);
 
 }
+
+
+//// Урок 28. (laravel). Задача 13. Даны продукты и категории этих продуктов. Пусть продукт может принадлежать одновременно нескольким категориям. Свяжите продукты и категории отношением belongsToMany.
+///
+    public function lesson28_13()
+    {
+
+        $products = Lesson28product::all();
+
+   return view('lesson28.lesson28-13',['products'=>$products]);
+
+
+
+
+
+
+    }
+
+
+
+
+
+
 }
+
 
 
