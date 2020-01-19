@@ -39,6 +39,12 @@ public function lesson28categorieRole()
 }
 
 
+// Урок 28. (laravel). Задача 15.
 
+
+    public function lesson28categorieRoles()
+    {
+        return $this->belongsToMany('App\Lesson28categorie');
+    }
 }
 

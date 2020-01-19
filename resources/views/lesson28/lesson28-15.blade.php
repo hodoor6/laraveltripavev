@@ -12,10 +12,11 @@
 
         @foreach ($categories as $category)
         <tr>
-            <td>{{ $category->name }}</td>
-
+            <td><b>{{ $category->name }}</b></td>
+        </tr>
     @foreach ($category->lesson28productRoles as $key =>$product)
-
+            <tr>
+        <td>{{ $product->id }}</td>
         <td>{{ $product->name }}</td>
 
             </tr>
