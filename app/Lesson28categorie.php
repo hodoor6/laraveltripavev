@@ -24,6 +24,15 @@ public $timestamps = false;
         return $this->belongsToMany('App\Lesson28product', 'lesson28categorie_lesson28product', 'cat_id', 'prod_id');
 
            }
+    // Урок 28. (laravel). Задача 14
+   public function Lesson28productRole()
+    {
+        return $this->belongsToMany('App\Lesson28product');
+    }
+
+
+
+
 
 
 }

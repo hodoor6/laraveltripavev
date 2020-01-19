@@ -30,6 +30,15 @@ public $timestamps = false;
     }
 
 
+// Урок 28. (laravel). Задача 14. Даны продукты и категории этих продуктов. Пусть продукт может принадлежать одновременно нескольким категориям. Свяжите продукты и категории отношением belongsToMany.
+
+
+public function lesson28categorieRole()
+{
+    return $this->belongsToMany('App\Lesson28categorie','lesson28categorie_lesson28product','id_prod','id_cat');
+}
+
+
 
 }
 

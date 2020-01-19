@@ -132,6 +132,15 @@ public function lesson28_8()
 
 
 
+    //// Урок 28. (laravel). Задача 14. Получите продукты вместе с их категориями.
+///
+    public function lesson28_14()
+    {
+       $products = Lesson28product::all();
+
+           return view('lesson28.lesson28-14',['products'=>$products]);
+
+   }
 
 
 }
