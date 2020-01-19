@@ -142,7 +142,7 @@ public function lesson28_8()
 
    }
 
-    //// Урок 28. (laravel). Задача 15. Получите категории вместе с продуктами, принадлежащими этим категориям.
+    //// Урок 28. (laravel). Задача 16. Самостоятельно опробуйте изученную теорию.
 ///
     public function lesson28_15()
     {
@@ -151,6 +151,24 @@ public function lesson28_8()
                return view('lesson28.lesson28-15',['categories'=>$categories]);
         }
 
+
+        //// Урок 28. (laravel). Задача 15. Получите категории вместе с продуктами, принадлежащими этим категориям.
+///
+    public function lesson28_16()
+    {
+
+        DB::listen(function($query) {
+            var_dump($query->sql);
+            echo '<br>';
+        });
+            $categories = Lesson28categorie::with('lesson28productRoles')->get();
+
+
+            $categories = Lesson28categorie::with('lesson28productRoles')->where('name','выпечка')->get();
+
+        $user = Lesson28citie::with('lesson28countrie')->get();
+
+}
 }
 
 
