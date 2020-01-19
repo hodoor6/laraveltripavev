@@ -169,6 +169,7 @@ public function lesson28_8()
         $user = Lesson28citie::with('lesson28countrie')->get();
 
 }
+
 }
 
 
