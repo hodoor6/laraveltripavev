@@ -60,8 +60,21 @@ class Lesson29 extends Controller
     public function lesson29_3()
     {
       $user =Lesson29product::find(6);
-      $user->cat()->attach(['cat_id'=>'2']);
-     $user->cat()->attach(3);
+      $user->lesson29categorieBelongsToMany()->attach(['cat_id'=>'2']);
+     $user->lesson29categorieBelongsToMany()->attach(3);
+
+    }
+
+//Урок 29. (laravel). Задача 4. Отсоединить продукт с id = 6 к категории с id = 2. (многие ко многим).
+//(продукты) products: id, name
+//(категории) categories: id, name
+//(таблица связи) prod_cat: id, prod_id, cat_id
+
+    public function lesson29_4()
+    {
+      $user =Lesson29product::find(6);
+//      $user->lesson29categorieBelongsToMany()->attach(['cat_id'=>'2']);
+     $user->lesson29categorieBelongsToMany()->detach(3);
 
     }
 
