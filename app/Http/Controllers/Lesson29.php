@@ -73,12 +73,18 @@ class Lesson29 extends Controller
     public function lesson29_4()
     {
       $user =Lesson29product::find(6);
-//      $user->lesson29categorieBelongsToMany()->attach(['cat_id'=>'2']);
      $user->lesson29categorieBelongsToMany()->detach(3);
 
     }
 
+//Урок 29. (laravel). Задача 5. Продолжение задачи 3. Есть в промежуточной таблице есть  колонка 'id_prod'. Надо изменить  значение на '10' для продукта (id = 6) и категории (id = 3).
 
+    public function lesson29_5()
+    {
+      $user =Lesson29product::find(6);
+    dump($user->lesson29categorieBelongsToMany()->updateExistingPivot(3,['id_prod'=>7]));
+//
+    }
     }
 
 
