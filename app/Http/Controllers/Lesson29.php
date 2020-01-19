@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Lesson29citie;
+use App\Lesson29product;
 use App\Lesson29user;
 use Illuminate\Http\Request;
 use DB;
@@ -26,7 +27,7 @@ class Lesson29 extends Controller
 
     }
 
-//Урок 30. (laravel). Задача 2. Добавить новый город  (и получить его модель) пользователя с id = 5. (один ко многим).
+//Урок 29. (laravel). Задача 2. Добавить новый город  (и получить его модель) пользователя с id = 5. (один ко многим).
 //(комментарии) cities: id, name, user_id
 //(пользователи) users: id, login, password
 
@@ -49,6 +50,22 @@ class Lesson29 extends Controller
 
 
     }
+
+
+//Урок 29. (laravel). Задача 3. Присоединить продукт с id = 6 к категории с id = 2. (многие ко многим).
+//(продукты) products: id, name
+//(категории) categories: id, name
+//(таблица связи) prod_cat: id, prod_id, cat_id
+
+    public function lesson29_3()
+    {
+      $user =Lesson29product::find(6);
+      $user->cat()->attach(['cat_id'=>'2']);
+     $user->cat()->attach(3);
+
+    }
+
+
     }
 
 
