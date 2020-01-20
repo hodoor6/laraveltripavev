@@ -83,7 +83,16 @@ class Lesson29 extends Controller
     {
       $user =Lesson29product::find(6);
     dump($user->lesson29categorieBelongsToMany()->updateExistingPivot(3,['id_prod'=>7]));
-//
+
+    }
+
+    //Урок 29. (laravel). Задача 6. Продолжение задачи 3. Для продукта (id = 7) осуществить связь с категориями (id =2, 3). Остальные категории удалить.
+
+    public function lesson29_6()
+    {
+      $user =Lesson29product::find(7);
+    dump($user->lesson29categorieBelongsToMany()->sync([2,3]));
+
     }
     }
 
