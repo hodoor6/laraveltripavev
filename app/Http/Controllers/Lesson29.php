@@ -104,6 +104,14 @@ class Lesson29 extends Controller
     dump($user->lesson29categorieBelongsToMany()->syncWithoutDetaching([8,9]));
 
     }
+    //Урок 29. (laravel). Задача 8. Продолжение задачи 3. Для продукта (id = 8) осуществить связь с категориями (id =8, 3), если ее нет и наоборот, удалить связи если они существуют.
+
+    public function lesson29_8()
+    {
+      $user =Lesson29product::find(7);
+    dump($user->lesson29categorieBelongsToMany()->toggle([8,9]));
+
+    }
 
 
     }
