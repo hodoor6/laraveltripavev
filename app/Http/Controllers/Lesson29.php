@@ -140,6 +140,29 @@ class Lesson29 extends Controller
     }
 
 
+
+    //Урок 29. (laravel). Задача 10. "Удалите у какого-нибудь объекта модели внешний ключ (foreign key)."
+
+    public function lesson29_10()
+    {
+
+
+        $user = user29::find(1);
+
+        $user->cities()->dissociate();
+        $user->save();
+        dump($user->cities);
+
+
+
+        $city = cities29::find(1);
+
+
+        dump($city->user);
+
+    }
+
+
     }
 
 
