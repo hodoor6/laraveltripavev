@@ -1,10 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\cities29;
 use App\Http\Controllers\Controller;
+use App\lesson24;
+use App\Lesson28user;
+use App\Lesson28citie;
 use App\Lesson29citie;
 use App\Lesson29product;
 use App\Lesson29user;
+use App\user29;
 use Illuminate\Http\Request;
 use DB;
 use App\User;
@@ -110,6 +115,27 @@ class Lesson29 extends Controller
     {
       $user =Lesson29product::find(7);
     dump($user->lesson29categorieBelongsToMany()->toggle([8,9]));
+
+    }
+
+    //Урок 29. (laravel). Задача 9. "Установите у какого-нибудь объекта модели внешний ключ (foreign key)."
+
+    public function lesson29_9()
+    {
+
+
+        $user = user29::find(1);
+
+        $user->cities()->associate(4);
+        $user->save();
+        dump($user->cities);
+
+
+
+        $city = cities29::find(1);
+
+
+        dump($city->user);
 
     }
 

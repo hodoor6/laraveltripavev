@@ -11,11 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//DB::listen(function($query) {
-//
-//    var_dump($query->sql, $query->bindings,  $query->time);
-//
-//});
+DB::listen(function($query) {
+
+    var_dump($query->sql, $query->bindings,  $query->time);
+
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -1014,3 +1014,13 @@ Route::get('/lesson29-6/', 'Lesson29@lesson29_6');
 
 //Урок 29. (laravel). Задача 7. Продолжение задачи 3. Для продукта (id = 7) осуществить связь с категориями (id =8, 9). Остальные категории не удалять.
 Route::get('/lesson29-7/', 'Lesson29@lesson29_7');
+
+
+//Урок 29. (laravel). Задача 8. Продолжение задачи 3. Для продукта (id = 8) осуществить связь с категориями (id =8, 3), если ее нет и наоборот, удалить связи если они существуют.
+Route::get('/lesson29-8/', 'Lesson29@lesson29_8');
+
+//Урок 29. (laravel). Задача 9. "Установите у какого-нибудь объекта модели внешний ключ (foreign key)."
+Route::get('/lesson29-9/', 'Lesson29@lesson29_9');
+
+
+
