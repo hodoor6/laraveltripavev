@@ -1035,3 +1035,21 @@ Route::get('/lesson29-10/', 'Lesson29@lesson29_10');
 //После того, как форма будет отправлена, над списком сообщений выведите информационное сообщение о том, что сообщение пользователя успешно сохранено.
 
 Route::get('/lesson30-1/', 'Lesson30GuestBook@lesson30_1');
+
+
+
+
+
+//Урок 30. (laravel). Задача 2.  Реализуйте модерирование сообщений гостевой книги. Пусть будет отдельная страница, на которой модератор видит список сообщений, а рядом с каждым сообщением - ссылку на удаление и ссылку на редактирование этого сообщения.
+
+Route::get('/lesson30-2/moderator', 'Lesson30GuestBook@lesson30_2moderator');
+
+Route::get('/lesson30-2/edit/{id}', 'Lesson30GuestBook@lesson30_2edit')->where('id','[0-9]+');
+
+Route::get('/lesson30-2/delete/{id}', 'Lesson30GuestBook@lesson30_2delete')->where('id','[0-9]+');
+
+
+
+
+
+
