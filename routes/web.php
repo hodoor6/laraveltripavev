@@ -1064,3 +1064,12 @@ Route::get('/lesson30-2/delete/{id}', 'Lesson30GuestBook@lesson30_2delete')->whe
 Route::match(['get', 'post'], '/lessonQueryBuilder30-1/', 'Lesson30GuestBookQueryBuilder@lesson30_1');
 
 
+//Lesson30GuestBookQueryBuilder
+
+//Урок 30. (laravel). Задача 2.  Реализуйте модерирование сообщений гостевой книги. Пусть будет отдельная страница, на которой модератор видит список сообщений, а рядом с каждым сообщением - ссылку на удаление и ссылку на редактирование этого сообщения.
+
+Route::match(['get', 'post'], '/lessonQueryBuilder30-2/moderator', 'Lesson30GuestBookQueryBuilder@lesson30_2moderator');
+
+Route::match(['get', 'post'],'/lessonQueryBuilder30-2/edit/{id}', 'Lesson30GuestBookQueryBuilder@lesson30_2edit')->where('id','[0-9]+');
+
+Route::get('/lessonQueryBuilder30-2/delete/{id}', 'Lesson30GuestBookQueryBuilder@lesson30_2delete')->where('id','[0-9]+');
