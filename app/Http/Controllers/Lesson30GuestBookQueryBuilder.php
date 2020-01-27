@@ -47,7 +47,7 @@ class Lesson30GuestBookQueryBuilder extends Controller
         } else {
 
 
-            return view('Lesson30GuestBookQueryBuilder..elem.dataform', ['alldata' => $dbselect]);
+            return view('Lesson30GuestBookQueryBuilder.elem.dataform', ['alldata' => $dbselect]);
         }
 
 

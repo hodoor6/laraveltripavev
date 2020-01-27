@@ -11,11 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-DB::listen(function($query) {
-
-    var_dump($query->sql, $query->bindings,  $query->time);
-
-});
+//DB::listen(function($query) {
+//
+//    var_dump($query->sql, $query->bindings,  $query->time);
+//
+//});
 
 Route::get('/', function () {
     return view('welcome');
@@ -1073,3 +1073,17 @@ Route::match(['get', 'post'], '/lessonQueryBuilder30-2/moderator', 'Lesson30Gues
 Route::match(['get', 'post'],'/lessonQueryBuilder30-2/edit/{id}', 'Lesson30GuestBookQueryBuilder@lesson30_2edit')->where('id','[0-9]+');
 
 Route::get('/lessonQueryBuilder30-2/delete/{id}', 'Lesson30GuestBookQueryBuilder@lesson30_2delete')->where('id','[0-9]+');
+
+
+//Lesson30GuestBook - ORM
+//Урок 30. (laravel). Задача 1.  Реализуйте гостевую книгу. Гостевая книга должна представлять собой страницу, на которую может зайти любой желающий и оставить свое сообщение.
+//Пусть по заходу на эту страницу выводится список всех оставленных ранее сообщений, отсортированных по убыванию даты. Пусть выводится текст сообщения, имя автора и дата создания сообщения.
+//
+//Под сообщениями пусть расположена форма, в которой можно оставить сообщение. Пусть в форме будет инпут для ввода имени и текстареа для ввода сообщения.
+//
+//После того, как форма будет отправлена, над списком сообщений выведите информационное сообщение о том, что сообщение пользователя успешно сохранено.
+
+
+Route::match(['get', 'post'], '/lessonorm30-1/', 'Lesson30OrmGuestBook@lesson30_1');
+
+
