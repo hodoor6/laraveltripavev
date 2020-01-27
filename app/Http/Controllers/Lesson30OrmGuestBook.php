@@ -24,10 +24,8 @@ class Lesson30OrmGuestBook extends Controller
 
 
 
-        $authors = Lesson30OrmAuthor::with(['message' => function($query)
-            {
-                $query->orderBy('date', 'desc');
-            }])->get();
+        $authors = Lesson30OrmMessage::with('Author' )-> orderBy('date', 'desc')
+            ->get();
 
 
 
@@ -79,6 +77,79 @@ class Lesson30OrmGuestBook extends Controller
 
     }
 
+    //Lesson30GuestBook - ORM
+//Урок 30. (laravel). Задача 2.  Реализуйте модерирование сообщений гостевой книги. Пусть будет отдельная страница, на которой модератор видит список сообщений, а рядом с каждым сообщением - ссылку на удаление и ссылку на редактирование этого сообщения.
+
+
+    public function lesson30_2moderator(Request $request)
+    {
+
+        $authors = Lesson30OrmAuthor::with(['message' => function($query)
+        {
+            $query->orderBy('date', 'desc');
+        }])->get();
+
+        return view('Lesson30OrmGuestBook.elem.moderator', ['authors' => $authors]);
+
+    }
+
+
+    public function lesson30_2edit(Request $request, $id,$author_id)
+    {
+
+        if ($request->has('submit')) {
+
+            if ($request->has('name') and !empty($request->input('name'))
+                and $request->has('message') and !empty($request->input('message'))
+                and $request->has('date') and !empty($request->input('date')
+                )) {
+
+
+            $request->session()->flash('status', 'Cообщение обновлено');
+
+            $status = $request->session()->get('status');
+
+                $updateAuthorsMessage = Lesson30OrmAuthor::find($author_id);
+                $updateAuthorsMessage->name = $request->input('name');
+                $updateAuthorsMessage->save();
+
+
+                $message = $request->input('message');
+                $date = $request->input('date');
+
+                $updateMessage = Lesson30OrmMessage::
+                where('id', $id)
+                ->update(['text' => $message ,'date' => $date]);
+
+            return redirect('/lessonorm30-2/moderator')->with(['status' => $status]);
+        }else {
+                $dbSelectAuthor = Lesson30OrmAuthor::find($author_id);
+                $dbSelectMessage = Lesson30OrmMessage::find($id);
+
+                $status = 'Заполните все поля';
+
+                return view('Lesson30OrmGuestBook.elem.editform', ['dbSelectMessage' => $dbSelectMessage,'dbSelectAuthor' => $dbSelectAuthor, 'status' => $status]);
+            }
+        } else {
+
+            $dbSelectAuthor = Lesson30OrmAuthor::find($author_id);
+          $dbSelectMessage = Lesson30OrmMessage::find($id);
+
+            return view('Lesson30OrmGuestBook.elem.editform', ['dbSelectMessage' => $dbSelectMessage,'dbSelectAuthor' => $dbSelectAuthor]);
+        }
+    }
+
+    public function lesson30_2delete(Request $request, $id)
+    {
+        $request->session()->flash('status', 'Cообщение удаленно');
+
+        $status = $request->session()->get('status');
+
+        $deletedMassage = Lesson30OrmMessage::destroy($id);
+
+       return redirect('/lessonorm30-2/moderator')->with(['status' => $status]);
+
+    }
 }
 
 

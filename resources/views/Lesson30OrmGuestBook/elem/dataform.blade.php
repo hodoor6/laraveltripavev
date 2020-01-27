@@ -28,19 +28,19 @@
                 <th>Имя</th>
                 <th>Дата</th>
             </tr>
-            @foreach($authors as $author)
+            @foreach($authors as $message)
                 <tr>
-                    @foreach($author->message as $message)
+{{--                    @foreach($author->message as $message)--}}
 
-                        <td>{{$message->id}}</td>
+                        <td>{{$message->Author->id}}</td>
                         <td>{{$message->text}} id -- {{$message->id}}</td>
-                            <td>{{$author->name}}</td>
+                            <td>{{$message->Author->name}}</td>
                         <td>{{$message->date}}</td>
 
                 </tr>
 
             @endforeach
-            @endforeach
+{{--            @endforeach--}}
         </table>
 
     @endif
