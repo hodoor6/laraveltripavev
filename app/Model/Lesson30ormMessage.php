@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Lesson30OrmMessage extends Model
 {
 
+const CREATED_AT = 'date';
 protected $table = 'lesson30ormmessages';
     protected $fillable = [
-        'id', 'name',
+        'text','date'
     ];
 
 
@@ -26,7 +27,7 @@ protected $table = 'lesson30ormmessages';
 
     public function Author()
     {
-        return $this->belongsTo('App\Model\Lesson30OrmAuthor','id');
+        return $this->belongsTo('App\Model\Lesson30OrmAuthor','author_id');
     }
 
 

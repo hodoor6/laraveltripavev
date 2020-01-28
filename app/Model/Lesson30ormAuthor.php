@@ -25,7 +25,7 @@ protected $table = 'lesson30ormauthors';
 
 public function message()
 {
-   return $this->hasMany('App\Model\Lesson30OrmMessage','author_id');
+   return $this->hasMany('App\Model\Lesson30OrmMessage', 'author_id');
 }
 
 
