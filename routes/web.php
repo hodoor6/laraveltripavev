@@ -1099,7 +1099,7 @@ Route::match(['get', 'post'],'/lessonorm30-2/edit/{id}/{author_id}', 'Lesson30Or
 Route::get('/lessonorm30-2/delete/{id}', 'Lesson30OrmGuestBook@lesson30_2delete')->where('id','[0-9]+');
 
 
-//-другой Lesson30Book - ORM
+//  -другой Lesson30Book - ORM
 //Урок 30. (laravel). Задача 1.  Реализуйте гостевую книгу. Гостевая книга должна представлять собой страницу, на которую может зайти любой желающий и оставить свое сообщение.
 //Пусть по заходу на эту страницу выводится список всех оставленных ранее сообщений, отсортированных по убыванию даты. Пусть выводится текст сообщения, имя автора и дата создания сообщения.
 //
@@ -1109,6 +1109,17 @@ Route::get('/lessonorm30-2/delete/{id}', 'Lesson30OrmGuestBook@lesson30_2delete'
 
 
 Route::match(['get', 'post'], '/book/all/', 'Lesson30OrmBook@bookAll');
+
+
+//  -другой Lesson30Book - ORM
+//Урок 30. (laravel). Задача 2.  Реализуйте модерирование сообщений гостевой книги. Пусть будет отдельная страница, на которой модератор видит список сообщений, а рядом с каждым сообщением - ссылку на удаление и ссылку на редактирование этого сообщения.
+
+Route::match(['get', 'post'], '/book/all/moder', 'Lesson30OrmBook@bookAllmoder');
+Route::match(['get', 'post'], '/book/admin', 'Lesson30OrmBook@bookAdmin');
+Route::match(['get', 'post'], '/book/delete/{id}', 'Lesson30OrmBook@bookDelete')-> where(['id' => '[\d]+']);
+
+Route::match(['get', 'post'], '/book/update/{id}', 'Lesson30OrmBook@bookUpdate')
+    -> where(['id' => '[\d]+']);
 
 
 
