@@ -1148,3 +1148,13 @@ Route::match(['get', 'post'], 'lesson30-4/city/{id}', 'Lesson30City@lesson30_4ci
 Route::match(['get', 'post'], 'lesson30-4/city/listshowplaces/{id}', 'Lesson30City@lesson30_4showplaces')->where('id','[1-9]+');
 Route::match(['get', 'post'], 'lesson30-4/city/listshowplaces/showplace/{id}', 'Lesson30City@lesson30_4showplace')->where('id','[1-9]+');
 
+//Урок 30. (laravel). Задача 5.  Реализуйте сайт про города и страны. -
+//--Модифицируйте предыдущую задачу так, чтобы на сайте появилась админка, в которой можно будет добавлять страны, города этих стран, достопримечательности и их описание.-Реализуйте добавление, редактирование и удаление. --
+
+Route::match(['get', 'post'], 'lesson30-5/admin/', 'Lesson30City@lesson30_5admin');
+
+Route::match(['get', 'post'], 'lesson30-5/admin/add', 'Lesson30City@lesson30_5adminAdd');
+Route::match(['get', 'post'], 'lesson30-5/admin/edit/{id}', 'Lesson30City@lesson30_5adminEdit')->where('id','[1-9]+');;
+
+Route::match(['get', 'post'], 'lesson30-5/admin/delete/{id}', 'Lesson30City@lesson30_5adminDelete')->where('id','[1-9]+');
+
