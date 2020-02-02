@@ -1138,5 +1138,13 @@ Route::match(['get', 'post'], '/lesson30-3/ads/{id}', 'Lesson30Ads@lesson30_3Ads
 
 Route::match(['get', 'post'], '/lessonorm30-3/', 'Lesson30OrmAds@lesson30_3');
 Route::match(['get', 'post'], '/lessonorm30-3/ads/{id}', 'Lesson30OrmAds@lesson30_3Ads')->where('id','[1-9]+');
+//Урок 30. (laravel). Задача 4.   Реализуйте сайт про города и страны.
+//На главной странице сайта должен быть список стран. Каждая страна должна представлять собой ссылку. При переходе по этой ссылке должен открыться список городов данной страны.
+//Каждый город также должен представлять собой ссылку. При переходе по этой ссылке должен открыться список достопримечательностей данного города, также в виде ссылок. Каждая из этих ссылок должна вести на страницу с описанием достопримечательности.
 
+Route::get( '/lesson30-4/', 'Lesson30City@lesson30_4');
+Route::match(['get', 'post'], 'lesson30-4/city/{id}', 'Lesson30City@lesson30_4city')->where('id','[1-9]+');
+
+Route::match(['get', 'post'], 'lesson30-4/city/listshowplaces/{id}', 'Lesson30City@lesson30_4showplaces')->where('id','[1-9]+');
+Route::match(['get', 'post'], 'lesson30-4/city/listshowplaces/showplace/{id}', 'Lesson30City@lesson30_4showplace')->where('id','[1-9]+');
 
