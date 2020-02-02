@@ -1163,4 +1163,21 @@ Route::match(['get', 'post'], 'lesson30-5/admin/delete/{id}', 'Lesson30City@less
 //Каждый город также должен представлять собой ссылку. При переходе по этой ссылке должен открыться список достопримечательностей данного города, также в виде ссылок. Каждая из этих ссылок должна вести на страницу с описанием достопримечательности.
 
 
+
 Route::get( '/lesson30-4orm/country/{id?}/{city?}/{land?}', 'Lesson30OrmCity@allCountry');
+
+
+
+//Другой подход
+
+//Урок 30. (laravel). Задача 5.  Реализуйте сайт про города и страны. -
+//--Модифицируйте предыдущую задачу так, чтобы на сайте появилась админка, в которой можно будет добавлять страны, города этих стран, достопримечательности и их описание.-Реализуйте добавление, редактирование и удаление. --
+
+
+Route::get('/lesson30-5orm/country/{id?}/{city?}/{land?}', 'Lesson30OrmWorldSite@allCountry');
+
+Route::match(['get', 'post'], '/lesson30-5orm/admin/{id?}/{city?}/{land?}', 'Lesson30OrmWorldSite@admin');
+
+Route::get('/lesson30-5orm/delete/{id?}/{city?}/{land?}', 'Lesson30OrmWorldSite@delete');
+
+Route::match(['get', 'post'], '/lesson30-5orm/update/{id?}/{city?}/{land?}', 'Lesson30OrmWorldSite@update');
