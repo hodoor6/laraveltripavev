@@ -1189,3 +1189,12 @@ Route::match(['get', 'post'], '/lesson30-5orm/update/{id?}/{city?}/{land?}', 'Le
 //Урок 31. (laravel). Задача 1. Пусть в базе данных есть таблица с пользователями. Выведите список всех пользователей (пока без пагинации) в виде HTML таблицы.
 Route::get('/lesson31-1/', 'Lesson31@Lesson31_1');
 
+//Урок 31. (laravel). Задача 2. Модифицируйте предыдущую задачу так, чтобы пользователи выводились по 10 штук на страницу.
+Route::get('/lesson31-2/', 'Lesson31@Lesson31_2');
+//Route::get('/lesson31-2/', function () {
+//     $users = App\Lesson31user::paginate(15);
+//
+//   return $users->setPath('/lesson31-2/');
+//
+//    //
+//});
