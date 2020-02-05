@@ -99,4 +99,19 @@ public function lesson32_2()
 
 
     }
+
+
+    // Урок 32. (laravel) . Задача 6. С помощью функции each() выведите имена пользователей.
+    public function lesson32_6()
+
+    {
+        $users=Lesson32user::All();
+        echo 'Разбить коллекцию на мелкие по четыре элемента '.'<br>';
+        $user = $users->each(function ($item) {
+                    echo $item['name'].'<br>';
+
+        });
+
+
+    }
 }

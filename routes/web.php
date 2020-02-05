@@ -1227,3 +1227,8 @@ Route::get('/lesson32-4/', 'Lesson32@Lesson32_4');
 Route::get('/lesson32-5/', 'Lesson32@Lesson32_5');
 
 
+// Урок 32. (laravel). Задача 6. . Задача 6. С помощью функции each() выведите имена пользователей.
+
+Route::get('/lesson32-6/', 'Lesson32@Lesson32_6');
+
+
