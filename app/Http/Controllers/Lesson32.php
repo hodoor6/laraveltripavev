@@ -18,6 +18,18 @@ public function lesson32_1()
 {
  $users=Lesson32user::All();
  dump($users);
-}
 
+
+    //Урок 32. (laravel). Задача 2. Задача 2. Найти минимальную, максимальную, среднюю зарплату, а также ее сумму.
+
+}public function lesson32_2()
+
+{
+ $users=Lesson32user::All();
+   echo 'Минимальная зарплата = '. $users->min('salary').'<br>';
+   echo 'Максимальная зарплата = '. $users->max('salary').'<br>';
+   echo 'Средняя зарплата = '. $users->avg('salary').'<br>';
+   echo 'Сумма зарплат = '. $users->sum('salary').'<br>';
+
+}
 }

@@ -1203,3 +1203,12 @@ Route::get('/lesson31-2/', 'Lesson31@Lesson31_2');
 //Модель LessonUser:
 
 Route::get('/lesson32-1/', 'Lesson32@Lesson32_1');
+//Урок 32. (laravel). Задача 1. Пусть дана таблица users с колонками name и salary. Получите все записи.
+//Модель LessonUser:
+
+
+//Урок 32. (laravel). Задача 2. Задача 2. Найти минимальную, максимальную, среднюю зарплату, а также ее сумму.
+
+Route::get('/lesson32-2/', 'Lesson32@Lesson32_2');
+
+
