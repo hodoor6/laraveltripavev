@@ -22,7 +22,11 @@ public function lesson32_1()
 
     //Урок 32. (laravel). Задача 2. Задача 2. Найти минимальную, максимальную, среднюю зарплату, а также ее сумму.
 
-}public function lesson32_2()
+}
+
+
+
+public function lesson32_2()
 
 {
  $users=Lesson32user::All();
@@ -32,4 +36,25 @@ public function lesson32_1()
    echo 'Сумма зарплат = '. $users->sum('salary').'<br>';
 
 }
+
+
+    //Урок 32. (laravel). Задача 3. Отсортировать в порядке возрастания и вывести через dump()
+
+    public function lesson32_3()
+
+    {
+
+
+        $users=Lesson32user::All();
+        echo 'Отсортировать по зарплата = ';
+        $users = $users->sortBy('salary');
+
+        dump($users);
+
+        echo 'Отсортировать по имени = ';
+        $users =  $users->sortBy('name');
+        dump($users);
+
+    }
+
 }
