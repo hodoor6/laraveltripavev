@@ -1198,3 +1198,8 @@ Route::get('/lesson31-2/', 'Lesson31@Lesson31_2');
 //
 //    //
 //});
+
+//Урок 32. (laravel). Задача 1. Пусть дана таблица users с колонками name и salary. Получите все записи.
+//Модель LessonUser:
+
+Route::get('/lesson32-1/', 'Lesson32@Lesson32_1');
