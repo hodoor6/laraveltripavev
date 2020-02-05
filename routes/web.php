@@ -1231,4 +1231,8 @@ Route::get('/lesson32-5/', 'Lesson32@Lesson32_5');
 
 Route::get('/lesson32-6/', 'Lesson32@Lesson32_6');
 
+// Урок 32. (laravel) . Задача 7. С помощью функции filter() выведите тех пользователей, у которых зарплата выше 300.
+
+Route::get('/lesson32-7/', 'Lesson32@Lesson32_7');
+
 
