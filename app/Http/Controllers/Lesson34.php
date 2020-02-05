@@ -24,3 +24,5 @@ class Lesson34 extends Controller
 
 # php artisan make:migration create_lesson34messages2_table --create=lesson34messages2
 
+//Урок 34 Задача 5. Переименуйте колонку text в message.
+//php artisan make:migration create_lesson34messages2_table --table=lesson34post
