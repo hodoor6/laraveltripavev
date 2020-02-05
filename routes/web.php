@@ -1217,3 +1217,9 @@ Route::get('/lesson32-2/', 'Lesson32@Lesson32_2');
 Route::get('/lesson32-3/', 'Lesson32@Lesson32_3');
 
 
+
+// Урок 33. (laravel). Задача 4. Преобразовать коллекцию в массив и вывести на экран имя и зарплату.
+
+Route::get('/lesson32-4/', 'Lesson32@Lesson32_4');
+
+

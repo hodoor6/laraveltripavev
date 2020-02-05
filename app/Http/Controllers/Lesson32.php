@@ -57,4 +57,24 @@ public function lesson32_2()
 
     }
 
+//Урок 33. (laravel). Задача 4. Преобразовать коллекцию в массив и вывести на экран имя и зарплату.
+
+    public function lesson32_4()
+
+    {
+
+
+        $users=Lesson32user::All();
+        echo 'Вывести на экран имя и зарплату = '.'<br>';
+        $users = $users->toArray();
+
+
+       foreach ($users as $user)
+       {
+           echo 'Имя '. $user['name'] .' Зарплата '. $user['salary'] .'<br>';
+       }
+        dump($users);
+
+
+    }
 }
