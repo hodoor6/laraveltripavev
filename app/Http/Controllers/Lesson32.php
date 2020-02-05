@@ -57,7 +57,7 @@ public function lesson32_2()
 
     }
 
-//Урок 33. (laravel). Задача 4. Преобразовать коллекцию в массив и вывести на экран имя и зарплату.
+//Урок 32. (laravel). Задача 4. Преобразовать коллекцию в массив и вывести на экран имя и зарплату.
 
     public function lesson32_4()
 
@@ -74,6 +74,28 @@ public function lesson32_2()
            echo 'Имя '. $user['name'] .' Зарплата '. $user['salary'] .'<br>';
        }
         dump($users);
+
+
+    }
+
+
+
+
+// Урок 32. (laravel). Задача 5. . Разбить коллекцию на мелкие по четыре элемента, вывести на экран, затем свернуть обратно и вывести на экран.
+    public function lesson32_5()
+
+    {
+
+
+        $users=Lesson32user::All();
+        echo 'Разбить коллекцию на мелкие по четыре элемента '.'<br>';
+
+        $user = $users->chunk(4);
+              dump($user);
+
+
+        $newUser = $user-> collapse();
+    dump($newUser);
 
 
     }
