@@ -13,3 +13,14 @@ class Lesson34 extends Controller
 
 //Урок 34. (laravel). Задача 2. Добавить столбцы 'text' и 'user_id'. , description Выполнить миграцию.
 //php artisan migrate
+
+
+//Урок 34. (laravel). Задача 3. Сделайте откат миграции.
+//php artisan migrate:rollback
+//
+//Таблица удалена.
+
+//Урок 34. (laravel). Задача 4. Сделайте заново миграцию с условиями: 1) создать таблицу messages; 2) добавить поле users_id; 3) переименовать таблицу в posts; 4) добавить столбец text после столбца id.
+
+# php artisan make:migration create_lesson34messages2_table --create=lesson34messages2
+

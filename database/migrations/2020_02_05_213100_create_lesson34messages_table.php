@@ -17,13 +17,20 @@ class CreateLesson34messagesTable extends Migration
 //Урок 34. (laravel). Задача 2. Добавить столбцы 'text' и 'user_id'  ,description. Выполнить миграцию.
 //php artisan migrate
 
+//Урок 34. (laravel). Задача 3. Сделайте откат миграции.
+//php artisan migrate:rollback
+//
+//Таблица удалена.
+
+
+
     public function up()
     {
         Schema::create('lesson34messages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('text', 100);
             $table->text('description');
-            $table->integer('User_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
