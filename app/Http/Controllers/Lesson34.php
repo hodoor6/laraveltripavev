@@ -26,3 +26,7 @@ class Lesson34 extends Controller
 
 //Урок 34 Задача 5. Переименуйте колонку text в message.
 //php artisan make:migration create_lesson34messages2_table --table=lesson34post
+
+//Урок 35. (laravel). Задача 6. Изменить тип колонки message из text в varchar с длиной 40.
+
+# php artisan make:migration create_lesson34messages2_table --table=lesson34post
